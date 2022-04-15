@@ -5,128 +5,150 @@
     padding: 0;
     box-sizing: border-box;
     list-style: none; /*elimina el esilo en las listas */
-    text-decoration: none; /*elimina las viñetas*/
+    text-decoration: none; /*elimina las viÃ±etas*/
     color: #383f3a; /* color del texto predeterminado*/
     user-select: none;
 }
 
-/*****************
-*****************
-
-ESTILOS GENERALES 
-
-*****************
-******************/
-
+/* configuraciones del body */
 body{
-    background-color: #fff;
     font-family: Quicksand, Arial, Helvetica, sans-serif; /*Fuente predeterminada para el contenido en general*/
     display: flex;
     flex-direction: column;
     min-height: 100vh; /*para que como minimo sea el viewport*/
+    background-color: white;
 }
 
-footer p{
-    text-align: center;
-    margin-top: 5px;
-    padding: 5px;
-}
-/* main{border: 1px solid blue;} */
+/* justificacion de todos los parrafos */
+p{text-align: justify;}
 
 /* INDEX */
-.portada img{
-    display: block; /*para centrar la imagen*/
-    margin-left: auto;
-    margin-right: auto;
-}
 
-.name hr, footer hr{ /*lineas de portada y footer*/
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.name h1{
-    font-weight: 200;
+.name {
     text-align: center;
+    animation-duration: 5s;
+    animation-name: color__name;
+    animation-iteration-count: 1;
 }
 
-.name h1 span{
-    /*modifica parte del titulo*/
+/* animacion al titulo*/
+@keyframes color__name {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+.title-name{font-size: 3vh;}
+
+/*modifica parte del titulo*/
+.name span{
     color: #7f8e57;
     font-family: Dosis, Quicksan, Arial, Helvetica, sans-serif;
 }
-
-.text__index p{
-    text-align: justify;
-    font-size: 1.2rem;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10px;
-    padding: 2px 5px ;
-}
+.text-index{font-size: 1.2rem;}
 
 /* PROJECT */
-.number01, .number02{
-    font-style: bold;
+
+.project-number{
     font-family: Dosis, Quicksand, Arial, Helvetica, sans-serif;
-    font-weight: 200;
+    font-weight: 300;
     text-shadow: 5px 5px 4px #545f3ac9;
 }
 
-.text__info01, .text__info02{ text-align: justify;}
+.project-info{
+    padding: 5% 0;
+    margin: 0 10%;
+}
 
-.title001, .title002{
+.project-text{ text-align: justify;}
+
+.project-img img{ width: 100%;}
+
+.title-1{font-size: calc(2em);}
+
+.title-2{
     /* formato para nombre individual */
     font-family: Dosis, Quicksand,Arial, Helvetica, sans-serif;
     color: #5b6b2e;
-    font-size: 3.5rem;
+    font-size: calc(5rem);
 }
 
-.link01, .link02{
-    /* formato del enlace para redireccionar */
-    justify-self: end;
-    align-self: center;
-    margin-right: 30px;
+hr{
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* link see more project.html */
+.link{
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    overflow: hidden;
+
+}
+
+/* efecto sobre los links */
+.project-link{
+    display: inline-block;
+    text-decoration: none;
     color: whitesmoke;
-    font-weight: 500;
+    padding: 2% 5%;   
     background-color: #7f8e57;
-    padding: 5px;
-    border-radius: 1px 3px;
-    box-shadow: 3px 3px 3px #545f3a;
+    border-radius: 5px 20px;
+    
 }
 
-/* PROJECT 02*/
-
-.title_p02{
-    font-weight: 200;
-    font-size: 2.2rem;
-    color: #5b6b2e;
-    text-align: center;
+.link:hover , .project-link:hover{
+    animation: pulsate 1s ease-in-out;
+    color: white;
 }
 
+@keyframes pulsate{
+    0%{
+        box-shadow:
+        0 0 25px #7f8e57,
+        0 0 50px #383f3a;
+    }
+}
+
+.project01-info{
+    margin: 0 10%;
+    padding: 5% 0;
+}
+
+#album{ width: 80%;}
+
+.featurette-heading{
+    color: #545f3a;
+    font-family: dosis, Arial, Helvetica, sans-serif;
+    padding: 5%;
+}
+
+.lead{
+    padding: 0 5%;
+    font-size: 1rem;
+    color: rgb(12, 12, 12);
+}
+
+#project-02{
+    width: 80%;
+    margin-left: 10%;
+}
 
 /* ABOUT ME */
-.title{
-    font-weight: 400;
-    color: #0d1102;
-    font-family: Dosis, Quicksand, Arial, Helvetica, sans-serif;
-    padding-top: 15px;
+.title__about{
+    font-weight: 200;
+    color: #383f3a;
 }
 
 .title__sub{
     color: #5b6b2e;
-    font-weight: 600;
+    font-weight: 300;
 }
 
-.text__about{
-    text-align: justify;
-}
-
-.date, .title__sub__01{
-    color: #0d1102;
-    
-}
+.text__about{ text-align: justify; }
+.date, .title__sub__01{ color: #0d1102;}
 
 .skill__icon p {
     color: #545f3a;
@@ -144,320 +166,86 @@ footer p{
 }
 
 /* CONTACT */
-.firma{
-    color: #545f3a;
-    font-family: Dosis, Quicksand, Arial, Helvetica, sans-serif;
-    font-weight: 600;
-}
-
-form{
-    /* formulario */
-    display: flex;
-    flex-flow: column nowrap;
+#grid__contact{
+    display: grid;
+    grid-template-columns: 60%;
+    grid-template-rows: 0.5fr 1fr;
     justify-content: center;
     align-items: center;
 }
 
-.boton{
-    /* boton de enviar */
-    padding: 4px 8px;
-    background-color: #7f8e57a4;
-    letter-spacing: 2px; /*espacio entre caracteres*/
-    border-radius: 10px 5px;
-    box-shadow: 2px 2px 2px #5b6b2e;
-    cursor: pointer;
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-/***************** 
+form input{
+    width: 60%;
+    margin-bottom: 3vh ;
+}
+
+form textarea{
+    width:60%;
+    margin-bottom: 3vh;
+}
+
+
+/*******
 MOBILE 
-******************/
+*******/
 
-@media (max-width:479px){
-    /* HEADER */
-
-    .logo{
-        width: 200px;
-        padding: 20px;
-    }
-
-    /* MENU HAMBURGUESA */
-    nav{
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .menu__btn{
-        font-size: 35px;
-        color: #7f8e57;
-        cursor: pointer;
-        margin-right: 50px;
-    }
-
-    .close{
-        background-color: #545f3a;
-        padding: 6px;
-        border-radius: 5px 15px;
-        box-shadow: 5px 5px 5px #383f3a;
-    }
-
-    .nav__links{
-        position: fixed;
-        top: 0px;
-        text-align: center;
-        background-color: #7f8e57;
-        width: 100%;
-        height: 0;
-        transition: all 0.5s;
-    }
-
-    .nav__links li{
-        display: none;
-        line-height: 30px;
-        margin: 50px;
-        transition: all 0.5s;
-        
-    }
-
-    .nav__links li a{
-        color: whitesmoke;
-        font-size: 2rem;
-        text-transform: uppercase;
-        font-weight: 200;
-
-    }
-
-    .nav__links li a.active,  .nav__links li a:hover{
-        color: whitesmoke;
-        transition: 0.3s;
-    }
-    
-    #check{
-        display: none;
-    }
-     /* pseudoclase checked para mostrar u ocultar el menu resposive cada vez que se de click en el icono */
-    #check:checked ~ .nav__links {
-        height: 100vh;
-    }
-
-    #check:checked ~ .nav__links li{
-        display: block;
-    }
-
-    /* INDEX */
-    #grid__index{
-        display: grid;
-        grid-template-areas:
-        "portada"
-        "name"
-        "icon__home"
-        "text__index";
-        grid-template-columns: 100%;
-        grid-template-rows:0.5fr 0.3fr 0.3fr auto;
-    }
-
-    /* Nombre de cada area de la grilla */
-
-    .portada{grid-area: portada;}
-    .portada img{
-        width: 90%;
-    }
-
-    .name{grid-area: name;}
-    .name hr{
-        width: 90%;
-    }
-    .name h1 {
-        font-size: 1.1em;
-    }
-    .icon__home{
-        grid-area: icon__home;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 15px;
-    }
-
-    .icon__home img{
-        width: 30%;
-        margin-left: 30%;
-    }
-    .text__index{grid-area: text__index;}
-
-    .text__index{
-        width: 100%
-    } 
-    
-    .text__index p{
-        padding: 10px 15px 5px;
-        text-align: justify;
-        font-size: 1rem;
-        margin-left: auto;
-        margin-right: auto;}
-    
-    .buttom__up{
-            display: none;
-    }
-    /* PROJECT */
-
-    .buttom__back, .buttom__up{
-        display: inline-block;
-        background-color: #7f8e57;
-        font-size: 20px;
-        padding: 5px;
-        border-radius: 7px 35px;
-        box-shadow: 5px 5px 5px #383f3a;
-        margin: 2% 5% 0%;
-    }
-
+@media (max-width: 768px){
+/* PROJECT */
     #project01{
         display: grid;
         grid-template-areas:
-        "number01 berrino01"
-        "title1 title1"
-        "text__info01 text__info01"
-        "link01 link01";
-        grid-template-columns: 35% 65%;
-        grid-template-rows: 1fr 0.6fr 0.4fr 0.5fr;
+        "number01 img01"
+        "info01 info01";
+        grid-template-columns: 0.4fr 0.6fr;
+        grid-template-rows: 0.5fr auto;
     }
-
-    /* areas de la grilla projecto01 */
-    .number01 {
-        grid-area: number01;
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: flex-end;
-        align-items: center;
-        font-size: 10em;
-    }
-    .berrino01{grid-area: berrino01;}
-    .berrino01 img{
-        width: 100%;
-        margin-top: 10vh;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .title1{
-        grid-area: title1;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .text__info01{
-        grid-area: text__info01;
-        text-align: justify;
-        margin: 5px 5%;
-    }
-
-    .link01{grid-area: link01;}
-
-    .title01, .title02{
-        /* formato para "project" */
-        color:#545f3a;
-        font-size: 1.5rem;
-    }
-    .title001, .title002{
-        font-size: 3.5rem;
-    }
+    /* areas de la grilla */
+    .number01{grid-area: number01;}
+    .img01{grid-area: img01;}
+    .info01{grid-area: info01;}
 
     #project02{
         display: grid;
         grid-template-areas:
-        "genaro02 number02"
-        "title2 title2"
-        "text__info02 text__info02"
-        "link02 link02";
-        grid-template-columns: 65% 35%;
-        grid-template-rows: 1fr 0.7fr 0.6fr 0.5fr;
+        "number02 img02"
+        "info02 info02";
+        grid-template-columns: 0.4fr 0.6fr;
+        grid-template-rows: 0.5fr auto;
     }
+      /* areas de la grilla */
+    .number02{grid-area: number02;}
+    .img02{grid-area: img02;}
+    .info02{grid-area: info02;}
 
-    /* areas de la grilla projecto01 */
-    .number02{
-        grid-area: number02;
+    .project-number{
+        font-size: 8rem;
         display: flex;
-        flex-flow: row nowrap;
-        justify-content: flex-start;
-        align-items: center;
-        font-size: 8em;
-    }
-    .genaro02{grid-area: genaro02;}
-    .genaro02 img{
-        width: 90%;
-        margin-top: 5vh;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .title2{
-        grid-area: title2;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .text__info02{
-        grid-area: text__info02;
-        text-align: justify;
-        margin: 5px 5%;
-    }
-    .link02{grid-area: link02;}
-
-    /* VIEW>>> PROJECT01 */
-    .plan01{
-        width: 80%;
-    }
-
-    .outside, .inside, .toilets{
-        display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-left: 5%;
-        margin-bottom: 2%;
     }
 
-
-    .outside img , .inside img, .toilets img{padding: 10px;}
-    
-    /* VIEW>>> PROJECT02 */
-    #grid__project02{
-        display: grid;
-        grid-template-areas: 
-        "foundation"
-        "metalic__structure"
-        "concrete_beams"
-        "main__level"
-        "slabs"
-        "water"
-        "sewer"
-        "gas";
-        grid-template-columns: 100%;
-        grid-template-rows: 0.7fr 0.7fr 0.6fr 0.4fr 0.8fr repeat(3,1fr) ;
+    .project-img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 5%;
     }
 
-    .foundation{grid-area:foundation;}
-    .metalic__structure{grid-area:metalic__structure;}
-    .concrete_beams{grid-area:concrete_beams;}
-    .main__level{grid-area:main__level;}
-    .slabs{grid-area:slabs;}
-    .water{grid-area:water ;}
-    .sewer{grid-area:sewer;}
-    .gas{grid-area:gas;}
-
-    .plan{
-        width: 80%;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 10px;
+    .text-project{
+        font-size: 1rem;
+        font-weight: 300;
     }
 
-    article p{
-        text-align: justify;
-        margin-bottom: 10px;
-        padding: 0px 5%;
-    }
+    .title-2{margin-top: -5vh;}
 
-
-    /* ABOUT ME */
+/* ABOUT ME */
     
     #grid__about{
         display: grid;
@@ -480,807 +268,287 @@ MOBILE
     .location{grid-area: location;}
     .experience{grid-area: experience;}
     .skill{grid-area: skill;}
-    .skill img{
-        width: 30%;
-    }
+    .skill img{ width: 100%; }
     .skill__icon{
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 0.2fr 0.7fr;
+        grid-template-rows: repeat(7, auto);
+        justify-content: center;
         align-items: center;
     }
 
     .education{grid-area: education;}
     
-    .title{
-        font-size: 1.4em;
-        margin-bottom: 10px;
+    .title__about{
+        font-size: 1.8rem;
+        text-align: center;
+        padding-bottom: 3vh;
     }
-    .title, .title__sub, .date, .text__about, .title__sub__01{ 
-        margin: 0px 20px;}
-    .text__about{margin-bottom: 20px;}
+    .title, .title__sub, .date, .text__about, .title__sub__01{ margin: 0px 10%;}
 
-    /* CONTACT */
-    #grid__contact{
-        display: grid;
-        grid-template-areas: 
-        "menssage"
-        "form"
-        "icon__contact";
-        grid-template-columns: 100%;
-        grid-template-rows: 0.2fr 2fr 0.4fr;
-    }
-
-    /* nombre de las areas */
-    .menssage{grid-area: menssage;}
-    .text__contact{
-        padding: 20px 20px 0px 20px;
+    .title__sub{
         text-align: justify;
+        font-size: 1.2rem;
+        padding-bottom: 2vh;
     }
 
-    .end{
-        text-align: center;
-        padding: 5vw;
-    }
+    .date{margin-bottom: 1vh;}
 
-    .firma{
-        text-align: center;
-        padding: 5px;
-    }
+    .text__about{ margin-bottom: 2vh;}
+    .languague p, .location p{text-align: center;}
 
-    .icon__contact{grid-area: icon__contact;}
-    .icon__contact img{
-        width: 10%;
-        margin-left: 25vw;
-        padding: 10px 0px;
-    }
-    form{grid-area: form;}
+/* CONTACT */
     form input{
-        padding-bottom: 10px;
-        margin-bottom: 10px;
+        width: 80%;
+        margin-bottom: 3vh ;
     }
-    form textarea{margin-bottom: 10px;}
-
+    
+    form textarea{
+        width: 80%;
+        margin-bottom: 3vh;
+    }
 }
 
-/***************** 
-TABLET 
-******************/
+/***********
+TABLET  
+************/
 
-@media (min-width:480px) and (max-width:1023px){
-    .logo{
-        width: 20%;
-        margin: 20px;
-    }
-    /* MENU HAMBURGUESA */
-    nav{
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .menu__btn{
-        font-size: 40px;
-        color: #7f8e57;
-        cursor: pointer;
-        margin-right: 50px;
-    }
-    .nav__links{
-        position: fixed;
-        top: 0px;
-        text-align: center;
-        background-color: #7f8e57;
-        width: 100%;
-        height: 0;
-        transition: all 0.5s;
-    }
-
-    .close{
-        background-color: #545f3a;
-        padding: 6px;
-        border-radius: 5px 15px;
-        box-shadow: 5px 5px 5px #383f3a;
-    }
-
-    .nav__links li{
-        display: none;
-        line-height: 30px;
-        margin: 50px;
-        transition: all 0.5s;
-    }
-    .nav__links li a{
-        color: whitesmoke;
-        font-size: 2rem;
-        text-transform: uppercase; /*transforma a mayuscula*/
-        font-weight: 200;
-    }
-    #check{
-        display: none;
-    }
-    #check:checked~.nav__links{
-        height: 100vh;
-    }
-    #check:checked~.nav__links li{
-        display: block;
-    }
-    /* INDEX */
-    #grid__index{
+@media (min-width:769px) and (max-width:1199px){
+/* PROJECT */
+    #project01{
         display: grid;
         grid-template-areas:
-        "portada"
-        "name"
-        "icon__home"
-        "text__index";
-        grid-template-columns: 100%;
-        grid-template-rows:0.5fr 0.3fr 0.3fr auto;
+        "number01 img01"
+        "info01 info01";
+        grid-template-columns: 0.4fr 0.6fr;
+        grid-template-rows: 0.5fr auto;
+    }
+    /* areas de la grilla */
+    .number01{grid-area: number01;}
+    .img01{grid-area: img01;}
+    .info01{grid-area: info01;}
 
-    }
-
-    /* Nombre de cada area de la grilla */
-
-    .portada{grid-area: portada;}
-    .portada img{
-        width: 90%;
-    }
-
-    .name{grid-area: name;}
-    .name hr{
-        width: 95%;
-    }
-    .name h1 {
-        font-size: 1.6em;
-    }
-    .icon__home{
-        grid-area: icon__home;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 15px;
-    }
-
-    .icon__home img{
-        width: 30%;
-        margin-left: 30%;
-    }
-    .text__index{grid-area: text__index;}
-
-    .text__index{
-        width: 100%
-    } 
-    
-    .text__index p{
-        padding: 10px 15px 5px;
-        text-align: justify;
-        font-size: 1rem;
-        margin-left: auto;
-        margin-right: auto;}
-
-    /* PROJECT */
-
-    .buttom__back, .buttom__up{
-        background-color: #7f8e57;
-        font-size: 35px;
-        padding: 5px;
-        border-radius: 7px 35px;
-        box-shadow: 5px 5px 5px #383f3a;
-        margin: 2% 5% 0%;
-    }
-
-    #project01{
-            display: grid;
-            grid-template-areas:
-            "number01 berrino01"
-            "title1 title1"
-            "text__info01 text__info01"
-            "link01 link01";
-            grid-template-columns: 35% 65%;
-            grid-template-rows: 0.4fr 0.3fr 0.3fr 0.2fr;
-    }
-    
-    /* areas de la grilla projecto01 */
-    .number01 {
-                grid-area: number01;
-                display: flex;
-                flex-flow: row nowrap;
-                justify-content: flex-end;
-                align-items: center;
-                font-size: 10em;
-    }
-
-    .berrino01{grid-area: berrino01;}
-    .berrino01 img{
-            width: 90%;
-            margin-top: 15%;
-            margin-left: auto;
-            margin-right: auto;
-    }
-    .title1{
-            grid-area: title1;
-            margin-left: auto;
-            margin-right: auto;
-    }
-    
-    .text__info01{
-            grid-area: text__info01;
-            text-align: justify;
-            margin: 5px 5%;
-    }
-    
-    .link01{
-            grid-area: link01;
-            margin-right: 10%;
-    }
-    
-    .title01, .title02{
-            /* formato para "project" */
-            color:#545f3a;
-            font-size: 1.5rem;
-    }
-    .title001, .title002{
-            font-size: 3.5rem;
-    }
-    
     #project02{
-            display: grid;
-            grid-template-areas:
-            "genaro02 number02"
-            "title2 title2"
-            "text__info02 text__info02"
-            "link02 link02";
-            grid-template-columns: 65% 35%;
-            grid-template-rows: 0.4fr 0.3fr 0.3fr 0.2fr;
+        display: grid;
+        grid-template-areas:
+        "number02 img02"
+        "info02 info02";
+        grid-template-columns: 0.4fr 0.6fr;
+        grid-template-rows: 0.5fr auto;
     }
-    
-    /* areas de la grilla projecto01 */
-    .number02{
-            grid-area: number02;
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: flex-start;
-            align-items: center;
-            font-size: 10em;
-    }
-    .genaro02{grid-area: genaro02;}
-    .genaro02 img{
-            width: 90%;
-            margin-top: 15%;
-            margin-left: auto;
-            margin-right: auto;
-    }
-    .title2{
-            grid-area: title2;
-            margin-left: auto;
-            margin-right: auto;
-    }
-    .text__info02{
-            grid-area: text__info02;
-            text-align: justify;
-            margin: 5px 5%;
-    }
-    .link02{grid-area: link02;}
+      /* areas de la grilla */
+    .number02{grid-area: number02;}
+    .img02{grid-area: img02;}
+    .info02{grid-area: info02;}
 
-    /* VIEW>>> PROJECT01 */
-    .plan01{
-        width: 80%;
-    }
-
-    .outside, .inside, .toilets{
+    .project-number{
+        font-size: 12rem;
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-left: 5%;
-        margin-bottom: 2%;
     }
 
-    .outside img , .inside img, .toilets img{padding: 10px;}
-
-    /* VIEW>>> PROJECT02 */
-    #grid__project02{
-        display: grid;
-        grid-template-areas: 
-        "foundation"
-        "metalic__structure"
-        "concrete_beams"
-        "main__level"
-        "slabs"
-        "water"
-        "sewer"
-        "gas";
-        grid-template-columns: 100%;
-        grid-template-rows: 0.7fr 0.8fr 0.4fr 0.5fr 0.8fr 0.8 1fr 1fr ;
-    }
-    
-    .foundation{grid-area:foundation;}
-    .metalic__structure{grid-area:metalic__structure;}
-    .concrete_beams{grid-area:concrete_beams;}
-    .main__level{grid-area:main__level;}
-    .slabs{grid-area:slabs;}
-    .water{grid-area:water ;}
-    .sewer{grid-area:sewer;}
-    .gas{grid-area:gas;}
-    
-    .plan{
-        width: 80%;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 10px;
-    }
-    
-    article p{
-        text-align: justify;
-        margin-bottom: 10px;
-        padding: 0px 5%;
+    .project-img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 5%;
     }
 
-    /* ABOUT ME */
-    
+    .text-project{
+        font-size: 1rem;
+        font-weight: 300;
+    }
+
+    .title-2{margin-top: -5vh;}
+
+
+/* ABOUT ME */    
     #grid__about{
         display: grid;
         grid-template-areas: 
-        "photo"
-        "profile"
-        "languague"
-        "location"
-        "experience"
-        "skill"
-        "education";
-        grid-template-columns: 100%;
-        grid-template-rows: 1fr 0.4fr 0.2fr 0.2fr repeat(4,auto);
+        "photo photo"
+        "profile profile"
+        "languague location"
+        "experience experience"
+        "skill skill"
+        "education education";
+        grid-template-columns: 0.5fr 0.5fr;
+        grid-template-rows: 1fr 0.5fr 0.3fr repeat(4,auto);
     }
 
-    .photo{grid-area: photo; margin-top: 8vh;}
-    .photo img{width: 80%;}
+    .photo{grid-area: photo; margin-top: 30px;}
+    .photo img{width: 300px;}
     .profile{grid-area: profile; margin-top: 0px;}
     .languague{grid-area: languague;}
     .location{grid-area: location;}
     .experience{grid-area: experience;}
     .skill{grid-area: skill;}
-    .skill__icon img{
-        width: 10%;
-    }
-    
+    .skill img{ width: 50%; }
     .skill__icon{
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: space-between;
-        align-items:center ;
+        display: grid;
+        grid-template-columns: 0.3fr 0.7fr;
+        grid-template-rows: repeat(7, auto);
+        justify-content: center;
+        align-items: center;
+        margin-left: 10%;
     }
+
     .education{grid-area: education;}
     
-    .title{
-        font-size: 1.4em;
-        }
-    .title, .title__sub, .date, .text__about, .title__sub__01{
-        margin: 0px 20px;}
-
-    .text__about{margin-bottom: 20px;}
-    
-    /* CONTACT */
-    #grid__contact{
-        display: grid;
-        grid-template-areas: 
-        "menssage"
-        "form"
-        "icon__contact";
-        grid-template-columns: 100%;
-        grid-template-rows: 0.2fr 2fr 0.4fr;
+    .title__about{
+        font-size: 2rem;
+        text-align: start;
+        padding: 3vh 0;
+        margin-left:10% ;
     }
 
-    /* nombre de las areas */
-    .menssage{grid-area: menssage;}
-    .text__contact{
-        margin: 10px 20%;
+    .languague h2, .location h2{ text-align: center;}
+
+    .title__sub{
         text-align: justify;
+        font-size: 1.2rem;
+        padding: 5px 2%;
+        margin: 0px 10% 0px 8% ;
     }
 
-    .end{
-        text-align: center;
-        padding: 5vw;
-        
-    }
-
-    .firma{
-        text-align: center;
-        padding: 5px;
-        
-    }
-
-    .icon__contact{grid-area: icon__contact;}
-    .icon__contact img{
-        width: 5%;
-        margin-left: 30vw;
-        padding: 10px 0px;
-    }
-    form{grid-area: form;}
-    form input{
-        width: 70%;
-        padding-bottom: 10px;
-        margin-bottom: 10px;
-    }
-    form textarea{
-        margin-bottom: 10px;
-        width: 70%;
-    }
-
-    .boton{
-        width: 15%;
-    }
+    .date{margin-left: 10%;}
+    .text__about{ margin: 0 10% 2vh 10%;}
+    .languague p, .location p{text-align: center;}
 
 }
 
+/******** 
+DESKTOP 
+*******/
 
-/***************** 
-DESKTOP
-******************/
+@media (min-width:1200px){
+/* index */
+    .title-name{font-size: 2.5rem;}
 
-@media (min-width: 1024px){
-    
-    .logo{
-        width: 100px;
-        margin: 20px 0px 0px 50px;
-    }
-
-    /* MENU HAMBURGUESA */
-    .menu__btn{
-        display: none; /*para ocultar el icono de la barra*/
-    }
-    #check{
-        display: none; /*para ocultar la opcion de check*/
-    }
-
-    nav{
-        width: 100%;
-        display: flex;
-        justify-content: space-between; /*para que los elemenos estes espaciados equivalente entre si*/
-        align-items: center;
-        padding: 5px;
-    }
-
-    .nav__links li{
-        display: inline-block; /*menu de manera horizontal*/
-        margin-right: 80px;
-    }
-
-    #close__td{display: none;}
-
-    .nav__links li a{
-        font-size: 2em;
-        font-weight: 300;
-    }
-
-    .portada img{
-        width: 55%;
-        padding: 2px;
-    }
-
-    /* INDEX */
-    #grid__index{
-        display: grid;
-        grid-template-areas:
-        "portada portada portada" /*1 fila*/
-        "name name name" /*2 fila*/
-        "icon__home text__index none"; /*3 fila*/
-        grid-template-columns: 15% auto 15%; /*medidas primera columna*/
-        grid-template-rows: 1fr 0.4fr auto ; /*medidas para las filas*/
-    }
-
-    /* Nombre de cada area */
-    header{grid-area: header;}    
-    .portada{grid-area: portada;}
-    .name{
-        grid-area: name;
-        padding: 3px;
-    }
-    .icon__home{
-        grid-area: icon__home;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-    }
-    .icon__home img{
-        width: 40%;
-        margin-left: 50px ;
-    }
-
-    .text__index{grid-area: text__index;}
-    footer{grid-area: footer;}
-
-    .name h1 {
-        font-size: 2.5em; /*tamaño del titulo*/
-    } 
-    
-    .buttom__up{
-        display: none;
-    }
-
-    /* 
-    PROJECT 
-    */
-
+/* PROJECT */
     #project01{
         display: grid;
         grid-template-areas:
-        "number01 berrino01 title1"
-        "number01 berrino01 text__info01"
-        "number01 berrino01 link01";
-        grid-template-columns: 25% auto 35%;
-        grid-template-rows: 0.5fr 1fr 0.4fr 0.2fr;
+        "number01 img01 info01";
+        grid-template-columns: 0.2fr 0.4fr 0.4fr;
+        grid-template-rows: 1fr;
+        width: 80%;
+        margin-left: 10%;
     }
-
-    .number01{
-        grid-area: number01;
-        font-size: 20rem;
-        display: flex;
-        justify-content:flex-end;
-        align-items: center;
-    }
-    .berrino01{grid-area: berrino01;}
-    .title1{
-        grid-area: title1;
-        margin-top: 10vh;
-    }
-    .berrino01 img{ 
-        width: 100%;
-        margin-top: 10vh;
-    }
-    .text__info01{
-        grid-area: text__info01;
-        padding: 10px;
-    }
-    .link01{grid-area: link01;}
+    /* areas de la grilla */
+    .number01{grid-area: number01;}
+    .img01{grid-area: img01;}
+    .info01{grid-area: info01;}
 
     #project02{
         display: grid;
-        grid-template-areas: 
-        "genaro02 title2 number02"
-        "genaro02 text__info02 number02"
-        "genaro02 link02 number02";
-        grid-template-columns: 35% auto 27%;
-        grid-template-rows: 0.5fr 1fr 0.4fr 0.3fr;
+        grid-template-areas:
+        "info02 img02 number02 ";
+        grid-template-columns: 0.4fr 0.4fr 0.2fr;
+        grid-template-rows: 1fr;        
+        width: 80%;
+        margin-left: 10%;
     }
-
+      /* areas de la grilla */
     .number02{
         grid-area: number02;
-        font-size: 20rem;
-        display: flex;
-        justify-content:flex-start;
+        justify-content: start;
         align-items: center;
     }
-    .genaro02{
-        grid-area: genaro02;
-    }
+    .img02{grid-area: img02;}
+    .info02{grid-area: info02;}
 
-    .genaro02 img{
-        width: 100%;
-        margin-top: 25vh;
-    }
-    .title2{
-        grid-area: title2;
-        margin-top: 25vh
-    }
-    .text__info02{grid-area: text__info02;}
-
-    .link02{grid-area: link02;}
-        
-   /* VIEW>>> PROJECT01 */
-    .plan01{
-        width: 20%;
-    }
-
-
-    .outside{
+    .project-number{
+        font-size: 12rem;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-left: 5%;
-        margin-bottom: 2%;
+        justify-content: center;
     }
 
-    .inside{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-left: 5%;
-        margin-bottom: 2%;
-    }
-    .toilets{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-left: 5%;
-    }
-
-    .outside img , .inside img, .toilets img{padding: 10px;}
-    
-    
-    /* VIEW>>> PROJECT02 */
-
-    .buttom__back, .buttom__up{
-        display: inline-block;
-        background-color: #7f8e57;
-        font-size: 35px;
-        padding: 5px;
-        border-radius: 7px 35px;
-        box-shadow: 5px 5px 5px #383f3a;
-        margin: 2% 5% 0%;
-    }
-    #grid__project02{
-        display: grid;
-        grid-template-areas: 
-        "foundation"
-        "metalic__structure"
-        "concrete_beams"
-        "main__level"
-        "slabs"
-        "water"
-        "sewer"
-        "gas";
-        grid-template-columns: 100%;
-        grid-template-rows: 0.7fr 0.8fr 0.4fr 0.5fr 0.8fr 0.8 1fr 1fr ;
-    }
-    .foundation{grid-area: foundation;}
-    .metalic__structure{grid-area: metalic__structure;}
-    .concrete_beams{grid-area:concrete_beams;}
-    .main__level{grid-area:main__level;}
-    .slabs{grid-area: slabs;}
-    .water{grid-area: water;}
-    .sewer{grid-area: sewer;}
-    .gas{grid-area: gas;}
-
-
-    .foundation, .metalic__structure, .main__level, .slabs {
+    .project-img{
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 0px 4%;
-    }
-    
-    .water, .sewer, .gas{
-        display: grid;
-        grid-template-columns: 20% auto 40%;
-        grid-template-rows:100% ;
-        align-items: center;
-    }
-    
-    .plan__container{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        padding-right: 5%;
     }
 
-    .plan{
-        width: 40%;
-        padding: 10px;
+    .text-project{
+        font-size: 1.2rem;
+        font-weight: 300;
     }
 
-    .plan__text{
-        justify-self: stretch;
-    }
-    
-    article p{
-        text-align: justify;
-        margin-bottom: 10px;
-        padding: 0px 5%;
-    }
+    .title-2{margin-top: -5vh;}
 
+    /* transformacion aumento de escala de imagenes de planos */
+    .scaled{transition: transform .2s;}
 
-    /*
-    ABOUT ME   
-    */
+    .scaled:hover{transform: scale(1.5);}
+
+/* ABOUT ME */
 
     #grid__about{
         display: grid;
         grid-template-areas: 
-        "photo profile"
-        "photo languague"
-        "photo location"
-        "skill experience"
-        "education education";
-        grid-template-columns: 40% 60%;
-        grid-template-rows: 1fr 0.5fr 0.3fr auto 2fr;
+        "photo profile profile"
+        "photo languague location"
+        "skill experience experience"
+        "education education education";
+        grid-template-columns: 0.4fr 0.2fr 0.4fr;
+        grid-template-rows: 0.5fr 0.5fr auto 2fr;
     }
 
+    .profile{grid-area: profile;}
     .photo{
         grid-area: photo;
         justify-self: center;
         align-self: center;
     }
     .photo img{
-        width: 70%; /*respecto del main*/
+        width: 80%; 
         border-radius:  50% 10%;
         display: block; /*para que se pueda centrar con margin*/
         margin-left: auto;
         margin-right: auto;
         box-shadow:5px 5px 5px #545f3a;
     }
-    .profile{grid-area: profile;}
     .languague{grid-area: languague;}
     .location{grid-area: location;}
     .experience{grid-area: experience;}
     .skill{grid-area: skill; margin-left: 10%;}
     .skill__icon{
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: flex-start;
+        display: grid;
+        grid-template-columns: 0.2fr 0.7fr;
+        grid-template-rows: repeat(7, auto);
+        justify-content: center;
         align-items: center;
+        margin: 5% 0;
     }
-    .skill__icon img{
-        width: 15%;
-    }
+    .skill__icon img{ width: 100%;}
 
     .skill__icon p{
         color: #545f3a;
-        font-weight: 600;
+        font-weight: 400;
         text-align: center;
     }
 
-    .reset {
-        clear: both;
+    .education{grid-area: education;}
+    .education h2{margin-left: 5%;}
+
+    .title__about{
+        font-size: 3rem;
+        text-align: start;
+        padding: 3vh 0;
     }
 
-    .education{grid-area: education; margin-left: 5%;}
-
-    .text__about{margin: 0px 5% 20px 0px;}
-
-    /* CONTACT */
-    #grid__contact{
-        display: grid;
-        grid-template-areas: 
-        "none menssage ."
-        "icon__contact form .";
-        grid-template-columns: 20% auto 20%;
-        grid-template-rows: 0.2fr 0.5fr ;
-        height: 100vh;
-    }
-
-    /* nombre de las areas */
-    .menssage{grid-area: menssage;}
-    .text__contact{
+    .title__sub{
         text-align: justify;
-        margin: 10px 0px;
+        font-size: 1.5rem;
+        padding: 5px 2%;
+        margin: 0px 10% 0px 8% ;
     }
 
-    .end{
-        text-align: center;
-        margin-bottom: 10px;
-    }
-
-    .firma{
-        text-align: center;
-    }
-
-    .icon__contact{
-        grid-area: icon__contact;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-    .icon__contact img{
-        width: 20%;
-        margin-left: 50%;
-    }
-
-    form{grid-area: form;}
-    form input{
-        width: 80%;
-        padding-bottom: 10px;
-        margin-bottom: 10px;
-    }
-    form textarea{
-        margin-bottom: 10px;
-        width: 80%;
-    }
-
-    .boton{
-        width: 10%;
-    }
-
-
+    .date{margin-left: 10%;}
+    .text__about{ margin: 0 10% 2vh 10%;}
+    .languague p, .location p{text-align: center;}
 
 }
