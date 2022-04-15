@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/32b8b1fb6e.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../style/style.css">
+
+    <title> IG | CIVIL ENGINEER</title>
+</head>
+<body id="grid">
+    <!-- ENCABEZADO -->
+    <header class="border">
+        <!-- MENU DE NAVEGACION -->        
+        <nav >
+            <!-- MENU HAMBURGUESA -->
+            <div>
+                <img class="logo" 
+                srcset="../asset/logo-mobile.png 479w, ../asset/logo-desktop.png 1024w"
+                sizes="(max-width: 479px) 200px,
+                (max-width:1024px) 300px"
+                src="../asset/logo-mobile.png" alt="logo">
+            </div>
+
+            <input type="checkbox" id="check">
+            <label for="check" class="menu__btn">
+                <i class="fas fa-bars"></i>
+            </label>
+
+            <ul class="nav__links">
+                <li><a href="contact.html" class="active close" id="close__td">&#60;</a></li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="projects.html">Project</a></li>
+                <li><a href="about-me.html">About me</a></li>
+                <li> <a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL DEL BODY -->
+    <main id="grid__contact">
+        <!-- Informacion de contacto -->
+        <div class="menssage">
+            <p class="text text__contact">I’m not currently open to work as freelancer but I’m up to answer questions or comments about the topics discussed on this page.  Reach me out by the contact form or by social media.</p>
+            <p class="text end">Regards.</p>
+            <p class="text end firma">Ignacio Gómez.</p>
+        </div>
+
+        <!-- Formulario de contacto -->
+        <form action="#">
+            <input type="text" name="name" placeholder="  Name">
+            <input type="text" name="email" placeholder="  Email">
+            <textarea name="message" id="" placeholder="  Message" cols="30" rows="10"></textarea>
+            <input class="boton" type="submit" value="Submit">
+        </form>
+
+        <!-- iconos de contacto -->
+        <div class="icon__contact">
+            <a href="https://www.linkedin.com/in/ignacio-gomez93/" target="_blank"> <img src="../asset/linkedin-img.png" alt="linkedin" ></a>
+            <a href="https://www.instagram.com/j.ignacio.gomez/" target="_blank"><img src="../asset/instagram-img.png" alt="instagram" ></a>   
+        </div>
+    </main>
+
+    <!-- PIE DE PAGINA -->
+    <footer class="footer">
+        <hr>
+        <p><a href="https://www.linkedin.com/in/galeano19maria/" target="_blank">Create by Jo Galeano</a></p>
+    </footer>
+</body>
+</html>

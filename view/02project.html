@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet"> 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/32b8b1fb6e.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../style/style.css">
+    <title> IG | CIVIL ENGINEER</title>
+</head>
+<body id="grid">
+    <!-- ENCABEZADO -->
+    <header class="border">
+        <!-- MENU DE NAVEGACION -->        
+        <nav >
+            <!-- MENU HAMBURGUESA -->
+            <div>
+                <img class="logo" 
+                srcset="../asset/logo-mobile.png 479w, ../asset/logo-desktop.png 1024w"
+                sizes="(max-width: 479px) 200px,
+                (max-width:1024px) 300px"
+                src="../asset/logo-mobile.png" alt="logo">
+            </div>
+
+            <input type="checkbox" id="check">
+            <label for="check" class="menu__btn">
+                <i class="fas fa-bars"></i>
+            </label>
+
+            <ul class="nav__links">
+                <li><a href="02project.html" class="active close" id="close__td">&#60;</a></li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="projects.html">Project</a></li>
+                <li><a href="about-me.html">About me</a></li>
+                <li> <a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- REDIRECCIONAR A LA PAGINA DE PROYECTOS -->
+    <div>
+        <a href="../view/projects.html" id="02project" class="buttom__back"> <<<</a>
+    </div>
+        
+    <section>
+        <!-- PORTADA DEL PROYECTO 02 -->
+        <div id="project02">
+            <div class="title2">
+                <p class="title02 border">Project</p>
+                <p class="title002 border">Genaro</p>
+            </div>
+            
+            <div class="text__info02 border">
+                <p>This project consists of a single-family dwelling located in Chubut - Argentina.</p>
+                <p>The house is 320 square meters which was designed with a focus on the kichen due to the fact that the owner is a professional chef. For modeling I worked with 5 Revit files and links Architecture, Structure, Gas and Ventilation, Electricity and Plumbing.</p>
+            </div>
+            <div class="genaro02 border">
+                <img src="../asset/01-project-genaro.png" alt="house project bogado" >
+            </div>            
+            <div class="number02 border">
+                <p>02</p>        
+            </div>
+        </div>
+
+    <!-- CONTENIDO PRINCIPAL DEL BODY -->
+    <main id="grid__project02">
+            <!-- INFORMACION SOBRE EL PROYECTO -->
+            <article class="foundation">
+                <h2 class="title_p02">Foundation</h2>
+                <img src="../asset/01-foundation.png" alt="foundation plan" class="plan">
+                <div class="plan__text">
+                    <p>The entire structure was calculated using the software RFEM 5 with non-linear models. Imperfection, wind, earthquake, and snow loads were included to a PΔ+pδ analysis with load steps. Besides, the bearing capacity of the soil was determined through a soil-structure interaction (SSI) analysis based on three soil studies and one SPT.</p>
+                    <p>The foundation was designed with both isolated and combined bases, and braced beams.</p>
+                </div>
+                </article>
+
+            <article class="metalic__structure">
+                <h2 class="title_p02">Metalic Structure</h2>
+                <div class="plan__text">
+                    <p>The metal structure forms a roofless pergola over the first-floor terrace. It was solved by using cold rolled profiles as beams and columns, and for the main curved beam a blacksmith was needed.</p>
+                    <p>The absence of a cover in the metal structure means that the main design loads are accidental loads.</p>
+                </div>
+                <img src="../asset/01-melatic-structure.png" alt="metalic structure plan" class="plan">
+            </article>
+
+            <article class="concrete_beams">
+                <h2 class="title_p02">Exposed concrete beams.</h2>
+                <div class="plan__text">
+                    <p>The architectural design framed the exterior spaces using exposed concrete beams. As a consequence, a 12-meter-long beam (without the contribution of loads from any slab) had to be solved.</p>
+                    <p>The structural design of this element, on the one hand, contemplated a counter-sag to accomplish the admissible deformations, and, on the other hand, the study of the twists in extreme nodes due to the stiffness offered by the intervening structural elements. For this, the construction stages were modeled in the structural calculation software, that is, adding stiffnesses and loads in the same order as in the real construction.</p>
+                </div>
+            </article>
+
+            <article class="main__level">
+                <h2 class="title_p02">Main Level</h2>
+                <div class="plan__text">
+                    <p>The main level was designed from the use of the kitchen space. The client's requirements were to have an internal patio, two bedrooms, a laundry room, a two-car garage and a yoga room with a small attached kitchen. This distribution can be seen on the plan.</p>
+                </div>
+                <img src="../asset/01-main-level.png" alt="main level plan" class=" plan">
+            </article>
+
+            <article class="slabs">
+                <h2 class="title_p02">Slabs</h2>
+                <img src="../asset/01-slabs.png" alt="slabs plan" class="plan">
+                <div class="plan__text">
+                    <p>Most of the slabs are made with prestressed joists. For these slabs, the instances joists, blocks/bricks, rebars and concrete compression layer were modeled to make the metric calculation easier.</p>
+                    <p>Besides, the yoga room was required to be located under a solid fair-faced concrete slab. Inverted beams were included in this slab in order to hide them.</p>
+                    <p>A final type of slab corresponds to the staircase. The steps are executed with masonry to be able to bridge the difference between the inclined slabs.</p>
+                </div>
+            </article>
+
+            <article class="water">
+                <h2 class="title_p02">Domestic Water</h2>
+                <div class="plan__text">
+                    <p>The domestic cold and hot water was resolved including a reserve tank, external faucets and, due to the distance between kitchen and bathrooms, a double water heater system for hot water.</p>
+                    <p>The level of detail includes pipes, plumbing fixtures, pipe fittings and accesories, and pipe insulation.</p>
+                </div>
+                <div class="plan__container">
+                    <img src="../asset/01-dw-1.png" alt="domestic plan" class="water01 plan">
+                    <img src="../asset/01-dw-2.png" alt="domestic plan" class="water02 plan">
+                </div>                
+            </article>
+
+            <article class="sewer">
+                <h2 class="title_p02">Sewer</h2>
+                <div class="plan__container">
+                    <img src="../asset/01-serwer-1.png" alt="sewer plan" class="sewer01 plan">
+                    <img src="../asset/01-serwer-2.png" alt="sewer plan" class="sewer02 plan">
+                </div>
+                <div class="plan__text">
+                    <p>For the sewage system, the difficulty was the distance between the areas to be served, so there is a nucleus with the two kitchens (ground floor and upper floor), another nucleus with suite bathrooms and finally a toilet.</p>
+                    <p>Each nucleus was resolved separately with its own inspection access and ventilation system; and then joined together before flowing into the local treatment system (septic tank).</p>
+                </div>
+            </article>
+
+            <article class="gas">
+                <h2 class="title_p02">Gas and ventilation</h2>
+                <div class="plan__text">
+                    <p>As for the gas, the pipes, adjustments and accessories were modeled. While for ventilation, forced systems and water heater exhaust were resolved. This exhaust required the coordination between the ground floor and the upper floor to model the ventilation ducts according to the local regulations.</p>
+                </div>
+                    <div class="plan__container">
+                    <img src="../asset/01-gas-1.png" alt="gas plan" class="gas01 plan">
+                    <img src="../asset/01-gas-2.png" alt="domestic plan" class="gas02 plan">
+                </div>                
+            </article>
+            
+        </section>
+
+        <!-- REDIRECCIONA AL PRINCIPIO DEL PROYECTO 02 -->
+        <div>
+            <a href="#02project" class="buttom__up">^</a>
+        </div>
+    </main>
+
+    <!-- PIE DE PAGINA -->
+    <footer class="footer">
+        <hr>
+        <p><a href="https://www.linkedin.com/in/galeano19maria/" target="_blank">Create by Jo Galeano</a></p>
+    </footer>
+    
+</body>
+</html>
