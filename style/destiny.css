@@ -1,0 +1,356 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  /*elimina el estilo en las listas*/
+  text-decoration: none;
+  /*elimina las viñetas*/
+  user-select: none;
+  /*impide seleccionar el texto*/
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /*para que como minimo sea el viewport*/
+  background-color: white;
+}
+
+/* justificacion de todos los parrafos */
+p {
+  text-align: justify;
+}
+
+body {
+  font-family: Quicksand, Arial, Helvetica, sans-serif;
+}
+
+/*VARIABLES - PALETA DE COLORES */
+/* color del texto predeterminado*/
+/*color secundario del texto*/
+/*color titulos*/
+/*color subtitulos*/
+/*color para sombras*/
+/*fondo de links*/
+/*color de texto al aplicar hover*/
+/*color de animacion 1 link*/
+/*color de animacion 2 link*/
+/*MOBILE*/
+@media (max-width: 768px) {
+  /*ABOUT ME*/
+  #grid__about {
+    display: grid;
+    grid-template-areas: "photo" "profile" "languague" "location" "experience" "skill" "education";
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 0.5fr 0.5fr 0.3fr repeat(4, auto);
+  }
+
+  .photo {
+    grid-area: photo;
+    margin-top: 30px;
+  }
+
+  .photo img {
+    width: 300px;
+  }
+
+  .profile {
+    grid-area: profile;
+    margin-top: 0px;
+  }
+
+  .languague {
+    grid-area: languague;
+  }
+
+  .location {
+    grid-area: location;
+  }
+
+  .experience {
+    grid-area: experience;
+  }
+
+  .skill {
+    grid-area: skill;
+  }
+
+  .skill img {
+    width: 100%;
+  }
+
+  .skill__icon {
+    display: grid;
+    grid-template-columns: 0.2fr 0.7fr;
+    grid-template-rows: repeat(7, auto);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .education {
+    grid-area: education;
+  }
+
+  .title__about {
+    font-size: 1.8rem;
+    text-align: center;
+    padding-bottom: 3vh;
+    color: #383f3a;
+  }
+
+  .title__sub {
+    text-align: justify;
+    font-size: 1.2rem;
+    padding-bottom: 2vh;
+    color: #5b6b2e;
+  }
+
+  .title, .title__sub, .date, .text__about, .title__sub__01 {
+    margin: 0px 10%;
+  }
+
+  .date {
+    margin-bottom: 1vh;
+  }
+
+  .text__about {
+    margin-bottom: 2vh;
+  }
+
+  .languague p, .location p {
+    text-align: center;
+  }
+}
+/*TABLET*/
+@media (min-width: 769px) and (max-width: 1199px) {
+  /* ABOUT ME */
+  #grid__about {
+    display: grid;
+    grid-template-areas: "photo photo" "profile profile" "languague location" "experience experience" "skill skill" "education education";
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-rows: 1fr 0.5fr 0.3fr repeat(4, auto);
+  }
+
+  .photo {
+    grid-area: photo;
+    margin-top: 30px;
+  }
+
+  .photo img {
+    width: 300px;
+  }
+
+  .profile {
+    grid-area: profile;
+    margin-top: 0px;
+  }
+
+  .languague {
+    grid-area: languague;
+  }
+
+  .location {
+    grid-area: location;
+  }
+
+  .experience {
+    grid-area: experience;
+  }
+
+  .skill {
+    grid-area: skill;
+  }
+
+  .skill img {
+    width: 50%;
+  }
+
+  .skill__icon {
+    display: grid;
+    grid-template-columns: 0.3fr 0.7fr;
+    grid-template-rows: repeat(7, auto);
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+  }
+
+  .education {
+    grid-area: education;
+  }
+
+  .title__about {
+    font-size: 2rem;
+    text-align: start;
+    padding: 3vh 0;
+    margin-left: 10%;
+    color: #383f3a;
+  }
+
+  .title__sub {
+    text-align: justify;
+    font-size: 1.2rem;
+    padding: 5px 2%;
+    margin: 0px 10% 0px 8%;
+    color: #5b6b2e;
+  }
+
+  .languague h2, .location h2 {
+    text-align: center;
+  }
+
+  .date {
+    margin-left: 10%;
+  }
+
+  .text__about {
+    margin: 0 10% 2vh 10%;
+  }
+
+  .languague p, .location p {
+    text-align: center;
+  }
+}
+@media (min-width: 1200px) {
+  /* ABOUT ME */
+  #grid__about {
+    display: grid;
+    grid-template-areas: "photo profile profile" "photo languague location" "skill experience experience" "education education education";
+    grid-template-columns: 0.4fr 0.2fr 0.4fr;
+    grid-template-rows: 0.5fr 0.5fr auto 2fr;
+  }
+
+  .profile {
+    grid-area: profile;
+  }
+
+  .photo {
+    grid-area: photo;
+    justify-self: center;
+    align-self: center;
+  }
+
+  .photo img {
+    width: 80%;
+    border-radius: 50% 10%;
+    display: block;
+    /*para que se pueda centrar con margin*/
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 5px 5px 5px #545f3a;
+  }
+
+  .languague {
+    grid-area: languague;
+  }
+
+  .location {
+    grid-area: location;
+  }
+
+  .experience {
+    grid-area: experience;
+  }
+
+  .skill {
+    grid-area: skill;
+    margin-left: 10%;
+  }
+
+  .skill__icon {
+    display: grid;
+    grid-template-columns: 0.2fr 0.7fr;
+    grid-template-rows: repeat(7, auto);
+    justify-content: center;
+    align-items: center;
+    margin: 5% 0;
+  }
+
+  .skill__icon img {
+    width: 100%;
+  }
+
+  .skill__icon p {
+    color: rgba(84, 95, 58, 0.7882352941);
+    font-weight: 400;
+    text-align: center;
+  }
+
+  .education {
+    grid-area: education;
+  }
+
+  .education h2 {
+    margin-left: 5%;
+  }
+
+  .title__about {
+    font-size: 2.5rem;
+    color: #383f3a;
+    text-align: start;
+    padding: 3vh 0;
+  }
+
+  .title__sub {
+    text-align: justify;
+    font-size: 1.5rem;
+    color: #5b6b2e;
+    padding: 5px 2%;
+    margin: 0px 10% 0px 8%;
+  }
+
+  .date {
+    margin-left: 10%;
+  }
+
+  .text__about {
+    margin: 0 10% 2vh 10%;
+  }
+
+  .languague p, .location p {
+    text-align: center;
+  }
+}
+body {
+  font-family: Quicksand, Arial, Helvetica, sans-serif;
+}
+
+/*VARIABLES - PALETA DE COLORES */
+/* color del texto predeterminado*/
+/*color secundario del texto*/
+/*color titulos*/
+/*color subtitulos*/
+/*color para sombras*/
+/*fondo de links*/
+/*color de texto al aplicar hover*/
+/*color de animacion 1 link*/
+/*color de animacion 2 link*/
+.name {
+  text-align: center;
+  font-size: 2.5rem;
+  animation-duration: 5s;
+  animation-name: color__name;
+  animation-iteration-count: 1;
+  /* animacion al titulo*/
+}
+@keyframes color__name {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.name span {
+  color: #7f8e57;
+  font-family: Dosis, Quicksan, Arial, Helvetica, sans-serif;
+  font-size: 2.5rem;
+}
+
+.text-index {
+  font-size: 1.2rem;
+}
+
+/*# sourceMappingURL=destiny.css.map */

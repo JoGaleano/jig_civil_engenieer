@@ -1,0 +1,23 @@
+@import "../base/typography";
+@import "../base/color";
+
+.name {
+    text-align: center;
+    font-size:$size_title_desktop;
+    animation-duration: 5s;
+    animation-name: color__name;
+    animation-iteration-count: 1;
+        /* animacion al titulo*/
+        @keyframes color__name {
+            0%{opacity: 0;}
+            100%{opacity: 1;}
+        }
+        span{
+            color: $text-span;
+            font-family: Dosis, Quicksan, Arial, Helvetica, sans-serif;
+            font-size:$size_title_desktop;
+        }
+}
+
+.text-index{font-size: $size_text_desktop;}
+
