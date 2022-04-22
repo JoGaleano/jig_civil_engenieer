@@ -28,11 +28,15 @@ body {
   font-family: Quicksand, Arial, Helvetica, sans-serif;
 }
 
+/*MOBILE*/
+/*TABLET*/
+/*DESKTOP*/
 /*VARIABLES - PALETA DE COLORES */
 /* color del texto predeterminado*/
 /*color secundario del texto*/
 /*color titulos*/
 /*color subtitulos*/
+/*color fecha about me*/
 /*color para sombras*/
 /*fondo de links*/
 /*color de texto al aplicar hover*/
@@ -40,6 +44,90 @@ body {
 /*color de animacion 2 link*/
 /*MOBILE*/
 @media (max-width: 768px) {
+  /*HOME*/
+  .name {
+    font-size: 1.7rem;
+  }
+  .name span {
+    font-size: 1.7rem;
+  }
+
+  .text__index p {
+    font-size: 1rem;
+  }
+
+  /*PROJECT*/
+  #project01, #project02 {
+    display: grid;
+    grid-template-areas: "number01 img01" "info01 info01";
+    grid-template-columns: 0.4fr 0.6fr;
+    grid-template-rows: 0.5fr auto;
+  }
+
+  /* areas de la grilla */
+  .number01 {
+    grid-area: number01;
+  }
+
+  .img01 {
+    grid-area: img01;
+  }
+
+  .info01 {
+    grid-area: info01;
+  }
+
+  #project02 {
+    display: grid;
+    grid-template-areas: "number02 img02" "info02 info02";
+    grid-template-columns: 0.4fr 0.6fr;
+    grid-template-rows: 0.5fr auto;
+  }
+
+  /* areas de la grilla */
+  .number02 {
+    grid-area: number02;
+  }
+
+  .img02 {
+    grid-area: img02;
+  }
+
+  .info02 {
+    grid-area: info02;
+  }
+
+  .project-number {
+    font-size: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .project-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 4%;
+  }
+  .project-img img {
+    width: 100%;
+  }
+
+  .project-text {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+
+  .title-2 {
+    margin-top: -5vh;
+  }
+
+  #project-02, #project-01 {
+    width: 80%;
+    margin-left: 10%;
+  }
+
   /*ABOUT ME*/
   #grid__about {
     display: grid;
@@ -95,37 +183,162 @@ body {
   }
 
   .title__about {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     text-align: center;
-    padding-bottom: 3vh;
-    color: #383f3a;
+    padding-top: 3vh;
   }
 
   .title__sub {
-    text-align: justify;
     font-size: 1.2rem;
     padding-bottom: 2vh;
-    color: #5b6b2e;
   }
 
-  .title, .title__sub, .date, .text__about, .title__sub__01 {
+  .title__sub__edu {
+    text-align: justify;
+    font-size: 1.4rem;
+  }
+
+  .title, .title__sub, .date, .date_edu, .title__sub__edu, .text__about, .text__about_edu {
     margin: 0px 10%;
   }
 
-  .date {
+  .date, .date_edu {
     margin-bottom: 1vh;
   }
 
-  .text__about {
+  .text__about, .text__about_edu {
     margin-bottom: 2vh;
+    font-size: 1rem;
   }
 
   .languague p, .location p {
     text-align: center;
   }
+
+  /*CONTACT*/
+  #grid__contact {
+    display: grid;
+    grid-template-columns: 60%;
+    grid-template-rows: 0.5fr 1fr;
+    justify-content: center;
+    align-items: center;
+  }
+  #grid__contact .message p {
+    font-size: 1.2rem;
+  }
+  #grid__contact .message :nth-child(2) {
+    font-size: 0.96rem;
+  }
+  #grid__contact form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #grid__contact form .form_space {
+    width: 90%;
+    margin-bottom: 3vh;
+  }
+  #grid__contact .boton {
+    width: 35%;
+    font-size: 1rem;
+  }
 }
 /*TABLET*/
 @media (min-width: 769px) and (max-width: 1199px) {
+  /*HOME*/
+  .name {
+    font-size: 2rem;
+  }
+  .name span {
+    font-size: 2rem;
+  }
+
+  .text__index p {
+    font-size: 1.2rem;
+  }
+
+  /* PROJECT */
+  #project01, #project02 {
+    display: grid;
+    grid-template-areas: "number01 img01" "info01 info01";
+    grid-template-columns: 0.4fr 0.6fr;
+    grid-template-rows: 0.5fr auto;
+  }
+
+  /* areas de la grilla */
+  .number01 {
+    grid-area: number01;
+  }
+
+  .img01 {
+    grid-area: img01;
+  }
+
+  .info01 {
+    grid-area: info01;
+  }
+
+  #project02 {
+    display: grid;
+    grid-template-areas: "number02 img02" "info02 info02";
+    grid-template-columns: 0.4fr 0.6fr;
+    grid-template-rows: 0.5fr auto;
+  }
+
+  /* areas de la grilla */
+  .number02 {
+    grid-area: number02;
+  }
+
+  .img02 {
+    grid-area: img02;
+  }
+
+  .info02 {
+    grid-area: info02;
+  }
+
+  .project-number {
+    font-size: 12rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .project-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 5%;
+  }
+  .project-img img {
+    width: 100%;
+  }
+
+  .text-project {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+
+  .title-2 {
+    margin-top: -5vh;
+  }
+
+  #project-02, #project-01 {
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  /* transformacion aumento de escala de imagenes de planos */
+  .scaled {
+    transition: transform 0.2s;
+  }
+
+  .scaled:hover {
+    transform: scale(1.5);
+  }
+
   /* ABOUT ME */
   #grid__about {
     display: grid;
@@ -164,8 +377,8 @@ body {
     grid-area: skill;
   }
 
-  .skill img {
-    width: 50%;
+  .skill__icon img {
+    width: 30%;
   }
 
   .skill__icon {
@@ -186,7 +399,6 @@ body {
     text-align: start;
     padding: 3vh 0;
     margin-left: 10%;
-    color: #383f3a;
   }
 
   .title__sub {
@@ -194,26 +406,146 @@ body {
     font-size: 1.2rem;
     padding: 5px 2%;
     margin: 0px 10% 0px 8%;
-    color: #5b6b2e;
   }
 
-  .languague h2, .location h2 {
-    text-align: center;
-  }
-
-  .date {
+  .date, .date_edu {
     margin-left: 10%;
   }
 
-  .text__about {
+  .text__about, .text__about_edu, .title__sub__edu {
     margin: 0 10% 2vh 10%;
   }
 
-  .languague p, .location p {
-    text-align: center;
+  .languague h2, .languague p, .location h2, .location p {
+    margin-left: 20%;
+  }
+
+  /*CONTACT*/
+  #grid__contact {
+    display: grid;
+    grid-template-columns: 60%;
+    grid-template-rows: 0.5fr 1fr;
+    justify-content: center;
+    align-items: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  form input, form textarea {
+    width: 60%;
+    margin-bottom: 3vh;
+  }
+  form .boton {
+    width: 25%;
+    font-size: 1.2rem;
   }
 }
+/******** 
+DESKTOP 
+*******/
 @media (min-width: 1200px) {
+  /*HOME*/
+  .name {
+    font-size: 2.5rem;
+  }
+  .name span {
+    font-size: 2.5rem;
+  }
+
+  .text__index p {
+    font-size: 1.2rem;
+  }
+
+  /* PROJECT */
+  #project01, #project02 {
+    display: grid;
+    grid-template-areas: "number01 img01 info01";
+    grid-template-columns: 0.2fr 0.4fr 0.4fr;
+    grid-template-rows: 1fr;
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  /* areas de la grilla project01 */
+  .number01 {
+    grid-area: number01;
+  }
+
+  .img01 {
+    grid-area: img01;
+  }
+
+  .info01 {
+    grid-area: info01;
+  }
+
+  #project02 {
+    display: grid;
+    grid-template-areas: "info02 img02 number02 ";
+    grid-template-columns: 0.4fr 0.4fr 0.2fr;
+    grid-template-rows: 1fr;
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  /* areas de la grilla project02 */
+  .number02 {
+    grid-area: number02;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .img02 {
+    grid-area: img02;
+  }
+
+  .info02 {
+    grid-area: info02;
+  }
+
+  .project-number {
+    font-size: 12rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .project-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 5%;
+  }
+  .project-img img {
+    width: 100%;
+  }
+
+  .text-project {
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+
+  .title-2 {
+    margin-top: -5vh;
+  }
+
+  /* transformacion aumento de escala de imagenes de planos */
+  .scaled {
+    transition: transform 0.2s;
+  }
+
+  .scaled:hover {
+    transform: scale(1.5);
+  }
+
+  #project-02, #project-01 {
+    width: 80%;
+    margin-left: 10%;
+  }
+
   /* ABOUT ME */
   #grid__about {
     display: grid;
@@ -234,12 +566,6 @@ body {
 
   .photo img {
     width: 80%;
-    border-radius: 50% 10%;
-    display: block;
-    /*para que se pueda centrar con margin*/
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 5px 5px 5px #545f3a;
   }
 
   .languague {
@@ -268,16 +594,6 @@ body {
     margin: 5% 0;
   }
 
-  .skill__icon img {
-    width: 100%;
-  }
-
-  .skill__icon p {
-    color: rgba(84, 95, 58, 0.7882352941);
-    font-weight: 400;
-    text-align: center;
-  }
-
   .education {
     grid-area: education;
   }
@@ -288,40 +604,88 @@ body {
 
   .title__about {
     font-size: 2.5rem;
-    color: #383f3a;
     text-align: start;
     padding: 3vh 0;
   }
 
   .title__sub {
     text-align: justify;
-    font-size: 1.5rem;
-    color: #5b6b2e;
+    font-size: 1.4rem;
     padding: 5px 2%;
-    margin: 0px 10% 0px 8%;
+    margin: 0px 17% 0px 0%;
+  }
+
+  .title__sub__edu {
+    text-align: justify;
+    font-size: 1.4rem;
+    padding: 5px 2%;
+    margin: 0px 17% 0px 5%;
   }
 
   .date {
-    margin-left: 10%;
+    margin-left: 5%;
+  }
+
+  .date_edu {
+    margin-left: 8%;
   }
 
   .text__about {
-    margin: 0 10% 2vh 10%;
+    margin: 0 17% 2vh 5%;
+    font-size: 1.2rem;
+  }
+
+  .text__about_edu {
+    margin: 0 17% 2vh 8%;
+    font-size: 1.2rem;
   }
 
   .languague p, .location p {
     text-align: center;
+  }
+
+  /*CONTACT*/
+  #grid__contact {
+    display: grid;
+    grid-template-columns: 60%;
+    grid-template-rows: 0.5fr 1fr;
+    justify-content: center;
+    align-items: center;
+  }
+  #grid__contact .message p {
+    font-size: 1.2rem;
+  }
+  #grid__contact .message :nth-child(2) {
+    font-size: 0.96rem;
+  }
+  #grid__contact form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #grid__contact form .form_space {
+    width: 60%;
+    margin-bottom: 3vh;
+  }
+  #grid__contact form .boton {
+    width: 20%;
+    font-size: 1.2rem;
   }
 }
 body {
   font-family: Quicksand, Arial, Helvetica, sans-serif;
 }
 
+/*MOBILE*/
+/*TABLET*/
+/*DESKTOP*/
 /*VARIABLES - PALETA DE COLORES */
 /* color del texto predeterminado*/
 /*color secundario del texto*/
 /*color titulos*/
 /*color subtitulos*/
+/*color fecha about me*/
 /*color para sombras*/
 /*fondo de links*/
 /*color de texto al aplicar hover*/
@@ -329,7 +693,6 @@ body {
 /*color de animacion 2 link*/
 .name {
   text-align: center;
-  font-size: 2.5rem;
   animation-duration: 5s;
   animation-name: color__name;
   animation-iteration-count: 1;
@@ -346,11 +709,213 @@ body {
 .name span {
   color: #7f8e57;
   font-family: Dosis, Quicksan, Arial, Helvetica, sans-serif;
-  font-size: 2.5rem;
 }
 
 .text-index {
   font-size: 1.2rem;
+}
+
+body {
+  font-family: Quicksand, Arial, Helvetica, sans-serif;
+}
+
+/*MOBILE*/
+/*TABLET*/
+/*DESKTOP*/
+/*VARIABLES - PALETA DE COLORES */
+/* color del texto predeterminado*/
+/*color secundario del texto*/
+/*color titulos*/
+/*color subtitulos*/
+/*color fecha about me*/
+/*color para sombras*/
+/*fondo de links*/
+/*color de texto al aplicar hover*/
+/*color de animacion 1 link*/
+/*color de animacion 2 link*/
+/*VARIABLES - PALETA DE COLORES */
+/* color del texto predeterminado*/
+/*color secundario del texto*/
+/*color titulos*/
+/*color subtitulos*/
+/*color fecha about me*/
+/*color para sombras*/
+/*fondo de links*/
+/*color de texto al aplicar hover*/
+/*color de animacion 1 link*/
+/*color de animacion 2 link*/
+.link {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  overflow: hidden;
+}
+.link:hover {
+  animation: pulsate 1s ease-in-out;
+  color: white;
+}
+
+/* efecto sobre los links */
+.project-link {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  padding: 2% 5%;
+  background-color: #7f8e57;
+  border-radius: 5px 20px;
+}
+.project-link:hover {
+  animation: pulsate 1s ease-in-out;
+  color: white;
+}
+
+@keyframes pulsate {
+  0% {
+    box-shadow: 0 0 25px #7f8e57, 0 0 50px #383f3a;
+  }
+}
+hr {
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#project01 .project-number, #project02 .project-number {
+  font-family: Dosis, Quicksand, Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  text-shadow: 5px 5px 4px rgba(84, 95, 58, 0.7882352941);
+}
+#project01 .project-info, #project02 .project-info {
+  margin: 0 10%;
+  padding: 5% 0;
+}
+#project01 .project-info .title-1, #project02 .project-info .title-1 {
+  font-size: 2rem;
+}
+#project01 .project-info .title-2, #project02 .project-info .title-2 {
+  /* formato para nombre individual */
+  font-family: Dosis, Quicksand, Arial, Helvetica, sans-serif;
+  color: #5b6b2e;
+  font-size: 5rem;
+}
+#project01 .project-info .project-text, #project02 .project-info .project-text {
+  text-align: justify;
+}
+
+#album {
+  width: 80%;
+}
+
+.featurette-heading {
+  color: #545f3a;
+  font-family: dosis, Arial, Helvetica, sans-serif;
+  padding: 5%;
+}
+
+.lead {
+  padding: 0 5%;
+  font-size: 1rem;
+  color: rgb(12, 12, 12);
+}
+
+body {
+  font-family: Quicksand, Arial, Helvetica, sans-serif;
+}
+
+/*MOBILE*/
+/*TABLET*/
+/*DESKTOP*/
+/*VARIABLES - PALETA DE COLORES */
+/* color del texto predeterminado*/
+/*color secundario del texto*/
+/*color titulos*/
+/*color subtitulos*/
+/*color fecha about me*/
+/*color para sombras*/
+/*fondo de links*/
+/*color de texto al aplicar hover*/
+/*color de animacion 1 link*/
+/*color de animacion 2 link*/
+.photo img {
+  border-radius: 50% 10%;
+  display: block;
+  /*para centrar la imagen*/
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 5px 5px 5px rgba(84, 95, 58, 0.7882352941);
+}
+
+section .title__about {
+  font-weight: 400;
+  color: #383f3a;
+}
+section .text__about {
+  text-align: justify;
+}
+section article .title__sub, section article .title__sub__edu {
+  color: #5b6b2e;
+  font-weight: 400;
+}
+section article .date, section article .date_edu {
+  color: #0d1102;
+}
+
+.skill div img {
+  width: 100%;
+}
+.skill div p {
+  color: #5b6b2e;
+  font-family: Quicksand, Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+}
+.skill div p span {
+  color: #383f3a;
+}
+
+body {
+  font-family: Quicksand, Arial, Helvetica, sans-serif;
+}
+
+/*MOBILE*/
+/*TABLET*/
+/*DESKTOP*/
+/*VARIABLES - PALETA DE COLORES */
+/* color del texto predeterminado*/
+/*color secundario del texto*/
+/*color titulos*/
+/*color subtitulos*/
+/*color fecha about me*/
+/*color para sombras*/
+/*fondo de links*/
+/*color de texto al aplicar hover*/
+/*color de animacion 1 link*/
+/*color de animacion 2 link*/
+.boton {
+  letter-spacing: 2px;
+  background-color: #7f8e57;
+  text-transform: uppercase;
+  padding: 2%;
+  border-radius: 2px 10px;
+  color: white;
+}
+
+.buttom__back {
+  color: #383f3a;
+}
+
+.message :nth-child(2) {
+  font-style: italic;
+}
+.message p {
+  text-align: center;
+}
+
+form input, form textarea {
+  border: 1px solid #383f3a;
 }
 
 /*# sourceMappingURL=destiny.css.map */

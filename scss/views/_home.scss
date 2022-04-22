@@ -3,7 +3,6 @@
 
 .name {
     text-align: center;
-    font-size:$size_title_desktop;
     animation-duration: 5s;
     animation-name: color__name;
     animation-iteration-count: 1;
@@ -15,7 +14,6 @@
         span{
             color: $text-span;
             font-family: Dosis, Quicksan, Arial, Helvetica, sans-serif;
-            font-size:$size_title_desktop;
         }
 }
 

@@ -1,6 +1,75 @@
 /*MOBILE*/
 
 @media (max-width: 768px){
+    /*HOME*/
+    .name{
+        font-size: $size_title_mobile;
+        span{
+            font-size: $size_title_mobile;
+        }
+    }
+    .text__index{
+        p{
+            font-size:$size_mobile_text;
+        }
+    }
+
+    /*PROJECT*/
+    #project01{
+        display: grid;
+        grid-template-areas:
+        "number01 img01"
+        "info01 info01";
+        grid-template-columns: 0.4fr 0.6fr;
+        grid-template-rows: 0.5fr auto;
+    }
+    /* areas de la grilla */
+    .number01{grid-area: number01;}
+    .img01{grid-area: img01;}
+    .info01{grid-area: info01;}
+
+    #project02{
+        display: grid;
+        grid-template-areas:
+        "number02 img02"
+        "info02 info02";
+        grid-template-columns: 0.4fr 0.6fr;
+        grid-template-rows: 0.5fr auto;
+    }
+      /* areas de la grilla */
+    .number02{grid-area: number02;}
+    .img02{grid-area: img02;}
+    .info02{grid-area: info02;}
+
+    .project-number{
+        font-size: $size_project_number_mobile;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .project-img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 4%;
+        img{
+            width: 100%;
+        }
+    }
+
+    .project-text{
+        font-size: $size_mobile_text;
+        font-weight: 300;
+    }
+
+    .title-2{margin-top: -5vh;}
+
+    #project-02, #project-01{
+        width: 80%;
+        margin-left: 10%;
+    }
+
     /*ABOUT ME*/
     #grid__about{
         display: grid;
@@ -37,26 +106,139 @@
     .title__about{
         font-size:$size_title_mobile;
         text-align: center;
-        padding-bottom: 3vh;
-        color:$title;
+        padding-top: 3vh;
     }
     .title__sub{
-        text-align: justify;
         font-size: $size_subtitle_mobile;
         padding-bottom: 2vh;
-        color:$subtitle;
     }
-    .title, .title__sub, .date, .text__about, .title__sub__01{ margin: 0px 10%;}
+    .title__sub__edu{
+        text-align: justify;
+        font-size: $size_subtitle_desktop;
+    }
+    .title, .title__sub, .date, .date_edu, .title__sub__edu, .text__about, .text__about_edu{ margin: 0px 10%;}
 
-    .date{margin-bottom: 1vh;}
+    .date, .date_edu{margin-bottom: 1vh;}
 
-    .text__about{ margin-bottom: 2vh;}
+    .text__about, .text__about_edu{ 
+        margin-bottom: 2vh;
+        font-size: $size_mobile_text;
+    }
     .languague p, .location p{text-align: center;}
+
+    /*CONTACT*/
+    #grid__contact{
+
+        display: grid;
+        grid-template-columns: 60%;
+        grid-template-rows: 0.5fr 1fr;
+        justify-content: center;
+        align-items: center;
+    
+        .message{
+            p {font-size: $size_text_desktop;}
+    
+            :nth-child(2){
+                font-size: $size_text_desktop *0.8;
+            }
+        } 
+    
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .form_space{
+                width: 90%;
+                margin-bottom: 3vh ;
+                }
+            }
+            .boton{
+                width: 35%;
+                font-size: $size_mobile_text;
+            }
+        }
+
 }
 
 
 /*TABLET*/
 @media (min-width:769px) and (max-width:1199px){
+
+    /*HOME*/
+    .name{
+        font-size: $size_title_tablet;
+        span{
+            font-size: $size_title_tablet;
+        }
+    }
+    .text__index{
+        p{
+            font-size:$size_tablet_text;
+        }
+    }
+
+    /* PROJECT */
+    #project01{
+        display: grid;
+        grid-template-areas:
+        "number01 img01"
+        "info01 info01";
+        grid-template-columns: 0.4fr 0.6fr;
+        grid-template-rows: 0.5fr auto;
+    }
+    /* areas de la grilla */
+    .number01{grid-area: number01;}
+    .img01{grid-area: img01;}
+    .info01{grid-area: info01;}
+
+    #project02{
+        display: grid;
+        grid-template-areas:
+        "number02 img02"
+        "info02 info02";
+        grid-template-columns: 0.4fr 0.6fr;
+        grid-template-rows: 0.5fr auto;
+    }
+      /* areas de la grilla */
+    .number02{grid-area: number02;}
+    .img02{grid-area: img02;}
+    .info02{grid-area: info02;}
+
+    .project-number{
+        font-size: 12rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .project-img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 5%;
+        img{
+            width: 100%;
+        }
+    }
+
+    .text-project{
+        font-size: 1rem;
+        font-weight: 300;
+    }
+
+    .title-2{margin-top: -5vh;}
+
+    #project-02, #project-01{
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    /* transformacion aumento de escala de imagenes de planos */
+    .scaled{transition: transform .2s;}
+
+    .scaled:hover{transform: scale(1.5);}
+
     /* ABOUT ME */    
     #grid__about{
         display: grid;
@@ -78,7 +260,7 @@
     .location{grid-area: location;}
     .experience{grid-area: experience;}
     .skill{grid-area: skill;}
-    .skill img{ width: 50%; }
+    .skill__icon img{ width: 30%; }
     .skill__icon{
         display: grid;
         grid-template-columns: 0.3fr 0.7fr;
@@ -94,8 +276,7 @@
         font-size: $size_title_tablet;
         text-align: start;
         padding: 3vh 0;
-        margin-left:10%;
-        color:$title;  
+        margin-left:10%;  
     }
 
     .title__sub{
@@ -103,18 +284,124 @@
         font-size: $size_subtitle_tablet;
         padding: 5px 2%;
         margin: 0px 10% 0px 8% ;
-        color:$subtitle;
     }
 
-    .languague h2, .location h2{ text-align: center;}
-    .date{margin-left: 10%;}
-    .text__about{ margin: 0 10% 2vh 10%;}
-    .languague p, .location p{text-align: center;}
+    .date, .date_edu{margin-left: 10%;}
+    .text__about, .text__about_edu, .title__sub__edu{ margin: 0 10% 2vh 10%;}
+    .languague, .location{
+        h2 , p{ margin-left: 20%;}
+    }
+
+    /*CONTACT*/    
+    #grid__contact{
+        display: grid;
+        grid-template-columns: 60%;
+        grid-template-rows: 0.5fr 1fr;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        input, textarea{
+            width: 60%;
+            margin-bottom: 3vh 
+        }
+        .boton{
+            width: 25%;
+            font-size: $size_tablet_text;
+        }
+    }
+    
+
 
 }
 
+/******** 
+DESKTOP 
+*******/
 
 @media (min-width:1200px){
+    /*HOME*/
+    .name{
+        font-size: $size_title_desktop;
+        span{
+            font-size: $size_title_desktop;
+        }
+    }
+    .text__index{
+        p{
+            font-size:$size_text_desktop;
+        }
+    }
+    /* PROJECT */
+    #project01{
+        display: grid;
+        grid-template-areas:
+        "number01 img01 info01";
+        grid-template-columns: 0.2fr 0.4fr 0.4fr;
+        grid-template-rows: 1fr;
+        width: 80%;
+        margin-left: 10%;
+    }
+    /* areas de la grilla project01 */
+    .number01{grid-area: number01;}
+    .img01{grid-area: img01;}
+    .info01{grid-area: info01;}
+
+    #project02{
+        display: grid;
+        grid-template-areas:
+        "info02 img02 number02 ";
+        grid-template-columns: 0.4fr 0.4fr 0.2fr;
+        grid-template-rows: 1fr;        
+        width: 80%;
+        margin-left: 10%;
+    }
+      /* areas de la grilla project02 */
+    .number02{
+        grid-area: number02;
+        justify-content: start;
+        align-items: center;
+    }
+    .img02{grid-area: img02;}
+    .info02{grid-area: info02;}
+
+    .project-number{
+        font-size: $size_project_number_desktop;
+        display: flex;
+        justify-content: center;
+    }
+
+    .project-img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 5%;
+        img{
+            width: 100%;
+        }
+    }
+
+    .text-project{
+        font-size: $size_text_desktop;
+        font-weight: 300;
+    }
+
+    .title-2{margin-top: -5vh;}
+
+    /* transformacion aumento de escala de imagenes de planos */
+    .scaled{transition: transform .2s;}
+
+    .scaled:hover{transform: scale(1.5);}
+
+    #project-02, #project-01{
+        width: 80%;
+        margin-left: 10%;
+    }
 
     /* ABOUT ME */
 
@@ -135,14 +422,7 @@
         justify-self: center;
         align-self: center;
     }
-    .photo img{
-        width: 80%; 
-        border-radius:  50% 10%;
-        display: block; /*para que se pueda centrar con margin*/
-        margin-left: auto;
-        margin-right: auto;
-        box-shadow:5px 5px 5px #545f3a;
-    }
+    .photo img{width: 80%;}
     .languague{grid-area: languague;}
     .location{grid-area: location;}
     .experience{grid-area: experience;}
@@ -155,20 +435,12 @@
         align-items: center;
         margin: 5% 0;
     }
-    .skill__icon img{ width: 100%;}
-
-    .skill__icon p{
-        color: $color-shadow;
-        font-weight: 400;
-        text-align: center;
-    }
 
     .education{grid-area: education;}
     .education h2{margin-left: 5%;}
 
     .title__about{
         font-size: $size_title_desktop;
-        color:$title;
         text-align: start;
         padding: 3vh 0;  
     }
@@ -176,12 +448,60 @@
     .title__sub{
         text-align: justify;
         font-size: $size_subtitle_desktop;
-        color:$subtitle;
         padding: 5px 2%;
-        margin: 0px 10% 0px 8% ;
+        margin: 0px 17% 0px 0% ;
+    }
+    .title__sub__edu{
+        text-align: justify;
+        font-size: $size_subtitle_desktop;
+        padding: 5px 2%;
+        margin: 0px 17% 0px 5%;
     }
 
-    .date{margin-left: 10%;}
-    .text__about{ margin: 0 10% 2vh 10%;}
+    .date{margin-left: 5%;}
+    .date_edu{margin-left: 8%;}
+
+    .text__about{ 
+        margin: 0 17% 2vh 5%;
+        font-size: $size_text_desktop;
+    }
+    .text__about_edu{
+        margin: 0 17% 2vh 8%;
+        font-size: $size_text_desktop;
+    }
     .languague p, .location p{text-align: center;}
+
+    /*CONTACT*/
+    #grid__contact{
+        display: grid;
+        grid-template-columns: 60%;
+        grid-template-rows: 0.5fr 1fr;
+        justify-content: center;
+        align-items: center;
+
+        .message{
+            p {font-size: $size_text_desktop;}
+
+            :nth-child(2){
+                font-size: $size_text_desktop *0.8;
+            }
+        } 
+
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .form_space{
+                width: 60%;
+                margin-bottom: 3vh ;
+            }
+            .boton{
+                width: 20%;
+                font-size: $size_text_desktop;
+            }
+        }
+    }
+
+
 }

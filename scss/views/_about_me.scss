@@ -1,0 +1,52 @@
+@import "../base/typography";
+@import "../base/color";
+
+
+.photo img{
+    border-radius: 50% 10%;
+    display: block; /*para centrar la imagen*/
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 5px 5px 5px $color-shadow;
+}
+
+
+section{
+    .title__about{
+        font-weight: 400;
+        color: $title;
+    }
+    .text__about{
+        text-align: justify;
+    }
+    article{
+        .title__sub, .title__sub__edu{
+            color: $subtitle;
+            font-weight: 400;
+        }
+        .date, .date_edu{
+            color: $color-date;
+        }
+    }
+}
+
+.skill{
+    div{
+        img{
+            width: 100%;
+        }
+        p{
+            color: $subtitle;
+            font-family: Quicksand, Arial, Helvetica, sans-serif;
+            font-size: $size_text_desktop;
+            font-weight: 600;
+            text-align: center;
+            span{
+                color: $textgral;
+            }
+        }
+    }
+}
+
+
+

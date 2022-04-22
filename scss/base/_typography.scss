@@ -1,13 +1,21 @@
 body{
     font-family: Quicksand, Arial, Helvetica, sans-serif;
 }
-
-$size_title_mobile: 1.8rem;
+/*MOBILE*/
+$size_title_mobile: 1.7rem;
 $size_subtitle_mobile:1.2rem;
-
+$size_project_number_mobile: 8rem;
+$size_mobile_text: 1rem;
+/*TABLET*/
 $size_title_tablet: 2rem;
 $size_subtitle_tablet:1.2rem;
-
+$size_project_number_tablet: 12rem;
+$size_tablet_text: 1.2rem;
+/*DESKTOP*/
 $size_title_desktop: 2.5rem;
-$size_subtitle_desktop:1.5rem;
+$size_subtitle_desktop:1.4rem;
 $size_text_desktop:1.2rem;
+$size_text_span_desktop:1rem;
+$size_project_number_desktop: 12rem;
+$size_title_project:2rem;
+$size_subtitle_project:5rem;

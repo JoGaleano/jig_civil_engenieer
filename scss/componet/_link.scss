@@ -1,0 +1,37 @@
+@import "../base/color";
+
+.link{
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    overflow: hidden;
+    &:hover{
+        animation: pulsate 1s ease-in-out;
+        color: $color-hover-link;
+    }
+
+}
+
+/* efecto sobre los links */
+.project-link{
+    display: inline-block;
+    text-decoration: none;
+    color: $color-hover-link;
+    padding: 2% 5%;   
+    background-color: $bgc-link;
+    border-radius: 5px 20px;
+    &:hover{
+        animation: pulsate 1s ease-in-out;
+        color: $color-hover-link;
+    }
+    
+}
+
+@keyframes pulsate{
+    0%{
+        box-shadow:
+        0 0 25px $color-animation-1,
+        0 0 50px $color-animation-2;
+    }
+}

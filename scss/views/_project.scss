@@ -1,0 +1,52 @@
+@import "../base/typography";
+@import "../base/color";
+@import "../componet/link";
+
+hr{
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#project01{
+    .project-number{
+        font-family: Dosis, Quicksand, Arial, Helvetica, sans-serif;
+        font-weight: 300;
+        text-shadow: 5px 5px 4px $color-shadow;
+    }
+    .project-info{
+        margin: 0 10%;
+        padding: 5% 0;
+        .title-1{font-size: $size_title_project;}        
+        .title-2{
+            /* formato para nombre individual */
+            font-family: Dosis, Quicksand,Arial, Helvetica, sans-serif;
+            color: $subtitle;
+            font-size:$size_subtitle_project;
+        }
+        .project-text{text-align: justify;}
+    }
+
+}  
+
+// PROJECT 01
+
+#album{ width: 80%;}
+
+.featurette-heading{
+    color: #545f3a;
+    font-family: dosis, Arial, Helvetica, sans-serif;
+    padding: 5%;
+}
+
+.lead{
+    padding: 0 5%;
+    font-size: 1rem;
+    color: rgb(12, 12, 12);
+}
+
+#project02{
+    @extend #project01;  
+}
+
