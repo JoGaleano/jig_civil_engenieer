@@ -1,21 +1,38 @@
 @import "../base/typography";
 @import "../base/color";
 
-.name {
-    text-align: center;
-    animation-duration: 5s;
-    animation-name: color__name;
-    animation-iteration-count: 1;
-        /* animacion al titulo*/
-        @keyframes color__name {
-            0%{opacity: 0;}
-            100%{opacity: 1;}
+
+.container{
+    width: 80%;
+    margin-left: 10%;
+    .container_img{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 80%;
         }
-        span{
-            color: $text-span;
-            font-family: Dosis, Quicksan, Arial, Helvetica, sans-serif;
-        }
+    }
+    .name {
+        text-align: center;
+        animation-duration: 5s;
+        animation-name: color__name;
+        animation-iteration-count: 1;
+            /* animacion al titulo*/
+            @keyframes color__name {
+                0%{opacity: 0;}
+                100%{opacity: 1;}
+            }
+            span{
+                color: $text-span;
+                font-family: Dosis, Quicksan, Arial, Helvetica, sans-serif;
+            }
+    }
+    .text__index p{ text-align: justify;}
+
 }
 
-.text-index{font-size: $size_text_desktop;}
+
+
+
 

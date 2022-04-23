@@ -42,8 +42,33 @@ body {
 /*color de texto al aplicar hover*/
 /*color de animacion 1 link*/
 /*color de animacion 2 link*/
+body {
+  font-family: Quicksand, Arial, Helvetica, sans-serif;
+}
+
+/*MOBILE*/
+/*TABLET*/
+/*DESKTOP*/
 /*MOBILE*/
 @media (max-width: 768px) {
+  /*FOOTER*/
+  footer {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 0.1fr 0.2fr;
+    justify-items: center;
+    align-items: center;
+    font-size: 1rem;
+  }
+  footer span {
+    margin-bottom: 2%;
+  }
+  footer .footer_icon {
+    width: 40px;
+    padding-bottom: 5%;
+    margin-right: 0%;
+  }
+
   /*HOME*/
   .name {
     font-size: 1.7rem;
@@ -246,6 +271,27 @@ body {
 }
 /*TABLET*/
 @media (min-width: 769px) and (max-width: 1199px) {
+  /*FOOTER*/
+  footer {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 0.2fr;
+    justify-items: center;
+    align-items: center;
+    font-size: 1.2rem;
+  }
+  footer span {
+    margin-bottom: 2%;
+  }
+  footer div {
+    width: 50%;
+  }
+  footer div .footer_icon {
+    width: 40px;
+    padding-bottom: 5%;
+    margin-right: 2%;
+  }
+
   /*HOME*/
   .name {
     font-size: 2rem;
@@ -448,6 +494,28 @@ body {
 DESKTOP 
 *******/
 @media (min-width: 1200px) {
+  /*FOOTER*/
+  footer {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 0.2fr;
+    justify-items: center;
+    align-items: center;
+    font-size: 1.2rem;
+  }
+  footer span {
+    margin-bottom: 2%;
+  }
+  footer div {
+    width: 50%;
+    justify-self: end;
+  }
+  footer div .footer_icon {
+    width: 40px;
+    padding-bottom: 5%;
+    margin-right: 2%;
+  }
+
   /*HOME*/
   .name {
     font-size: 2.5rem;
@@ -673,6 +741,26 @@ DESKTOP
     font-size: 1.2rem;
   }
 }
+/*VARIABLES - PALETA DE COLORES */
+/* color del texto predeterminado*/
+/*color secundario del texto*/
+/*color titulos*/
+/*color subtitulos*/
+/*color fecha about me*/
+/*color para sombras*/
+/*fondo de links*/
+/*color de texto al aplicar hover*/
+/*color de animacion 1 link*/
+/*color de animacion 2 link*/
+footer {
+  width: 80%;
+  margin-left: 10%;
+}
+footer a {
+  text-decoration: none;
+  color: #383f3a;
+}
+
 body {
   font-family: Quicksand, Arial, Helvetica, sans-serif;
 }
@@ -691,7 +779,19 @@ body {
 /*color de texto al aplicar hover*/
 /*color de animacion 1 link*/
 /*color de animacion 2 link*/
-.name {
+.container {
+  width: 80%;
+  margin-left: 10%;
+}
+.container .container_img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .container_img img {
+  width: 80%;
+}
+.container .name {
   text-align: center;
   animation-duration: 5s;
   animation-name: color__name;
@@ -706,13 +806,12 @@ body {
     opacity: 1;
   }
 }
-.name span {
+.container .name span {
   color: #7f8e57;
   font-family: Dosis, Quicksan, Arial, Helvetica, sans-serif;
 }
-
-.text-index {
-  font-size: 1.2rem;
+.container .text__index p {
+  text-align: justify;
 }
 
 body {

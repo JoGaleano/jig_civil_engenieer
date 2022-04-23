@@ -1,6 +1,27 @@
+@import "../base/typography";
 /*MOBILE*/
 
+@mixin size_icon_footer ($width, $padding_bottom, $margin_right) {
+    width: $width;
+    padding-bottom: $padding_bottom;
+    margin-right: $margin_right;
+}
+
 @media (max-width: 768px){
+    /*FOOTER*/
+    footer{
+        display:grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 0.1fr 0.2fr;
+        span{margin-bottom: 2%;}
+        justify-items: center;
+        align-items: center;
+        font-size: $size_mobile_text;
+        .footer_icon{
+            @include size_icon_footer(40px, 5%, 0%);
+        }
+    }
+
     /*HOME*/
     .name{
         font-size: $size_title_mobile;
@@ -164,7 +185,22 @@
 
 /*TABLET*/
 @media (min-width:769px) and (max-width:1199px){
-
+    /*FOOTER*/
+    footer{
+        display:grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 0.2fr;
+        span{margin-bottom: 2%;}
+        justify-items: center;
+        align-items: center;
+        font-size: $size_tablet_text;
+        div{
+            width: 50%;
+            .footer_icon{
+                @include size_icon_footer(40px, 5%, 2%);
+            }
+        }        
+    }
     /*HOME*/
     .name{
         font-size: $size_title_tablet;
@@ -325,6 +361,23 @@ DESKTOP
 *******/
 
 @media (min-width:1200px){
+    /*FOOTER*/
+    footer{
+        display:grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 0.2fr;
+        justify-items: center;
+        align-items: center;
+        font-size: $size_text_desktop;
+        span{margin-bottom: 2%;}
+        div{
+            width: 50%;
+            justify-self: end;
+            .footer_icon{
+                @include size_icon_footer(40px, 5%, 2%);
+            }
+        }        
+    }
     /*HOME*/
     .name{
         font-size: $size_title_desktop;
