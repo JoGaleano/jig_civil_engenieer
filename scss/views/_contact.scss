@@ -6,13 +6,16 @@
     :nth-child(2){
         font-style: italic; 
     }
-    p{
+    h1,p{
         text-align: center;
+        font-weight: 300;
     }
 }
 
 form {
     input, textarea{
         border: 1px solid $textgral;
+        border-radius: 5px;
+        caret-color: $color-shadow;
     }
 }

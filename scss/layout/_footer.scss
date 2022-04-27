@@ -6,6 +6,14 @@ footer{
     a{
         text-decoration: none;
         color: $textgral;
-        
+        &:hover{
+            color: $color-date;
+        }
     }
 } 
+
+@mixin size_icon_footer ($width, $padding_bottom, $margin_right) {
+    width: $width;
+    padding-bottom: $padding_bottom;
+    margin-right: $margin_right;
+}

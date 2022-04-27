@@ -9,7 +9,9 @@ hr{
     margin-right: auto;
 }
 
+/*PORTADAS PAGINA PROJECT*/
 #project01{
+    @include structure (80%,10%);
     .project-number{
         font-family: Dosis, Quicksand, Arial, Helvetica, sans-serif;
         font-weight: 300;
@@ -17,23 +19,62 @@ hr{
     }
     .project-info{
         margin: 0 10%;
-        padding: 5% 0;
-        .title-1{font-size: $size_title_project;}        
+        padding: 5% 0;        
         .title-2{
             /* formato para nombre individual */
             font-family: Dosis, Quicksand,Arial, Helvetica, sans-serif;
             color: $subtitle;
-            font-size:$size_subtitle_project;
+            margin-top: -5vh;
         }
-        .project-text{text-align: justify;}
+        .project-text{
+            text-align: justify;
+            font-weight: 300;
+        }
     }
-
 }  
 
-// PROJECT 01
+#project02{
+    @extend #project01;  
+}
 
-#album{ width: 80%;}
+/*PROJECTO-01 INDIVIDUAL*/
 
+#project01_expl{
+    @extend #project01;
+}
+
+.project_info01{
+    @include structure (80%,10%);
+    p{ 
+        padding: 2%;
+        font-weight: 300;
+    }
+}
+
+#album{ 
+    width: 80%;
+    h5{
+        font-family: Quicksand, Arial, Helvetica, sans-serif;
+        font-weight: 300;
+        text-align: center;
+    }
+}
+
+
+/*PROJECTO-02 INDIVIDUAL*/
+#project01_expl2{
+    @extend #project02;
+    @include structure(80%,10%)
+}
+
+#project_info02{
+    @include structure (80%,10%);
+    p{ padding: 5%;}
+}
+
+.grid_img_02{
+    @include  flex(row, nowrap, center, center);
+}
 .featurette-heading{
     color: #545f3a;
     font-family: dosis, Arial, Helvetica, sans-serif;
@@ -41,12 +82,5 @@ hr{
 }
 
 .lead{
-    padding: 0 5%;
-    font-size: 1rem;
-    color: rgb(12, 12, 12);
+    color:$textgral;
 }
-
-#project02{
-    @extend #project01;  
-}
-

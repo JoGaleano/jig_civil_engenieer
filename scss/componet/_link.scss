@@ -6,6 +6,10 @@
     text-transform: uppercase;
     letter-spacing: 2px;
     overflow: hidden;
+    border-radius: 40px;
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    box-shadow:  8px 8px 22px #d1d1d1,
+                -8px -8px 22px #ffffff;
     &:hover{
         animation: pulsate 1s ease-in-out;
         color: $color-hover-link;
@@ -21,6 +25,7 @@
     padding: 2% 5%;   
     background-color: $bgc-link;
     border-radius: 5px 20px;
+    box-shadow: 2px 5px 5px $color-shadow;
     &:hover{
         animation: pulsate 1s ease-in-out;
         color: $color-hover-link;

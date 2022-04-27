@@ -1,0 +1,23 @@
+@mixin structure ($width , $m-lef) {
+    width: $width;
+    margin-left: $m-lef;
+}
+
+@mixin flex ($dire, $corte, $just, $align) {
+    display: flex;
+    flex-flow: $dire $corte;
+    justify-content: $just;
+    align-items: $align;
+}
+
+@mixin grid_project ($width, $m-left) {
+    display: grid;
+    width: $width;
+    margin-left: $m-left;    
+}
+
+@mixin grid_base ($jus, $align){
+    display: grid;
+    justify-content: $jus;
+    align-items: $align;
+}

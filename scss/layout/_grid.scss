@@ -1,28 +1,33 @@
 @import "../base/typography";
+@import "footer";
+@import "mixin";
+
+
 /*MOBILE*/
-
-@mixin size_icon_footer ($width, $padding_bottom, $margin_right) {
-    width: $width;
-    padding-bottom: $padding_bottom;
-    margin-right: $margin_right;
-}
-
 @media (max-width: 768px){
-    /*FOOTER*/
+/*FOOTER*/
     footer{
-        display:grid;
+        @include grid_base(center, center);
         grid-template-columns: 100%;
-        grid-template-rows: 0.1fr 0.2fr;
-        span{margin-bottom: 2%;}
-        justify-items: center;
-        align-items: center;
+        grid-template-rows: 0.2fr 0.4fr;
+        padding: 2%;
+        .footer_text{
+            justify-self: center;
+            padding-bottom: 2%;
+        }
         font-size: $size_mobile_text;
-        .footer_icon{
-            @include size_icon_footer(40px, 5%, 0%);
+        div{
+            padding: 2%;
+            align-self: center;
+            justify-self: center;
+            .footer_icon{
+                @include size_icon_footer(40px, 5%, 0%);
+                padding-left: 3%;
+            }
         }
     }
 
-    /*HOME*/
+/*HOME*/
     .name{
         font-size: $size_title_mobile;
         span{
@@ -35,9 +40,9 @@
         }
     }
 
-    /*PROJECT*/
+/*PROJECT*/
     #project01{
-        display: grid;
+        @include grid_base(center, center);
         grid-template-areas:
         "number01 img01"
         "info01 info01";
@@ -49,51 +54,74 @@
     .img01{grid-area: img01;}
     .info01{grid-area: info01;}
 
+    .card h5{font-size: $size_subtitle_mobile;}
+
     #project02{
-        display: grid;
+        @include grid_base(center, center);
         grid-template-areas:
         "number02 img02"
         "info02 info02";
-        grid-template-columns: 0.4fr 0.6fr;
+        grid-template-columns: 0.5fr 0.5fr;
         grid-template-rows: 0.5fr auto;
     }
       /* areas de la grilla */
     .number02{grid-area: number02;}
-    .img02{grid-area: img02;}
+    .img02{
+        grid-area: img02;
+        padding-left: 2%;
+    }
     .info02{grid-area: info02;}
 
     .project-number{
         font-size: $size_project_number_mobile;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex(row, nowrap,center,center);
     }
-
     .project-img{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex(row, nowrap,center,center);
         padding-right: 4%;
         img{
             width: 100%;
         }
     }
 
-    .project-text{
-        font-size: $size_mobile_text;
-        font-weight: 300;
+    .project-info{
+        .title-1{
+            font-size: $size_project_subtitle_mobile;
+        }
+        .title-2{
+            font-size: $size_project_title_mobile;
+        }
+        .project-text{
+            font-size: $size_mobile_text;
+            font-weight: 300;
+        }
     }
+    .lead{font-size: $size_mobile_text;}
 
-    .title-2{margin-top: -5vh;}
-
-    #project-02, #project-01{
-        width: 80%;
-        margin-left: 10%;
+/*ABOUT ME*/
+    section{
+        margin: 0 10%;
+        h1, h2{
+            font-size:$size_title_mobile;
+            text-align: center;
+            padding-top: 3vh;  
+        }
+        .text__about{ 
+            font-size:$size_mobile_text;
+            text-align: center;
+            padding-top: 3vh;
+            margin-bottom: 2vh;
+        }
+        article{
+            h3{
+                font-size: $size_subtitle_mobile;
+                padding-bottom: 2vh;
+            }
+            .date{margin-bottom: 1vh;}
+        }
     }
-
-    /*ABOUT ME*/
     #grid__about{
-        display: grid;
+        @include grid_project(90% , 5%);
         grid-template-areas: 
         "photo"
         "profile"
@@ -103,105 +131,90 @@
         "skill"
         "education";
         grid-template-columns: 100%;
-        grid-template-rows: 1fr 0.5fr 0.5fr 0.3fr repeat(4,auto);
+        grid-template-rows: 0.7fr 0.5fr 0.5fr 0.3fr repeat(4,auto);
     }
-
-    .photo{grid-area: photo; margin-top: 30px;}
-    .photo img{width: 300px;}
-    .profile{grid-area: profile; margin-top: 0px;}
-    .languague{grid-area: languague;}
-    .location{grid-area: location;}
-    .experience{grid-area: experience;}
-    .skill{grid-area: skill;}
-    .skill img{ width: 100%; }
-    .skill__icon{
-        display: grid;
-        grid-template-columns: 0.2fr 0.7fr;
-        grid-template-rows: repeat(7, auto);
-        justify-content: center;
-        align-items: center;
+    .photo{
+        grid-area: photo; 
+        margin-top: 30px;
+        img{
+            width: 80%;
+        }
     }
-
-    .education{grid-area: education;}
-    
-    .title__about{
-        font-size:$size_title_mobile;
+    .profile{
+        grid-area: profile; 
+        margin-top: 0px;
+    }
+    .languague{
+        grid-area: languague;
         text-align: center;
-        padding-top: 3vh;
     }
-    .title__sub{
-        font-size: $size_subtitle_mobile;
-        padding-bottom: 2vh;
+    .location{
+        grid-area: location;
+        text-align: center;
     }
-    .title__sub__edu{
-        text-align: justify;
-        font-size: $size_subtitle_desktop;
+    .experience{grid-area: experience;}
+    .skill{
+        grid-area: skill;
+        div{
+            @include grid_base(center, center);
+            grid-template-columns: 0.2fr 0.7fr;
+            grid-template-rows: repeat(7, auto);
+            img{
+                width: 100%;
+            }
+        }
     }
-    .title, .title__sub, .date, .date_edu, .title__sub__edu, .text__about, .text__about_edu{ margin: 0px 10%;}
+    .education{grid-area: education;}
 
-    .date, .date_edu{margin-bottom: 1vh;}
-
-    .text__about, .text__about_edu{ 
-        margin-bottom: 2vh;
-        font-size: $size_mobile_text;
-    }
-    .languague p, .location p{text-align: center;}
-
-    /*CONTACT*/
+/*CONTACT*/
     #grid__contact{
-
-        display: grid;
+        @include grid_base(center, center);
         grid-template-columns: 60%;
         grid-template-rows: 0.5fr 1fr;
-        justify-content: center;
-        align-items: center;
     
         .message{
-            p {font-size: $size_text_desktop;}
+            h1, p {font-size: $size_mobile_text;}
     
             :nth-child(2){
-                font-size: $size_text_desktop *0.8;
+                font-size: $size_mobile_text *0.8;
             }
         } 
     
         form{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            @include flex(column, nowrap, center, center);
             .form_space{
                 width: 90%;
                 margin-bottom: 3vh ;
                 }
             }
             .boton{
-                width: 35%;
                 font-size: $size_mobile_text;
             }
-        }
-
+    }
 }
 
 
 /*TABLET*/
 @media (min-width:769px) and (max-width:1199px){
-    /*FOOTER*/
+/*FOOTER*/
     footer{
-        display:grid;
+        @include grid_base(center, center);
         grid-template-columns: 50% 50%;
-        grid-template-rows: 0.2fr;
-        span{margin-bottom: 2%;}
-        justify-items: center;
-        align-items: center;
+        grid-template-rows: 0.5fr;
+        padding: 2%;
+        .footer_text{
+            justify-self: flex-start;
+        }        
         font-size: $size_tablet_text;
         div{
             width: 50%;
+            justify-self: flex-end;
             .footer_icon{
                 @include size_icon_footer(40px, 5%, 2%);
             }
         }        
     }
-    /*HOME*/
+/*HOME*/
     .name{
         font-size: $size_title_tablet;
         span{
@@ -214,9 +227,9 @@
         }
     }
 
-    /* PROJECT */
+/* PROJECT */
     #project01{
-        display: grid;
+        @include grid_base(center, center);
         grid-template-areas:
         "number01 img01"
         "info01 info01";
@@ -228,8 +241,10 @@
     .img01{grid-area: img01;}
     .info01{grid-area: info01;}
 
+    .card h5{font-size: $size_subtitle_tablet;}
+
     #project02{
-        display: grid;
+        @include grid_base(center, center);
         grid-template-areas:
         "number02 img02"
         "info02 info02";
@@ -242,42 +257,60 @@
     .info02{grid-area: info02;}
 
     .project-number{
-        font-size: 12rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        font-size: $size_project_number_tablet;
+        @include flex( row, nowrap, center, center);
     }
 
     .project-img{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex( row, nowrap, center, center);
         padding-right: 5%;
         img{
             width: 100%;
         }
     }
 
-    .text-project{
-        font-size: 1rem;
-        font-weight: 300;
+    .project-info{
+        .title-1{
+            font-size: $size_project_subtitle_mobile ;
+        }
+        .title-2{
+            font-size: $size_project_title_mobile;
+        }
+        .project-text{
+            font-size: $size_tablet_text;
+            font-weight: 300;
+        }
     }
-
-    .title-2{margin-top: -5vh;}
-
-    #project-02, #project-01{
-        width: 80%;
-        margin-left: 10%;
-    }
+    .lead{font-size: $size_tablet_text;}
 
     /* transformacion aumento de escala de imagenes de planos */
     .scaled{transition: transform .2s;}
 
     .scaled:hover{transform: scale(1.5);}
 
-    /* ABOUT ME */    
+/* ABOUT ME */  
+    section{
+        margin: 0 10% ;
+        h1, h2{
+            font-size: $size_title_tablet;
+            text-align: start;
+            padding: 3vh 0;  
+        }
+        .text__about{ 
+            font-size: $size_tablet_text;
+            padding-left: 3%;
+        }
+        article{
+            h3{
+                text-align: justify;
+                font-size: $size_subtitle_tablet;
+            }
+            .date{margin-left: 3%;}
+        }
+    }
+
     #grid__about{
-        display: grid;
+        @include grid_project(80% , 10%);
         grid-template-areas: 
         "photo photo"
         "profile profile"
@@ -289,96 +322,90 @@
         grid-template-rows: 1fr 0.5fr 0.3fr repeat(4,auto);
     }
 
-    .photo{grid-area: photo; margin-top: 30px;}
-    .photo img{width: 300px;}
-    .profile{grid-area: profile; margin-top: 0px;}
-    .languague{grid-area: languague;}
+    .photo{
+        grid-area: photo; 
+        margin-top: 30px;
+        img{width: 60%;}
+
+    }
+    .profile{
+        grid-area: profile; 
+        margin-top: 0px;
+    }
+    .languague{
+        grid-area: languague;
+        @include flex (column, nowrap, flex-start, center);
+    }
     .location{grid-area: location;}
     .experience{grid-area: experience;}
-    .skill{grid-area: skill;}
-    .skill__icon img{ width: 30%; }
-    .skill__icon{
-        display: grid;
-        grid-template-columns: 0.3fr 0.7fr;
-        grid-template-rows: repeat(7, auto);
-        justify-content: center;
-        align-items: center;
-        margin-left: 10%;
+    .skill{
+        grid-area: skill;
+        div{
+            display: grid;
+            grid-template-columns: 0.3fr 0.7fr;
+            grid-template-rows: repeat(7, auto);
+            justify-content: center;
+            align-items: center;
+            margin-left: 10%;
+            img{
+                width: 30%;
+            }
+        }
     }
-
     .education{grid-area: education;}
     
-    .title__about{
-        font-size: $size_title_tablet;
-        text-align: start;
-        padding: 3vh 0;
-        margin-left:10%;  
-    }
-
-    .title__sub{
-        text-align: justify;
-        font-size: $size_subtitle_tablet;
-        padding: 5px 2%;
-        margin: 0px 10% 0px 8% ;
-    }
-
-    .date, .date_edu{margin-left: 10%;}
-    .text__about, .text__about_edu, .title__sub__edu{ margin: 0 10% 2vh 10%;}
-    .languague, .location{
-        h2 , p{ margin-left: 20%;}
-    }
-
-    /*CONTACT*/    
+/*CONTACT*/    
     #grid__contact{
-        display: grid;
+        @include grid_base(center, center);
         grid-template-columns: 60%;
         grid-template-rows: 0.5fr 1fr;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    form{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        input, textarea{
-            width: 60%;
-            margin-bottom: 3vh 
-        }
-        .boton{
-            width: 25%;
-            font-size: $size_tablet_text;
-        }
-    }
-    
+        
+        .message{
+            h1, p {font-size: $size_tablet_text;}
 
-
+            :nth-child(2){
+                font-size: $size_tablet_text *0.8;
+            }
+        } 
+        form{
+            @include flex ( column, nowrap, center, center);
+            input, textarea{
+                width: 80%;
+                margin-bottom: 3vh 
+            }
+            .boton{
+                width: 30%;
+                font-size: $size_tablet_text;
+            }
+        }    
+    }  
 }
 
-/******** 
+/********   
 DESKTOP 
 *******/
 
 @media (min-width:1200px){
-    /*FOOTER*/
+/*FOOTER*/
     footer{
-        display:grid;
+        @include grid_base(center, center);
         grid-template-columns: 50% 50%;
-        grid-template-rows: 0.2fr;
-        justify-items: center;
-        align-items: center;
+        grid-template-rows: 0.5fr;
+        padding: 1%;
+        .footer_text{
+            justify-self: flex-start;
+        }
         font-size: $size_text_desktop;
-        span{margin-bottom: 2%;}
         div{
             width: 50%;
-            justify-self: end;
+            justify-self: flex-end;
             .footer_icon{
                 @include size_icon_footer(40px, 5%, 2%);
             }
         }        
     }
-    /*HOME*/
+
+/*HOME*/
     .name{
         font-size: $size_title_desktop;
         span{
@@ -390,29 +417,30 @@ DESKTOP
             font-size:$size_text_desktop;
         }
     }
-    /* PROJECT */
+
+/* PROJECT */
+
     #project01{
-        display: grid;
+        @include grid_base(center, center);
         grid-template-areas:
         "number01 img01 info01";
         grid-template-columns: 0.2fr 0.4fr 0.4fr;
         grid-template-rows: 1fr;
-        width: 80%;
-        margin-left: 10%;
+        
     }
     /* areas de la grilla project01 */
     .number01{grid-area: number01;}
     .img01{grid-area: img01;}
     .info01{grid-area: info01;}
 
+    .card h5{font-size: $size_subtitle_desktop;}
+
     #project02{
-        display: grid;
+        @include grid_base(center, center);
         grid-template-areas:
         "info02 img02 number02 ";
         grid-template-columns: 0.4fr 0.4fr 0.2fr;
-        grid-template-rows: 1fr;        
-        width: 80%;
-        margin-left: 10%;
+        grid-template-rows: 1fr;
     }
       /* areas de la grilla project02 */
     .number02{
@@ -425,126 +453,130 @@ DESKTOP
 
     .project-number{
         font-size: $size_project_number_desktop;
-        display: flex;
-        justify-content: center;
+        @include flex(row, nowrap,center,center);
     }
-
     .project-img{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex( row, nowrap, center, center);
         padding-right: 5%;
         img{
             width: 100%;
         }
+    }    
+    .project-info{
+        .title-1{
+            font-size: $size_title_project_desktop;
+        }
+        .title-2{
+            font-size: $size_subtitle_project_desktop;
+        }
+        .project-text{
+            font-size: $size_text_desktop;
+        }
     }
 
-    .text-project{
+    .project_info01{
         font-size: $size_text_desktop;
-        font-weight: 300;
     }
-
-    .title-2{margin-top: -5vh;}
-
     /* transformacion aumento de escala de imagenes de planos */
     .scaled{transition: transform .2s;}
 
     .scaled:hover{transform: scale(1.5);}
 
-    #project-02, #project-01{
-        width: 80%;
-        margin-left: 10%;
+/* ABOUT ME */
+    section{
+        h1, h2{
+            font-size: $size_title_desktop;
+            text-align: start;
+        }
+        .text__about{ 
+            font-size: $size_text_desktop;
+            padding-left: 5%;
+        }
+        article{
+            h3{
+                font-size: $size_subtitle_desktop;
+                padding: 5px 2%;
+            }
+            .date{margin-left: 5%;}
+        }
     }
 
-    /* ABOUT ME */
-
     #grid__about{
-        display: grid;
+        @include grid_project(80% , 10%);
         grid-template-areas: 
         "photo profile profile"
         "photo languague location"
         "skill experience experience"
         "education education education";
-        grid-template-columns: 0.4fr 0.2fr 0.4fr;
+        grid-template-columns: 0.5fr auto 0.4fr;
         grid-template-rows: 0.5fr 0.5fr auto 2fr;
     }
-
-    .profile{grid-area: profile;}
+    .profile{
+        grid-area: profile;
+        @include flex (column, nowrap, flex-start, center);
+        h1, h2{
+            align-self: flex-start;
+            padding-left: 5%;
+        }
+    }
     .photo{
         grid-area: photo;
         justify-self: center;
         align-self: center;
+        img{
+            width: 100%;
+        }
     }
-    .photo img{width: 80%;}
-    .languague{grid-area: languague;}
-    .location{grid-area: location;}
-    .experience{grid-area: experience;}
-    .skill{grid-area: skill; margin-left: 10%;}
-    .skill__icon{
-        display: grid;
-        grid-template-columns: 0.2fr 0.7fr;
-        grid-template-rows: repeat(7, auto);
-        justify-content: center;
-        align-items: center;
-        margin: 5% 0;
+    .languague{
+        grid-area: languague;
+        @include flex (column, nowrap, flex-start, center);
     }
-
-    .education{grid-area: education;}
-    .education h2{margin-left: 5%;}
-
-    .title__about{
-        font-size: $size_title_desktop;
-        text-align: start;
-        padding: 3vh 0;  
+    .location{
+        grid-area: location;
+        @include flex (column, nowrap, flex-start, center);
     }
-
-    .title__sub{
-        text-align: justify;
-        font-size: $size_subtitle_desktop;
-        padding: 5px 2%;
-        margin: 0px 17% 0px 0% ;
+    .experience{
+        grid-area: experience;
+        padding-left: 5%;
     }
-    .title__sub__edu{
-        text-align: justify;
-        font-size: $size_subtitle_desktop;
-        padding: 5px 2%;
-        margin: 0px 17% 0px 5%;
+    .skill{
+        grid-area: skill; 
+        div{
+            @include grid_base( center, center);
+            grid-template-columns: 0.2fr 0.7fr;
+            grid-template-rows: repeat(7, auto);
+            margin: 5% 0;
+        }
     }
 
-    .date{margin-left: 5%;}
-    .date_edu{margin-left: 8%;}
-
-    .text__about{ 
-        margin: 0 17% 2vh 5%;
-        font-size: $size_text_desktop;
+    .education{
+        grid-area: education;
+        h3{
+            text-align: justify;
+            font-size: $size_subtitle_desktop;
+            padding-bottom: 5px;
+        }
+        .date_edu{padding-left: 3%;}
+        .text__about_edu{
+            padding-left: 5%;
+            font-size: $size_text_desktop;
+        }
     }
-    .text__about_edu{
-        margin: 0 17% 2vh 8%;
-        font-size: $size_text_desktop;
-    }
-    .languague p, .location p{text-align: center;}
 
-    /*CONTACT*/
+/*CONTACT*/
     #grid__contact{
-        display: grid;
+        @include grid_base(center, center);
         grid-template-columns: 60%;
         grid-template-rows: 0.5fr 1fr;
-        justify-content: center;
-        align-items: center;
-
         .message{
-            p {font-size: $size_text_desktop;}
+            h1,p {font-size: $size_text_desktop;}
 
             :nth-child(2){
                 font-size: $size_text_desktop *0.8;
             }
         } 
-
         form{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            @include flex ( column, nowrap, center, center);
             .form_space{
                 width: 60%;
                 margin-bottom: 3vh ;

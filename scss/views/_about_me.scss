@@ -12,20 +12,23 @@
 
 
 section{
-    .title__about{
+    h1, h2{
         font-weight: 400;
         color: $title;
+        padding: 3vh 0; 
     }
     .text__about{
         text-align: justify;
     }
     article{
-        .title__sub, .title__sub__edu{
+        h3{
             color: $subtitle;
             font-weight: 400;
+            text-align: justify;
         }
-        .date, .date_edu{
+        .date{
             color: $color-date;
+            font-style: italic;
         }
     }
 }
