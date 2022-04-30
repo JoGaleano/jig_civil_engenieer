@@ -15,5 +15,9 @@
     "url": "https://github.com/JoGaleano/jig_civil_engenieer/issues"
   },
   "homepage": "https://github.com/JoGaleano/jig_civil_engenieer#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "@animxyz/core": "^0.6.6",
+    "aos": "^2.3.4"
+  }
 }

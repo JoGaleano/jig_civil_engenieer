@@ -19,6 +19,13 @@
     }
 }
 
+.buttom__up{
+        @include flex(row, nowrap, flex-end, center);
+        svg{ 
+            @extend .buttom__back;
+        }
+}
+
 @keyframes pulsate{
     0%{
         box-shadow:

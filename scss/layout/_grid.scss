@@ -19,7 +19,7 @@
         div{
             padding: 2%;
             align-self: center;
-            justify-self: center;
+            justify-self: flex-end;
             .footer_icon{
                 @include size_icon_footer(40px, 5%, 0%);
                 padding-left: 3%;
@@ -397,7 +397,7 @@ DESKTOP
         }
         font-size: $size_text_desktop;
         div{
-            width: 50%;
+            width: 25%;
             justify-self: flex-end;
             .footer_icon{
                 @include size_icon_footer(40px, 5%, 2%);
@@ -412,9 +412,9 @@ DESKTOP
             font-size: $size_title_desktop;
         }
     }
-    .text__index{
+    .text_index{
         p{
-            font-size:$size_text_desktop;
+            font-size: $size_text_desktop ;
         }
     }
 
@@ -460,7 +460,8 @@ DESKTOP
         padding-right: 5%;
         img{
             width: 100%;
-        }
+        }        
+
     }    
     .project-info{
         .title-1{
@@ -572,7 +573,7 @@ DESKTOP
             h1,p {font-size: $size_text_desktop;}
 
             :nth-child(2){
-                font-size: $size_text_desktop *0.8;
+                font-size: calc($size_text_desktop *0.8);
             }
         } 
         form{

@@ -10,6 +10,11 @@ footer{
             color: $color-date;
         }
     }
+        .hidden-text{
+            font-size: 0px;
+            width: 0px;
+            height: 0px;
+        }
 } 
 
 @mixin size_icon_footer ($width, $padding_bottom, $margin_right) {
@@ -17,3 +22,4 @@ footer{
     padding-bottom: $padding_bottom;
     margin-right: $margin_right;
 }
+

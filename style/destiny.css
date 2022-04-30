@@ -71,6 +71,11 @@ footer a {
 footer a:hover {
   color: #0d1102;
 }
+footer .hidden-text {
+  font-size: 0px;
+  width: 0px;
+  height: 0px;
+}
 
 /*MOBILE*/
 @media (max-width: 768px) {
@@ -91,7 +96,7 @@ footer a:hover {
   footer div {
     padding: 2%;
     align-self: center;
-    justify-self: center;
+    justify-self: flex-end;
   }
   footer div .footer_icon {
     width: 40px;
@@ -555,7 +560,7 @@ DESKTOP
     justify-self: flex-start;
   }
   footer div {
-    width: 50%;
+    width: 25%;
     justify-self: flex-end;
   }
   footer div .footer_icon {
@@ -572,7 +577,7 @@ DESKTOP
     font-size: 2.5rem;
   }
 
-  .text__index p {
+  .text_index p {
     font-size: 1.2rem;
   }
 
@@ -816,6 +821,11 @@ footer a {
 footer a:hover {
   color: #0d1102;
 }
+footer .hidden-text {
+  font-size: 0px;
+  width: 0px;
+  height: 0px;
+}
 
 body {
   font-family: Quicksand, Arial, Helvetica, sans-serif;
@@ -1035,6 +1045,69 @@ body {
 /*color de texto al aplicar hover*/
 /*color de animacion 1 link*/
 /*color de animacion 2 link*/
+/*VARIABLES - PALETA DE COLORES */
+/* color del texto predeterminado*/
+/*color secundario del texto*/
+/*color titulos*/
+/*color subtitulos*/
+/*color fecha about me*/
+/*color para sombras*/
+/*fondo de links*/
+/*color de texto al aplicar hover*/
+/*color de animacion 1 link*/
+/*color de animacion 2 link*/
+.boton {
+  letter-spacing: 2px;
+  background-color: #7f8e57;
+  text-transform: uppercase;
+  padding: 1% 2%;
+  border-radius: 10px;
+  box-shadow: 2px 5px 5px rgba(84, 95, 58, 0.7882352941);
+  color: white;
+}
+.boton:hover {
+  animation: pulsate 1s ease-in-out;
+}
+
+.buttom__back, .buttom__up svg {
+  color: #383f3a;
+}
+.buttom__back:hover, .buttom__up svg:hover {
+  color: rgba(84, 95, 58, 0.7882352941);
+}
+
+.buttom__up {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+@keyframes pulsate {
+  0% {
+    box-shadow: 0 0 10px #7f8e57, 0 0 25px #383f3a;
+  }
+}
+.fa-linkedin {
+  color: #818C61;
+}
+.fa-linkedin:hover {
+  color: #0d1102;
+}
+
+.fa-instagram {
+  color: #4F611E;
+}
+.fa-instagram:hover {
+  color: #0d1102;
+}
+
+.fa-envelope {
+  color: #9BAD6A;
+}
+.fa-envelope:hover {
+  color: #0d1102;
+}
+
 .photo img {
   border-radius: 50% 10%;
   display: block;
@@ -1118,13 +1191,19 @@ body {
   animation: pulsate 1s ease-in-out;
 }
 
-.buttom__back {
+.buttom__back, .buttom__up svg {
   color: #383f3a;
 }
-.buttom__back:hover {
+.buttom__back:hover, .buttom__up svg:hover {
   color: rgba(84, 95, 58, 0.7882352941);
 }
 
+.buttom__up {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+}
 @keyframes pulsate {
   0% {
     box-shadow: 0 0 10px #7f8e57, 0 0 25px #383f3a;
