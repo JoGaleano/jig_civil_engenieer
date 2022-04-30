@@ -19,7 +19,7 @@
         div{
             padding: 2%;
             align-self: center;
-            justify-self: flex-end;
+            justify-self: center;
             .footer_icon{
                 @include size_icon_footer(40px, 5%, 0%);
                 padding-left: 3%;

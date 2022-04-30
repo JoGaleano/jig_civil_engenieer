@@ -96,7 +96,7 @@ footer .hidden-text {
   footer div {
     padding: 2%;
     align-self: center;
-    justify-self: flex-end;
+    justify-self: center;
   }
   footer div .footer_icon {
     width: 40px;
