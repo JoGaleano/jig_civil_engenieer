@@ -89,7 +89,7 @@ footer .hidden-text {
     padding: 2%;
     font-size: 1rem;
   }
-  footer .footer_text {
+  footer .footerText {
     justify-self: center;
     padding-bottom: 2%;
   }
@@ -98,27 +98,21 @@ footer .hidden-text {
     align-self: center;
     justify-self: center;
   }
-  footer div .footer_icon {
-    width: 40px;
-    padding-bottom: 5%;
-    margin-right: 0%;
-    padding-left: 3%;
-  }
 
   /*HOME*/
-  .name {
+  .homeTitle {
     font-size: 1.7rem;
   }
-  .name span {
+  .homeTitle span {
     font-size: 1.7rem;
   }
 
-  .text__index p {
+  .textHome p {
     font-size: 1rem;
   }
 
   /*PROJECT*/
-  #project01, #project01_expl, #project02, #project01_expl2 {
+  #project01, #project01_expl, #project02, #project01Expl2 {
     display: grid;
     justify-content: center;
     align-items: center;
@@ -144,7 +138,7 @@ footer .hidden-text {
     font-size: 1.2rem;
   }
 
-  #project02, #project01_expl2 {
+  #project02, #project01Expl2 {
     display: grid;
     justify-content: center;
     align-items: center;
@@ -167,7 +161,7 @@ footer .hidden-text {
     grid-area: info02;
   }
 
-  .project-number {
+  .projectNumber {
     font-size: 8rem;
     display: flex;
     flex-flow: row nowrap;
@@ -175,24 +169,24 @@ footer .hidden-text {
     align-items: center;
   }
 
-  .project-img {
+  .projectImg {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
     padding-right: 4%;
   }
-  .project-img img {
+  .projectImg img {
     width: 100%;
   }
 
-  .project-info .title-1 {
+  .projectInfo .title-1 {
     font-size: 2rem;
   }
-  .project-info .title-2 {
+  .projectInfo .title-2 {
     font-size: 5rem;
   }
-  .project-info .project-text {
+  .projectInfo .projectText {
     font-size: 1rem;
     font-weight: 300;
   }
@@ -210,10 +204,9 @@ footer .hidden-text {
     text-align: center;
     padding-top: 3vh;
   }
-  section .text__about {
+  section .textAbout {
     font-size: 1rem;
     text-align: center;
-    padding-top: 3vh;
     margin-bottom: 2vh;
   }
   section article h3 {
@@ -224,21 +217,21 @@ footer .hidden-text {
     margin-bottom: 1vh;
   }
 
-  #grid__about {
+  #gridAbout {
     display: grid;
     width: 90%;
     margin-left: 5%;
     grid-template-areas: "photo" "profile" "languague" "location" "experience" "skill" "education";
     grid-template-columns: 100%;
-    grid-template-rows: 0.7fr 0.5fr 0.5fr 0.3fr repeat(4, auto);
+    grid-template-rows: 0.5fr 0.5fr 0.4fr 0.3fr repeat(4, auto);
   }
 
   .photo {
     grid-area: photo;
-    margin-top: 30px;
+    margin: 2% 0px;
   }
   .photo img {
-    width: 80%;
+    width: 70%;
   }
 
   .profile {
@@ -270,6 +263,12 @@ footer .hidden-text {
     grid-template-columns: 0.2fr 0.7fr;
     grid-template-rows: repeat(7, auto);
   }
+  .skill div p {
+    font-size: 1rem;
+  }
+  .skill div p span {
+    font-size: 1rem;
+  }
   .skill div img {
     width: 100%;
   }
@@ -277,32 +276,35 @@ footer .hidden-text {
   .education {
     grid-area: education;
   }
+  .education .textEdu {
+    text-align: justify;
+  }
 
   /*CONTACT*/
-  #grid__contact {
+  #gridContact {
     display: grid;
     justify-content: center;
     align-items: center;
     grid-template-columns: 60%;
     grid-template-rows: 0.5fr 1fr;
   }
-  #grid__contact .message h1, #grid__contact .message p {
+  #gridContact .message h1, #gridContact .message p {
     font-size: 1rem;
   }
-  #grid__contact .message :nth-child(2) {
+  #gridContact .message :nth-child(2) {
     font-size: 0.8rem;
   }
-  #grid__contact form {
+  #gridContact form {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
   }
-  #grid__contact form .form_space {
+  #gridContact form .formSpace {
     width: 90%;
     margin-bottom: 3vh;
   }
-  #grid__contact .boton {
+  #gridContact .boton {
     font-size: 1rem;
   }
 }
@@ -318,33 +320,28 @@ footer .hidden-text {
     padding: 2%;
     font-size: 1rem;
   }
-  footer .footer_text {
+  footer .footerText {
     justify-self: flex-start;
   }
   footer div {
     width: 50%;
     justify-self: flex-end;
   }
-  footer div .footer_icon {
-    width: 40px;
-    padding-bottom: 5%;
-    margin-right: 2%;
-  }
 
   /*HOME*/
-  .name {
+  .homeTitle {
     font-size: 2rem;
   }
-  .name span {
+  .homeTitle span {
     font-size: 2rem;
   }
 
-  .text__index p {
+  .textHome p {
     font-size: 1rem;
   }
 
   /* PROJECT */
-  #project01, #project01_expl, #project02, #project01_expl2 {
+  #project01, #project01_expl, #project02, #project01Expl2 {
     display: grid;
     justify-content: center;
     align-items: center;
@@ -370,7 +367,7 @@ footer .hidden-text {
     font-size: 1.4rem;
   }
 
-  #project02, #project01_expl2 {
+  #project02, #project01Expl2 {
     display: grid;
     justify-content: center;
     align-items: center;
@@ -392,7 +389,7 @@ footer .hidden-text {
     grid-area: info02;
   }
 
-  .project-number {
+  .projectNumber {
     font-size: 12rem;
     display: flex;
     flex-flow: row nowrap;
@@ -400,24 +397,24 @@ footer .hidden-text {
     align-items: center;
   }
 
-  .project-img {
+  .projectImg {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
     padding-right: 5%;
   }
-  .project-img img {
+  .projectImg img {
     width: 100%;
   }
 
-  .project-info .title-1 {
+  .projectInfo .title-1 {
     font-size: 2rem;
   }
-  .project-info .title-2 {
+  .projectInfo .title-2 {
     font-size: 5rem;
   }
-  .project-info .project-text {
+  .projectInfo .project-text {
     font-size: 1rem;
     font-weight: 300;
   }
@@ -444,7 +441,7 @@ footer .hidden-text {
     text-align: start;
     padding: 3vh 0;
   }
-  section .text__about {
+  section .textAbout {
     font-size: 1rem;
     padding-left: 3%;
   }
@@ -456,7 +453,7 @@ footer .hidden-text {
     margin-left: 3%;
   }
 
-  #grid__about {
+  #gridAbout {
     display: grid;
     width: 80%;
     margin-left: 10%;
@@ -467,7 +464,7 @@ footer .hidden-text {
 
   .photo {
     grid-area: photo;
-    margin-top: 30px;
+    margin: 2% 0px;
   }
   .photo img {
     width: 60%;
@@ -484,6 +481,7 @@ footer .hidden-text {
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: center;
+    margin-left: -10%;
   }
 
   .location {
@@ -506,7 +504,7 @@ footer .hidden-text {
     margin-left: 10%;
   }
   .skill div img {
-    width: 30%;
+    width: 50%;
   }
 
   .education {
@@ -514,30 +512,30 @@ footer .hidden-text {
   }
 
   /*CONTACT*/
-  #grid__contact {
+  #gridContact {
     display: grid;
     justify-content: center;
     align-items: center;
     grid-template-columns: 60%;
     grid-template-rows: 0.5fr 1fr;
   }
-  #grid__contact .message h1, #grid__contact .message p {
+  #gridContact .message h1, #gridContact .message p {
     font-size: 1rem;
   }
-  #grid__contact .message :nth-child(2) {
+  #gridContact .message :nth-child(2) {
     font-size: 0.8rem;
   }
-  #grid__contact form {
+  #gridContact form {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
   }
-  #grid__contact form input, #grid__contact form textarea {
+  #gridContact form input, #gridContact form textarea {
     width: 80%;
     margin-bottom: 3vh;
   }
-  #grid__contact form .boton {
+  #gridContact form .boton {
     width: 30%;
     font-size: 1rem;
   }
@@ -556,33 +554,28 @@ DESKTOP
     padding: 1%;
     font-size: 1.2rem;
   }
-  footer .footer_text {
+  footer .footerText {
     justify-self: flex-start;
   }
   footer div {
     width: 25%;
     justify-self: flex-end;
   }
-  footer div .footer_icon {
-    width: 40px;
-    padding-bottom: 5%;
-    margin-right: 2%;
-  }
 
   /*HOME*/
-  .name {
+  .homeTitle {
     font-size: 2.5rem;
   }
-  .name span {
+  .homeTitle span {
     font-size: 2.5rem;
   }
 
-  .text_index p {
+  .textHome p {
     font-size: 1.2rem;
   }
 
   /* PROJECT */
-  #project01, #project01_expl, #project02, #project01_expl2 {
+  #project01, #project01_expl, #project02, #project01Expl2 {
     display: grid;
     justify-content: center;
     align-items: center;
@@ -608,7 +601,7 @@ DESKTOP
     font-size: 1.4rem;
   }
 
-  #project02, #project01_expl2 {
+  #project02, #project01Expl2 {
     display: grid;
     justify-content: center;
     align-items: center;
@@ -632,7 +625,7 @@ DESKTOP
     grid-area: info02;
   }
 
-  .project-number {
+  .projectNumber {
     font-size: 12rem;
     display: flex;
     flex-flow: row nowrap;
@@ -640,28 +633,28 @@ DESKTOP
     align-items: center;
   }
 
-  .project-img {
+  .projectImg {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
     padding-right: 5%;
   }
-  .project-img img {
+  .projectImg img {
     width: 100%;
   }
 
-  .project-info .title-1 {
+  .projectInfo .title-1 {
     font-size: 2rem;
   }
-  .project-info .title-2 {
+  .projectInfo .title-2 {
     font-size: 5rem;
   }
-  .project-info .project-text {
+  .projectInfo .projectText {
     font-size: 1.2rem;
   }
 
-  .project_info01 {
+  .projectInfo01 {
     font-size: 1.2rem;
   }
 
@@ -679,7 +672,7 @@ DESKTOP
     font-size: 2.5rem;
     text-align: start;
   }
-  section .text__about {
+  section .textAbout {
     font-size: 1.2rem;
     padding-left: 5%;
   }
@@ -691,7 +684,7 @@ DESKTOP
     margin-left: 5%;
   }
 
-  #grid__about {
+  #gridAbout {
     display: grid;
     width: 80%;
     margin-left: 10%;
@@ -707,7 +700,7 @@ DESKTOP
     justify-content: flex-start;
     align-items: center;
   }
-  .profile h1, .profile h2 {
+  .profile h1, .profile h2, .profile p {
     align-self: flex-start;
     padding-left: 5%;
   }
@@ -753,6 +746,15 @@ DESKTOP
     grid-template-rows: repeat(7, auto);
     margin: 5% 0;
   }
+  .skill div p {
+    font-size: 1.2rem;
+  }
+  .skill div p span {
+    font-size: 1.2rem;
+  }
+  .skill div img {
+    width: 100%;
+  }
 
   .education {
     grid-area: education;
@@ -762,39 +764,39 @@ DESKTOP
     font-size: 1.4rem;
     padding-bottom: 5px;
   }
-  .education .date_edu {
+  .education .dateEdu {
     padding-left: 3%;
   }
-  .education .text__about_edu {
+  .education .textEdu {
     padding-left: 5%;
     font-size: 1.2rem;
   }
 
   /*CONTACT*/
-  #grid__contact {
+  #gridContact {
     display: grid;
     justify-content: center;
     align-items: center;
     grid-template-columns: 60%;
     grid-template-rows: 0.5fr 1fr;
   }
-  #grid__contact .message h1, #grid__contact .message p {
+  #gridContact .message h1, #gridContact .message p {
     font-size: 1.2rem;
   }
-  #grid__contact .message :nth-child(2) {
+  #gridContact .message :nth-child(2) {
     font-size: 0.96rem;
   }
-  #grid__contact form {
+  #gridContact form {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
   }
-  #grid__contact form .form_space {
+  #gridContact form .formSpace {
     width: 60%;
     margin-bottom: 3vh;
   }
-  #grid__contact form .boton {
+  #gridContact form .boton {
     width: 20%;
     font-size: 1.2rem;
   }
@@ -845,20 +847,20 @@ body {
 /*color de texto al aplicar hover*/
 /*color de animacion 1 link*/
 /*color de animacion 2 link*/
-.container_home {
+.containerHome {
   width: 80%;
   margin-left: 10%;
 }
-.container_home .container_img {
+.containerHome .homeImg {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
 }
-.container_home .container_img img {
+.containerHome .homeImg img {
   width: 80%;
 }
-.container_home .container_title h1 {
+.containerHome .homeTitle h1 {
   text-align: center;
   animation-duration: 5s;
   animation-name: color__name;
@@ -873,11 +875,11 @@ body {
     opacity: 1;
   }
 }
-.container_home .container_title h1 span {
+.containerHome .homeTitle h1 span {
   color: #7f8e57;
   font-family: Dosis, Quicksan, Arial, Helvetica, sans-serif;
 }
-.container_home .text_index p {
+.containerHome .textHome p {
   text-align: justify;
 }
 
@@ -926,7 +928,7 @@ body {
 }
 
 /* efecto sobre los links */
-.project-link {
+.projectLink {
   display: inline-block;
   text-decoration: none;
   color: white;
@@ -935,7 +937,7 @@ body {
   border-radius: 5px 20px;
   box-shadow: 2px 5px 5px rgba(84, 95, 58, 0.7882352941);
 }
-.project-link:hover {
+.projectLink:hover {
   animation: pulsate 1s ease-in-out;
   color: white;
 }
@@ -953,36 +955,36 @@ hr {
 }
 
 /*PORTADAS PAGINA PROJECT*/
-#project01, #project01_expl, #project02, #project01_expl2 {
+#project01, #project01_expl, #project02, #project01Expl2 {
   width: 80%;
   margin-left: 10%;
 }
-#project01 .project-number, #project01_expl .project-number, #project02 .project-number, #project01_expl2 .project-number {
+#project01 .projectNumber, #project01_expl .projectNumber, #project02 .projectNumber, #project01Expl2 .projectNumber {
   font-family: Dosis, Quicksand, Arial, Helvetica, sans-serif;
   font-weight: 300;
   text-shadow: 5px 5px 4px rgba(84, 95, 58, 0.7882352941);
 }
-#project01 .project-info, #project01_expl .project-info, #project02 .project-info, #project01_expl2 .project-info {
+#project01 .projectInfo, #project01_expl .projectInfo, #project02 .projectInfo, #project01Expl2 .projectInfo {
   margin: 0 10%;
   padding: 5% 0;
 }
-#project01 .project-info .title-2, #project01_expl .project-info .title-2, #project02 .project-info .title-2, #project01_expl2 .project-info .title-2 {
+#project01 .projectInfo .title-2, #project01_expl .projectInfo .title-2, #project02 .projectInfo .title-2, #project01Expl2 .projectInfo .title-2 {
   /* formato para nombre individual */
   font-family: Dosis, Quicksand, Arial, Helvetica, sans-serif;
   color: #5b6b2e;
   margin-top: -5vh;
 }
-#project01 .project-info .project-text, #project01_expl .project-info .project-text, #project02 .project-info .project-text, #project01_expl2 .project-info .project-text {
+#project01 .projectInfo .projectText, #project01_expl .projectInfo .projectText, #project02 .projectInfo .projectText, #project01Expl2 .projectInfo .projectText {
   text-align: justify;
   font-weight: 300;
 }
 
 /*PROJECTO-01 INDIVIDUAL*/
-.project_info01 {
+.projectInfo01 {
   width: 80%;
   margin-left: 10%;
 }
-.project_info01 p {
+.projectInfo01 p {
   padding: 2%;
   font-weight: 300;
 }
@@ -997,20 +999,20 @@ hr {
 }
 
 /*PROJECTO-02 INDIVIDUAL*/
-#project01_expl2 {
+#project01Expl2 {
   width: 80%;
   margin-left: 10%;
 }
 
-#project_info02 {
+#projectInfo02 {
   width: 80%;
   margin-left: 10%;
 }
-#project_info02 p {
+#projectInfo02 p {
   padding: 5%;
 }
 
-.grid_img_02 {
+.gridImg02 {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -1069,14 +1071,14 @@ body {
   animation: pulsate 1s ease-in-out;
 }
 
-.buttom__back, .buttom__up svg {
+.buttomBack, .buttomUp svg {
   color: #383f3a;
 }
-.buttom__back:hover, .buttom__up svg:hover {
+.buttomBack:hover, .buttomUp svg:hover {
   color: rgba(84, 95, 58, 0.7882352941);
 }
 
-.buttom__up {
+.buttomUp {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-end;
@@ -1122,7 +1124,7 @@ section h1, section h2 {
   color: #383f3a;
   padding: 3vh 0;
 }
-section .text__about {
+section .textAbout {
   text-align: justify;
 }
 section article h3 {
@@ -1135,13 +1137,9 @@ section article .date {
   font-style: italic;
 }
 
-.skill div img {
-  width: 100%;
-}
 .skill div p {
   color: #5b6b2e;
   font-family: Quicksand, Arial, Helvetica, sans-serif;
-  font-size: 1.2rem;
   font-weight: 600;
   text-align: center;
 }
@@ -1191,14 +1189,14 @@ body {
   animation: pulsate 1s ease-in-out;
 }
 
-.buttom__back, .buttom__up svg {
+.buttomBack, .buttomUp svg {
   color: #383f3a;
 }
-.buttom__back:hover, .buttom__up svg:hover {
+.buttomBack:hover, .buttomUp svg:hover {
   color: rgba(84, 95, 58, 0.7882352941);
 }
 
-.buttom__up {
+.buttomUp {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-end;

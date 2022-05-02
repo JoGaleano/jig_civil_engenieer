@@ -12,17 +12,17 @@
     }    
 }
 
-.buttom__back{ 
+.buttomBack{ 
     color: $textgral;
     &:hover{
         color: $color-shadow;
     }
 }
 
-.buttom__up{
+.buttomUp{
         @include flex(row, nowrap, flex-end, center);
         svg{ 
-            @extend .buttom__back;
+            @extend .buttomBack;
         }
 }
 

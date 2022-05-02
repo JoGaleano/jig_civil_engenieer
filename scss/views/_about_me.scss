@@ -11,14 +11,13 @@
     box-shadow: 5px 5px 5px $color-shadow;
 }
 
-
 section{
     h1, h2{
         font-weight: 400;
         color: $title;
         padding: 3vh 0; 
     }
-    .text__about{
+    .textAbout{
         text-align: justify;
     }
     article{
@@ -36,13 +35,9 @@ section{
 
 .skill{
     div{
-        img{
-            width: 100%;
-        }
         p{
             color: $subtitle;
             font-family: Quicksand, Arial, Helvetica, sans-serif;
-            font-size: $size_text_desktop;
             font-weight: 600;
             text-align: center;
             span{

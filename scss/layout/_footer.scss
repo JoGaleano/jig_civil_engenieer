@@ -17,9 +17,3 @@ footer{
         }
 } 
 
-@mixin size_icon_footer ($width, $padding_bottom, $margin_right) {
-    width: $width;
-    padding-bottom: $padding_bottom;
-    margin-right: $margin_right;
-}
-

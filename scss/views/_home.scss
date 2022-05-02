@@ -2,15 +2,15 @@
 @import "../base/color";
 
 
-.container_home{
+.containerHome{
     @include structure ( 80% , 10%);
-    .container_img{
+    .homeImg{
         @include flex( row, nowrap, center, center);
         img{
             width: 80%;
         }
     }
-    .container_title{
+    .homeTitle{
         h1{
             text-align: center;
             animation-duration: 5s;
@@ -28,7 +28,7 @@
         }
 
     }
-    .text_index p{
+    .textHome p{
         text-align: justify;
     }
 

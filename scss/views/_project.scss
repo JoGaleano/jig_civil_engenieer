@@ -12,12 +12,12 @@ hr{
 /*PORTADAS PAGINA PROJECT*/
 #project01{
     @include structure (80%,10%);
-    .project-number{
+    .projectNumber{
         font-family: Dosis, Quicksand, Arial, Helvetica, sans-serif;
         font-weight: 300;
         text-shadow: 5px 5px 4px $color-shadow;
     }
-    .project-info{
+    .projectInfo{
         margin: 0 10%;
         padding: 5% 0;        
         .title-2{
@@ -26,7 +26,7 @@ hr{
             color: $subtitle;
             margin-top: -5vh;
         }
-        .project-text{
+        .projectText{
             text-align: justify;
             font-weight: 300;
         }
@@ -44,7 +44,7 @@ hr{
     @extend #project01;
 }
 
-.project_info01{
+.projectInfo01{
     @include structure (80%,10%);
     p{ 
         padding: 2%;
@@ -63,17 +63,17 @@ hr{
 
 
 /*PROJECTO-02 INDIVIDUAL*/
-#project01_expl2{
+#project01Expl2{
     @extend #project02;
     @include structure(80%,10%)
 }
 
-#project_info02{
+#projectInfo02{
     @include structure (80%,10%);
     p{ padding: 5%;}
 }
 
-.grid_img_02{
+.gridImg02{
     @include  flex(row, nowrap, center, center);
 }
 .featurette-heading{

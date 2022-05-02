@@ -11,30 +11,26 @@
         grid-template-columns: 100%;
         grid-template-rows: 0.2fr 0.4fr;
         padding: 2%;
-        .footer_text{
+        font-size: $size_mobile_text;
+        .footerText{
             justify-self: center;
             padding-bottom: 2%;
-        }
-        font-size: $size_mobile_text;
+        }        
         div{
             padding: 2%;
             align-self: center;
             justify-self: center;
-            .footer_icon{
-                @include size_icon_footer(40px, 5%, 0%);
-                padding-left: 3%;
-            }
         }
     }
 
 /*HOME*/
-    .name{
+    .homeTitle{
         font-size: $size_title_mobile;
         span{
             font-size: $size_title_mobile;
         }
     }
-    .text__index{
+    .textHome{
         p{
             font-size:$size_mobile_text;
         }
@@ -72,11 +68,11 @@
     }
     .info02{grid-area: info02;}
 
-    .project-number{
+    .projectNumber{
         font-size: $size_project_number_mobile;
         @include flex(row, nowrap,center,center);
     }
-    .project-img{
+    .projectImg{
         @include flex(row, nowrap,center,center);
         padding-right: 4%;
         img{
@@ -84,14 +80,14 @@
         }
     }
 
-    .project-info{
+    .projectInfo{
         .title-1{
             font-size: $size_project_subtitle_mobile;
         }
         .title-2{
             font-size: $size_project_title_mobile;
         }
-        .project-text{
+        .projectText{
             font-size: $size_mobile_text;
             font-weight: 300;
         }
@@ -106,10 +102,9 @@
             text-align: center;
             padding-top: 3vh;  
         }
-        .text__about{ 
+        .textAbout{ 
             font-size:$size_mobile_text;
             text-align: center;
-            padding-top: 3vh;
             margin-bottom: 2vh;
         }
         article{
@@ -120,7 +115,7 @@
             .date{margin-bottom: 1vh;}
         }
     }
-    #grid__about{
+    #gridAbout{
         @include grid_project(90% , 5%);
         grid-template-areas: 
         "photo"
@@ -131,13 +126,13 @@
         "skill"
         "education";
         grid-template-columns: 100%;
-        grid-template-rows: 0.7fr 0.5fr 0.5fr 0.3fr repeat(4,auto);
+        grid-template-rows: 0.5fr 0.5fr 0.4fr 0.3fr repeat(4,auto);
     }
     .photo{
         grid-area: photo; 
-        margin-top: 30px;
+        margin: 2% 0px;
         img{
-            width: 80%;
+            width: 70%;
         }
     }
     .profile{
@@ -159,15 +154,24 @@
             @include grid_base(center, center);
             grid-template-columns: 0.2fr 0.7fr;
             grid-template-rows: repeat(7, auto);
+            p{
+                font-size: $size_mobile_text;
+                span{
+                    font-size: $size_mobile_text;
+                }
+            }
             img{
                 width: 100%;
             }
         }
     }
-    .education{grid-area: education;}
+    .education{
+        grid-area: education;
+        .textEdu{text-align: justify}
+    }
 
 /*CONTACT*/
-    #grid__contact{
+    #gridContact{
         @include grid_base(center, center);
         grid-template-columns: 60%;
         grid-template-rows: 0.5fr 1fr;
@@ -182,7 +186,7 @@
     
         form{
             @include flex(column, nowrap, center, center);
-            .form_space{
+            .formSpace{
                 width: 90%;
                 margin-bottom: 3vh ;
                 }
@@ -202,26 +206,23 @@
         grid-template-columns: 50% 50%;
         grid-template-rows: 0.5fr;
         padding: 2%;
-        .footer_text{
-            justify-self: flex-start;
-        }        
         font-size: $size_tablet_text;
+        .footerText{
+            justify-self: flex-start;
+        }   
         div{
             width: 50%;
             justify-self: flex-end;
-            .footer_icon{
-                @include size_icon_footer(40px, 5%, 2%);
-            }
         }        
     }
 /*HOME*/
-    .name{
+    .homeTitle{
         font-size: $size_title_tablet;
         span{
             font-size: $size_title_tablet;
         }
     }
-    .text__index{
+    .textHome{
         p{
             font-size:$size_tablet_text;
         }
@@ -256,12 +257,12 @@
     .img02{grid-area: img02;}
     .info02{grid-area: info02;}
 
-    .project-number{
+    .projectNumber{
         font-size: $size_project_number_tablet;
         @include flex( row, nowrap, center, center);
     }
 
-    .project-img{
+    .projectImg{
         @include flex( row, nowrap, center, center);
         padding-right: 5%;
         img{
@@ -269,7 +270,7 @@
         }
     }
 
-    .project-info{
+    .projectInfo{
         .title-1{
             font-size: $size_project_subtitle_mobile ;
         }
@@ -296,7 +297,7 @@
             text-align: start;
             padding: 3vh 0;  
         }
-        .text__about{ 
+        .textAbout{ 
             font-size: $size_tablet_text;
             padding-left: 3%;
         }
@@ -309,7 +310,7 @@
         }
     }
 
-    #grid__about{
+    #gridAbout{
         @include grid_project(80% , 10%);
         grid-template-areas: 
         "photo photo"
@@ -324,7 +325,7 @@
 
     .photo{
         grid-area: photo; 
-        margin-top: 30px;
+        margin: 2% 0px;
         img{width: 60%;}
 
     }
@@ -335,6 +336,7 @@
     .languague{
         grid-area: languague;
         @include flex (column, nowrap, flex-start, center);
+        margin-left:  -10%;
     }
     .location{grid-area: location;}
     .experience{grid-area: experience;}
@@ -348,14 +350,14 @@
             align-items: center;
             margin-left: 10%;
             img{
-                width: 30%;
+                width: 50%;
             }
         }
     }
     .education{grid-area: education;}
     
 /*CONTACT*/    
-    #grid__contact{
+    #gridContact{
         @include grid_base(center, center);
         grid-template-columns: 60%;
         grid-template-rows: 0.5fr 1fr;
@@ -392,27 +394,24 @@ DESKTOP
         grid-template-columns: 50% 50%;
         grid-template-rows: 0.5fr;
         padding: 1%;
-        .footer_text{
+        .footerText{
             justify-self: flex-start;
         }
         font-size: $size_text_desktop;
         div{
             width: 25%;
             justify-self: flex-end;
-            .footer_icon{
-                @include size_icon_footer(40px, 5%, 2%);
-            }
         }        
     }
 
 /*HOME*/
-    .name{
+    .homeTitle{
         font-size: $size_title_desktop;
         span{
             font-size: $size_title_desktop;
         }
     }
-    .text_index{
+    .textHome{
         p{
             font-size: $size_text_desktop ;
         }
@@ -451,11 +450,11 @@ DESKTOP
     .img02{grid-area: img02;}
     .info02{grid-area: info02;}
 
-    .project-number{
+    .projectNumber{
         font-size: $size_project_number_desktop;
         @include flex(row, nowrap,center,center);
     }
-    .project-img{
+    .projectImg{
         @include flex( row, nowrap, center, center);
         padding-right: 5%;
         img{
@@ -463,19 +462,19 @@ DESKTOP
         }        
 
     }    
-    .project-info{
+    .projectInfo{
         .title-1{
             font-size: $size_title_project_desktop;
         }
         .title-2{
             font-size: $size_subtitle_project_desktop;
         }
-        .project-text{
+        .projectText{
             font-size: $size_text_desktop;
         }
     }
 
-    .project_info01{
+    .projectInfo01{
         font-size: $size_text_desktop;
     }
     /* transformacion aumento de escala de imagenes de planos */
@@ -489,7 +488,7 @@ DESKTOP
             font-size: $size_title_desktop;
             text-align: start;
         }
-        .text__about{ 
+        .textAbout{ 
             font-size: $size_text_desktop;
             padding-left: 5%;
         }
@@ -502,7 +501,7 @@ DESKTOP
         }
     }
 
-    #grid__about{
+    #gridAbout{
         @include grid_project(80% , 10%);
         grid-template-areas: 
         "photo profile profile"
@@ -515,7 +514,7 @@ DESKTOP
     .profile{
         grid-area: profile;
         @include flex (column, nowrap, flex-start, center);
-        h1, h2{
+        h1, h2, p{
             align-self: flex-start;
             padding-left: 5%;
         }
@@ -547,6 +546,15 @@ DESKTOP
             grid-template-columns: 0.2fr 0.7fr;
             grid-template-rows: repeat(7, auto);
             margin: 5% 0;
+            p{
+                font-size: $size_text_desktop ;
+                span{
+                    font-size: $size_text_desktop ;
+                }
+            }
+            img{
+                width: 100%;
+            }
         }
     }
 
@@ -557,15 +565,15 @@ DESKTOP
             font-size: $size_subtitle_desktop;
             padding-bottom: 5px;
         }
-        .date_edu{padding-left: 3%;}
-        .text__about_edu{
+        .dateEdu{padding-left: 3%;}
+        .textEdu{
             padding-left: 5%;
             font-size: $size_text_desktop;
         }
     }
 
 /*CONTACT*/
-    #grid__contact{
+    #gridContact{
         @include grid_base(center, center);
         grid-template-columns: 60%;
         grid-template-rows: 0.5fr 1fr;
@@ -578,7 +586,7 @@ DESKTOP
         } 
         form{
             @include flex ( column, nowrap, center, center);
-            .form_space{
+            .formSpace{
                 width: 60%;
                 margin-bottom: 3vh ;
             }
