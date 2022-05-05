@@ -551,13 +551,13 @@ DESKTOP
     align-items: center;
     grid-template-columns: 50% 50%;
     grid-template-rows: 0.5fr;
-    padding: 1%;
     font-size: 1.2rem;
   }
   footer .footerText {
     justify-self: flex-start;
   }
   footer div {
+    padding: 1%;
     width: 25%;
     justify-self: flex-end;
   }
@@ -847,9 +847,14 @@ body {
 /*color de texto al aplicar hover*/
 /*color de animacion 1 link*/
 /*color de animacion 2 link*/
+.logo {
+  width: 150px;
+}
+
 .containerHome {
   width: 80%;
   margin-left: 10%;
+  overflow: hidden;
 }
 .containerHome .homeImg {
   display: flex;

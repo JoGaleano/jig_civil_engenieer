@@ -393,12 +393,12 @@ DESKTOP
         @include grid_base(center, center);
         grid-template-columns: 50% 50%;
         grid-template-rows: 0.5fr;
-        padding: 1%;
         .footerText{
             justify-self: flex-start;
         }
         font-size: $size_text_desktop;
         div{
+            padding: 1%;
             width: 25%;
             justify-self: flex-end;
         }        
