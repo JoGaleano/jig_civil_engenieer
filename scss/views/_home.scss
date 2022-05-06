@@ -2,9 +2,6 @@
 @import "../base/color";
 
 
-.logo{
-    width: 150px;
-}
 .containerHome{
     @include structure ( 80% , 10%);
     overflow: hidden;

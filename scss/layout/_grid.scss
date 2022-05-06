@@ -5,6 +5,9 @@
 
 /*MOBILE*/
 @media (max-width: 768px){
+    .logo{
+        width: 100px;
+    }
 /*FOOTER*/
     footer{
         @include grid_base(center, center);
@@ -200,6 +203,9 @@
 
 /*TABLET*/
 @media (min-width:769px) and (max-width:1199px){
+    .logo{
+        width: 150px;
+    }
 /*FOOTER*/
     footer{
         @include grid_base(center, center);
@@ -388,6 +394,9 @@ DESKTOP
 *******/
 
 @media (min-width:1200px){
+    .logo{
+        width: 150px;
+    }
 /*FOOTER*/
     footer{
         @include grid_base(center, center);
