@@ -28,7 +28,7 @@ hr{
         }
         .projectText{
             text-align: justify;
-            font-weight: 300;
+            font-weight: 400;
         }
     }
 }  
@@ -48,7 +48,7 @@ hr{
     @include structure (80%,10%);
     p{ 
         padding: 2%;
-        font-weight: 300;
+        font-weight: 400;
     }
 }
 
@@ -56,7 +56,7 @@ hr{
     width: 80%;
     h5{
         font-family: Quicksand, Arial, Helvetica, sans-serif;
-        font-weight: 300;
+        font-weight: 400;
         text-align: center;
     }
 }
@@ -84,4 +84,5 @@ hr{
 
 .lead{
     color:$textgral;
+    font-weight: 400;
 }

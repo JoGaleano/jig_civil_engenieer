@@ -981,7 +981,7 @@ hr {
 }
 #project01 .projectInfo .projectText, #project01_expl .projectInfo .projectText, #project02 .projectInfo .projectText, #project01Expl2 .projectInfo .projectText {
   text-align: justify;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 /*PROJECTO-01 INDIVIDUAL*/
@@ -991,7 +991,7 @@ hr {
 }
 .projectInfo01 p {
   padding: 2%;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 #album {
@@ -999,7 +999,7 @@ hr {
 }
 #album h5 {
   font-family: Quicksand, Arial, Helvetica, sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   text-align: center;
 }
 
@@ -1032,6 +1032,7 @@ hr {
 
 .lead {
   color: #383f3a;
+  font-weight: 400;
 }
 
 body {
@@ -1233,12 +1234,14 @@ body {
   color: #0d1102;
 }
 
+.message {
+  font-weight: 400;
+}
 .message :nth-child(2) {
   font-style: italic;
 }
 .message h1, .message p {
   text-align: center;
-  font-weight: 300;
 }
 
 form input, form textarea {
