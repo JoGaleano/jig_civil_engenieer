@@ -3,19 +3,15 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  list-style: none;
-  /*elimina el estilo en las listas*/
-  text-decoration: none;
-  /*elimina las viñetas*/
-  user-select: none;
-  /*impide seleccionar el texto*/
+  list-style: none; /*elimina el estilo en las listas*/
+  text-decoration: none; /*elimina las viñetas*/
+  user-select: none; /*impide seleccionar el texto*/
 }
 
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  /*para que como minimo sea el viewport*/
+  min-height: 100vh; /*para que como minimo sea el viewport*/
   background-color: white;
 }
 
@@ -79,6 +75,9 @@ footer .hidden-text {
 
 /*MOBILE*/
 @media (max-width: 768px) {
+  .logo {
+    width: 100px;
+  }
   /*FOOTER*/
   footer {
     display: grid;
@@ -98,7 +97,6 @@ footer .hidden-text {
     align-self: center;
     justify-self: center;
   }
-
   /*HOME*/
   .homeTitle {
     font-size: 1.7rem;
@@ -106,11 +104,9 @@ footer .hidden-text {
   .homeTitle span {
     font-size: 1.7rem;
   }
-
   .textHome p {
     font-size: 1rem;
   }
-
   /*PROJECT*/
   #project01, #project01_expl, #project02, #project01Expl2 {
     display: grid;
@@ -120,24 +116,19 @@ footer .hidden-text {
     grid-template-columns: 0.4fr 0.6fr;
     grid-template-rows: 0.5fr auto;
   }
-
   /* areas de la grilla */
   .number01 {
     grid-area: number01;
   }
-
   .img01 {
     grid-area: img01;
   }
-
   .info01 {
     grid-area: info01;
   }
-
   .card h5 {
     font-size: 1.2rem;
   }
-
   #project02, #project01Expl2 {
     display: grid;
     justify-content: center;
@@ -146,21 +137,17 @@ footer .hidden-text {
     grid-template-columns: 0.5fr 0.5fr;
     grid-template-rows: 0.5fr auto;
   }
-
   /* areas de la grilla */
   .number02 {
     grid-area: number02;
   }
-
   .img02 {
     grid-area: img02;
     padding-left: 2%;
   }
-
   .info02 {
     grid-area: info02;
   }
-
   .projectNumber {
     font-size: 8rem;
     display: flex;
@@ -168,7 +155,6 @@ footer .hidden-text {
     justify-content: center;
     align-items: center;
   }
-
   .projectImg {
     display: flex;
     flex-flow: row nowrap;
@@ -179,7 +165,6 @@ footer .hidden-text {
   .projectImg img {
     width: 100%;
   }
-
   .projectInfo .title-1 {
     font-size: 2rem;
   }
@@ -190,11 +175,9 @@ footer .hidden-text {
     font-size: 1rem;
     font-weight: 300;
   }
-
   .lead {
     font-size: 1rem;
   }
-
   /*ABOUT ME*/
   section {
     margin: 0 10%;
@@ -216,7 +199,6 @@ footer .hidden-text {
   section article .date {
     margin-bottom: 1vh;
   }
-
   #gridAbout {
     display: grid;
     width: 90%;
@@ -225,7 +207,6 @@ footer .hidden-text {
     grid-template-columns: 100%;
     grid-template-rows: 0.5fr 0.5fr 0.4fr 0.3fr repeat(4, auto);
   }
-
   .photo {
     grid-area: photo;
     margin: 2% 0px;
@@ -233,26 +214,21 @@ footer .hidden-text {
   .photo img {
     width: 70%;
   }
-
   .profile {
     grid-area: profile;
     margin-top: 0px;
   }
-
   .languague {
     grid-area: languague;
     text-align: center;
   }
-
   .location {
     grid-area: location;
     text-align: center;
   }
-
   .experience {
     grid-area: experience;
   }
-
   .skill {
     grid-area: skill;
   }
@@ -272,21 +248,17 @@ footer .hidden-text {
   .skill div img {
     width: 100%;
   }
-
   .education {
     grid-area: education;
   }
   .education .textEdu {
     text-align: justify;
   }
-
   /*CONTACT*/
   #gridContact {
     display: grid;
     justify-content: center;
     align-items: center;
-    grid-template-columns: 60%;
-    grid-template-rows: 0.5fr 1fr;
   }
   #gridContact .message h1, #gridContact .message p {
     font-size: 1rem;
@@ -294,22 +266,24 @@ footer .hidden-text {
   #gridContact .message :nth-child(2) {
     font-size: 0.8rem;
   }
-  #gridContact form {
+  #gridContact .message .linkedin {
     display: flex;
-    flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    padding: 5%;
   }
-  #gridContact form .formSpace {
-    width: 90%;
-    margin-bottom: 3vh;
-  }
-  #gridContact .boton {
-    font-size: 1rem;
+  #gridContact .message .textWork {
+    width: 80%;
+    margin-left: 10%;
+    font-size: 0.8rem;
+    font-style: italic;
   }
 }
 /*TABLET*/
 @media (min-width: 769px) and (max-width: 1199px) {
+  .logo {
+    width: 150px;
+  }
   /*FOOTER*/
   footer {
     display: grid;
@@ -327,7 +301,6 @@ footer .hidden-text {
     width: 50%;
     justify-self: flex-end;
   }
-
   /*HOME*/
   .homeTitle {
     font-size: 2rem;
@@ -335,11 +308,9 @@ footer .hidden-text {
   .homeTitle span {
     font-size: 2rem;
   }
-
   .textHome p {
     font-size: 1rem;
   }
-
   /* PROJECT */
   #project01, #project01_expl, #project02, #project01Expl2 {
     display: grid;
@@ -349,24 +320,19 @@ footer .hidden-text {
     grid-template-columns: 0.4fr 0.6fr;
     grid-template-rows: 0.5fr auto;
   }
-
   /* areas de la grilla */
   .number01 {
     grid-area: number01;
   }
-
   .img01 {
     grid-area: img01;
   }
-
   .info01 {
     grid-area: info01;
   }
-
   .card h5 {
     font-size: 1.4rem;
   }
-
   #project02, #project01Expl2 {
     display: grid;
     justify-content: center;
@@ -375,20 +341,16 @@ footer .hidden-text {
     grid-template-columns: 0.4fr 0.6fr;
     grid-template-rows: 0.5fr auto;
   }
-
   /* areas de la grilla */
   .number02 {
     grid-area: number02;
   }
-
   .img02 {
     grid-area: img02;
   }
-
   .info02 {
     grid-area: info02;
   }
-
   .projectNumber {
     font-size: 12rem;
     display: flex;
@@ -396,7 +358,6 @@ footer .hidden-text {
     justify-content: center;
     align-items: center;
   }
-
   .projectImg {
     display: flex;
     flex-flow: row nowrap;
@@ -407,7 +368,6 @@ footer .hidden-text {
   .projectImg img {
     width: 100%;
   }
-
   .projectInfo .title-1 {
     font-size: 2rem;
   }
@@ -418,20 +378,16 @@ footer .hidden-text {
     font-size: 1rem;
     font-weight: 300;
   }
-
   .lead {
     font-size: 1rem;
   }
-
   /* transformacion aumento de escala de imagenes de planos */
   .scaled {
     transition: transform 0.2s;
   }
-
   .scaled:hover {
     transform: scale(1.5);
   }
-
   /* ABOUT ME */
   section {
     margin: 0 10%;
@@ -452,7 +408,6 @@ footer .hidden-text {
   section article .date {
     margin-left: 3%;
   }
-
   #gridAbout {
     display: grid;
     width: 80%;
@@ -461,7 +416,6 @@ footer .hidden-text {
     grid-template-columns: 0.5fr 0.5fr;
     grid-template-rows: 1fr 0.5fr 0.3fr repeat(4, auto);
   }
-
   .photo {
     grid-area: photo;
     margin: 2% 0px;
@@ -469,12 +423,10 @@ footer .hidden-text {
   .photo img {
     width: 60%;
   }
-
   .profile {
     grid-area: profile;
     margin-top: 0px;
   }
-
   .languague {
     grid-area: languague;
     display: flex;
@@ -483,15 +435,12 @@ footer .hidden-text {
     align-items: center;
     margin-left: -10%;
   }
-
   .location {
     grid-area: location;
   }
-
   .experience {
     grid-area: experience;
   }
-
   .skill {
     grid-area: skill;
   }
@@ -506,18 +455,14 @@ footer .hidden-text {
   .skill div img {
     width: 50%;
   }
-
   .education {
     grid-area: education;
   }
-
   /*CONTACT*/
   #gridContact {
     display: grid;
     justify-content: center;
     align-items: center;
-    grid-template-columns: 60%;
-    grid-template-rows: 0.5fr 1fr;
   }
   #gridContact .message h1, #gridContact .message p {
     font-size: 1rem;
@@ -525,25 +470,24 @@ footer .hidden-text {
   #gridContact .message :nth-child(2) {
     font-size: 0.8rem;
   }
-  #gridContact form {
+  #gridContact .message .linkedin {
     display: flex;
-    flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    padding: 5%;
   }
-  #gridContact form input, #gridContact form textarea {
+  #gridContact .message .textWork {
     width: 80%;
-    margin-bottom: 3vh;
-  }
-  #gridContact form .boton {
-    width: 30%;
-    font-size: 1rem;
+    margin-left: 10%;
   }
 }
 /********   
 DESKTOP 
 *******/
 @media (min-width: 1200px) {
+  .logo {
+    width: 150px;
+  }
   /*FOOTER*/
   footer {
     display: grid;
@@ -561,7 +505,6 @@ DESKTOP
     width: 25%;
     justify-self: flex-end;
   }
-
   /*HOME*/
   .homeTitle {
     font-size: 2.5rem;
@@ -569,11 +512,9 @@ DESKTOP
   .homeTitle span {
     font-size: 2.5rem;
   }
-
   .textHome p {
     font-size: 1.2rem;
   }
-
   /* PROJECT */
   #project01, #project01_expl, #project02, #project01Expl2 {
     display: grid;
@@ -583,24 +524,19 @@ DESKTOP
     grid-template-columns: 0.2fr 0.4fr 0.4fr;
     grid-template-rows: 1fr;
   }
-
   /* areas de la grilla project01 */
   .number01 {
     grid-area: number01;
   }
-
   .img01 {
     grid-area: img01;
   }
-
   .info01 {
     grid-area: info01;
   }
-
   .card h5 {
     font-size: 1.4rem;
   }
-
   #project02, #project01Expl2 {
     display: grid;
     justify-content: center;
@@ -609,22 +545,18 @@ DESKTOP
     grid-template-columns: 0.4fr 0.4fr 0.2fr;
     grid-template-rows: 1fr;
   }
-
   /* areas de la grilla project02 */
   .number02 {
     grid-area: number02;
     justify-content: start;
     align-items: center;
   }
-
   .img02 {
     grid-area: img02;
   }
-
   .info02 {
     grid-area: info02;
   }
-
   .projectNumber {
     font-size: 12rem;
     display: flex;
@@ -632,7 +564,6 @@ DESKTOP
     justify-content: center;
     align-items: center;
   }
-
   .projectImg {
     display: flex;
     flex-flow: row nowrap;
@@ -643,7 +574,6 @@ DESKTOP
   .projectImg img {
     width: 100%;
   }
-
   .projectInfo .title-1 {
     font-size: 2rem;
   }
@@ -653,20 +583,16 @@ DESKTOP
   .projectInfo .projectText {
     font-size: 1.2rem;
   }
-
   .projectInfo01 {
     font-size: 1.2rem;
   }
-
   /* transformacion aumento de escala de imagenes de planos */
   .scaled {
     transition: transform 0.2s;
   }
-
   .scaled:hover {
     transform: scale(1.5);
   }
-
   /* ABOUT ME */
   section h1, section h2 {
     font-size: 2.5rem;
@@ -683,7 +609,6 @@ DESKTOP
   section article .date {
     margin-left: 5%;
   }
-
   #gridAbout {
     display: grid;
     width: 80%;
@@ -692,7 +617,6 @@ DESKTOP
     grid-template-columns: 0.5fr auto 0.4fr;
     grid-template-rows: 0.5fr 0.5fr auto 2fr;
   }
-
   .profile {
     grid-area: profile;
     display: flex;
@@ -704,7 +628,6 @@ DESKTOP
     align-self: flex-start;
     padding-left: 5%;
   }
-
   .photo {
     grid-area: photo;
     justify-self: center;
@@ -713,7 +636,6 @@ DESKTOP
   .photo img {
     width: 100%;
   }
-
   .languague {
     grid-area: languague;
     display: flex;
@@ -721,7 +643,6 @@ DESKTOP
     justify-content: flex-start;
     align-items: center;
   }
-
   .location {
     grid-area: location;
     display: flex;
@@ -729,12 +650,10 @@ DESKTOP
     justify-content: flex-start;
     align-items: center;
   }
-
   .experience {
     grid-area: experience;
     padding-left: 5%;
   }
-
   .skill {
     grid-area: skill;
   }
@@ -755,7 +674,6 @@ DESKTOP
   .skill div img {
     width: 100%;
   }
-
   .education {
     grid-area: education;
   }
@@ -771,14 +689,11 @@ DESKTOP
     padding-left: 5%;
     font-size: 1.2rem;
   }
-
   /*CONTACT*/
   #gridContact {
     display: grid;
     justify-content: center;
     align-items: center;
-    grid-template-columns: 60%;
-    grid-template-rows: 0.5fr 1fr;
   }
   #gridContact .message h1, #gridContact .message p {
     font-size: 1.2rem;
@@ -786,19 +701,15 @@ DESKTOP
   #gridContact .message :nth-child(2) {
     font-size: 0.96rem;
   }
-  #gridContact form {
+  #gridContact .message .linkedin {
     display: flex;
-    flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    padding: 2% 0% 5% 0%;
   }
-  #gridContact form .formSpace {
-    width: 60%;
-    margin-bottom: 3vh;
-  }
-  #gridContact form .boton {
-    width: 20%;
-    font-size: 1.2rem;
+  #gridContact .message .textWork {
+    font-size: 1rem;
+    font-style: italic;
   }
 }
 /*VARIABLES - PALETA DE COLORES */
@@ -847,10 +758,6 @@ body {
 /*color de texto al aplicar hover*/
 /*color de animacion 1 link*/
 /*color de animacion 2 link*/
-.logo {
-  width: 150px;
-}
-
 .containerHome {
   width: 80%;
   margin-left: 10%;
@@ -1118,8 +1025,7 @@ body {
 
 .photo img {
   border-radius: 50% 10%;
-  display: block;
-  /*para centrar la imagen*/
+  display: block; /*para centrar la imagen*/
   margin-left: auto;
   margin-right: auto;
   box-shadow: 5px 5px 5px rgba(84, 95, 58, 0.7882352941);

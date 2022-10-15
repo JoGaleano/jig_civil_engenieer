@@ -580,25 +580,24 @@ DESKTOP
 /*CONTACT*/
     #gridContact{
         @include grid_base(center, center);
-        grid-template-columns: 60%;
-        grid-template-rows: 0.5fr 1fr;
         .message{
             h1,p {font-size: $size_text_desktop;}
 
             :nth-child(2){
                 font-size: calc($size_text_desktop *0.8);
             }
+            .linkedin{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 2% 0% 5% 0%;
+            }
+            .textWork{
+                font-size: $size_text_span_desktop;
+                font-style: italic;
+            }
         } 
-        .linkedin{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 2% 0% 5% 0%;
-        }
-        .textWork{
-            font-size: $size_text_span_desktop;
-            font-style: italic;
-        }
+
     }
 
 
