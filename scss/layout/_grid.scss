@@ -175,28 +175,27 @@
 
 /*CONTACT*/
     #gridContact{
-        @include grid_base(center, center);
-        grid-template-columns: 60%;
-        grid-template-rows: 0.5fr 1fr;
-    
+        @include grid_base(center, center);    
         .message{
             h1, p {font-size: $size_mobile_text;}
     
             :nth-child(2){
                 font-size: $size_mobile_text *0.8;
             }
+            .linkedin{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 5%;
+            }
+            .textWork{
+                width: 80%;
+                margin-left: 10%;
+                font-size: $size_mobile_text *0.8;
+                font-style: italic;
+            }
         } 
     
-        form{
-            @include flex(column, nowrap, center, center);
-            .formSpace{
-                width: 90%;
-                margin-bottom: 3vh ;
-                }
-            }
-            .boton{
-                font-size: $size_mobile_text;
-            }
     }
 }
 
@@ -365,8 +364,6 @@
 /*CONTACT*/    
     #gridContact{
         @include grid_base(center, center);
-        grid-template-columns: 60%;
-        grid-template-rows: 0.5fr 1fr;
         
         .message{
             h1, p {font-size: $size_tablet_text;}
@@ -374,18 +371,17 @@
             :nth-child(2){
                 font-size: $size_tablet_text *0.8;
             }
-        } 
-        form{
-            @include flex ( column, nowrap, center, center);
-            input, textarea{
+            .linkedin{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 5%;
+            }
+            .textWork{
                 width: 80%;
-                margin-bottom: 3vh 
+                margin-left: 10%;
             }
-            .boton{
-                width: 30%;
-                font-size: $size_tablet_text;
-            }
-        }    
+        }  
     }  
 }
 
@@ -593,16 +589,15 @@ DESKTOP
                 font-size: calc($size_text_desktop *0.8);
             }
         } 
-        form{
-            @include flex ( column, nowrap, center, center);
-            .formSpace{
-                width: 60%;
-                margin-bottom: 3vh ;
-            }
-            .boton{
-                width: 20%;
-                font-size: $size_text_desktop;
-            }
+        .linkedin{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2% 0% 5% 0%;
+        }
+        .textWork{
+            font-size: $size_text_span_desktop;
+            font-style: italic;
         }
     }
 
