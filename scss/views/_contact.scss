@@ -2,20 +2,85 @@
 @import "../base/color";
 @import "../componet/buttom";
 
-.message{
-    font-weight: 400;
-    :nth-child(2){
-        font-style: italic; 
+
+#gridContact{
+
+    position: relative;
+    top: 72px;
+    margin-top: 20px;
+    height: 100vh;
+
+    .message{
+        font-weight: 400;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        :nth-child(2){
+            color: $color-animation-2;
+        }
+        h1,p{
+            text-align: center;
+        }
     }
-    h1,p{
-        text-align: center;
+
+}
+
+@media (max-width: 768px)  {
+    #gridContact{
+        height: 100vh;
+        margin-top: 60px;
+        margin-bottom: 140px;
+        @include grid_base(center, center);    
+        .message{
+            h1, p {
+                font-size: $size_mobile_text;
+                text-align: start;
+            }
+    
+            :nth-child(2){
+                font-size: $size_mobile_text *0.8;
+            }
+            .linkedin{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: 10%;
+            }
+            .textWork{
+                font-size: $size_mobile_text *0.8;
+            }
+        } 
+    
     }
 }
 
-form {
-    input, textarea{
-        border: 1px solid $textgral;
-        border-radius: 5px;
-        caret-color: $color-shadow;
-    }
+@media (min-width:769px) and (max-width:1199px){
+    #gridContact{
+        height: 100vh;
+        margin-top: 60px;
+        margin-bottom: 140px;
+        @include grid_base(center, center);
+        
+        .message{
+            h1, p {font-size: $size_tablet_text;}
+
+            :nth-child(2){
+                font-size: $size_tablet_text *0.8;
+            }
+            .linkedin{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 5%;
+            }
+            .textWork{
+                width: 80%;
+                margin-left: 10%;
+            }
+        }  
+    }  
 }
+
+
+
+

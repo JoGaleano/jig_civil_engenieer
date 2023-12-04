@@ -3,48 +3,170 @@
 @import "../componet/buttom";
 
 
-.photo img{
-    border-radius: 50% 10%;
-    display: block; /*para centrar la imagen*/
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 5px 5px 5px $color-shadow;
+.photo {
+    margin-top: 72px;
+    background-image: url(../../asset/about_desktop_portada.png);
+    height: 343px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: auto;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    &:hover{
+
+        background-image: url(../../asset/about_desktop_portada_color.png);
+    }
 }
 
 section{
     h1, h2{
-        font-weight: 400;
+        font-weight: 600;
         color: $title;
         padding: 3vh 0; 
     }
-    .textAbout{
-        text-align: justify;
-    }
+
     article{
         h3{
             color: $subtitle;
             font-weight: 400;
-            text-align: justify;
+            text-align: start;
+            span{
+                color: $color-date;
+                font-weight: 200;
+            }
+        }
+
+        .middle{
+            color: #a1a1a1;
+            width: 60%;
         }
         .date{
             color: $color-date;
-            font-style: italic;
+        }
+    }
+
+}
+
+.profile{
+    display: flex;
+    gap: 120px;
+}
+
+.itemsSkill {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-gap: 10px; 
+    align-items: start;
+    div{
+        display: flex;
+        flex-direction: column;
+        span{
+            margin-bottom: 24px;
+        }
+    } 
+}
+
+.education{
+    article{
+        margin-bottom: 80px;
+    }
+}
+
+.buttomUp{
+    margin-bottom: 20px;
+}
+
+@media (min-width:769px) and (max-width:1199px){
+    .photo {
+        margin-top: 72px;
+        background-image: url(../../asset/about_desktop_portada.png);
+        height: 200px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: left;
+        overflow: auto;
+        transition: background-color 0.3s ease;
+        &:hover{
+    
+            background-image: url(../../asset/about_desktop_portada_color.png);
         }
     }
 }
 
-.skill{
-    div{
-        p{
-            color: $subtitle;
-            font-family: Quicksand, Arial, Helvetica, sans-serif;
-            font-weight: 600;
-            text-align: center;
-            span{
-                color: $textgral;
+
+@media (max-width: 768px) {
+
+    .photo {
+        width: 100%;
+        margin-top: 72px;
+        background-image: url(../../asset/about-me_mobile.png);
+        height: 343px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        overflow: auto;
+        transition: background-color 0.3s ease;
+        border-radius: 0px 0px 18px 18px;
+        &:hover{
+            background-image: url(../../asset/about-me_mobile.png);
+        }
+    }
+
+    section{
+        h1{
+            margin-top: 20px;
+        }
+    
+        .intro{
+            margin-top: -20px;
+        }
+
+        .experience{
+            margin-bottom: -20px;
+        }
+
+        article{
+            h3{
+                color: $subtitle;
+                font-weight: 400;
+                text-align: start;
+                span{
+                    color: $color-date;
+                }
+            }
+            .date{
+                color: $color-date;
+                margin-top: 12px;
             }
         }
     }
+
+    
+    .profile{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .itemsSkill {
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        grid-gap: 10px; 
+        align-items: start;
+        div{
+            display: flex;
+            flex-direction: column;
+            span{
+                margin-bottom: 24px;
+            }
+        } 
+    }
+
+    .buttomUp{
+        margin-bottom: 20px;
+    }
+   
 }
 
 

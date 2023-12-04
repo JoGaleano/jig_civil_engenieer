@@ -3,39 +3,75 @@
 
 
 .containerHome{
-    @include structure ( 80% , 10%);
-    overflow: hidden;
-    .homeImg{
-        @include flex( row, nowrap, center, center);
-        img{
-            width: 80%;
-        }
-    }
-    .homeTitle{
-        h1{
-            text-align: center;
-            animation-duration: 5s;
-            animation-name: color__name;
-            animation-iteration-count: 1;
-            /* animacion al titulo*/
-            @keyframes color__name {
-                0%{opacity: 0;}
-                100%{opacity: 1;}
+    position: relative;
+    top: 72px;
+    background-image: url("../../asset/bg_principal.png"); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: auto;
+    min-height: 94vh;
+    .container-text{
+        margin-top: 200px;
+        @include structure ( 90% , 5%);
+        .homeTitle{
+            z-index: 10;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            h1{
+                text-align: center;
+                font-size: 2.5rem;
+                  #dynamicText {
+                    color: $text-span;
+                    font-family: Dosis, Quicksan, Arial, Helvetica, sans-serif;
+                    border-right: 2px solid black; /* cursor simulado */
+                    white-space: nowrap; /* asegura que el texto no se envuelva */
+                    overflow: hidden; /* oculta texto que sobrepasa el contenedor */
+                  }
+                  @keyframes blinkCursor {
+                    from {border-right-color: black;}
+                    to {border-right-color: transparent;}
+                }
+                  #dynamicText.visible {
+                    animation: blinkCursor 0.7s steps(5) infinite;
+                }
+
             }
-            span{
-                color: $text-span;
-                font-family: Dosis, Quicksan, Arial, Helvetica, sans-serif;
+
+            }
+
+        .textHome{
+            margin-top: 100px;
+            background: $color-bg;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 4px;
+            height: auto;
+            margin-bottom: 200px;
+            p{
+                text-align: justify;
             }
         }
 
-    }
-    .textHome p{
-        text-align: justify;
-    }
+    }   
 
 }
 
+@media (min-width:1428px){
+    .homeTitle{
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
 
-
+/*MOBILE*/
+@media (max-width: 768px){
+    .containerHome{
+        width: 100%;
+    }
+}
 
 

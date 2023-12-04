@@ -2,14 +2,183 @@
 @import "../base/color";
 @import "../componet/link";
 
-hr{
-    width: 80%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+
+.wait{
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    h2{
+        font: 2rem;
+        color: #7c7c7b;
+        font-weight: 200;
+    }
+    img{
+        width: 400px;
+        margin-bottom: 20px;
+        opacity: 0.6;
+    }
 }
 
+
+
+
+
+
 /*PORTADAS PAGINA PROJECT*/
+
+
+.container-projects{
+    position: relative;
+    top: 72px;
+    margin-top: 60px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 200px;
+
+    h1{
+        font-size: $size_text_span_desktop;
+        color: $title;
+    }
+        .project{
+            height: 170px;
+            position: relative;
+            overflow: hidden;
+            display: grid;
+            grid-template-areas: "titulos informacion";
+            border-radius: 4px;
+            transition: transform 0.3s ease-in-out;
+            a{
+                text-decoration: none;
+            }
+            .title{
+                width: 600px;
+                grid-area: titulos;
+                display: grid;
+                grid-template-areas: 
+                "num titulo";
+                grid-template-columns: auto 1fr;
+                gap: 20px;
+                span{
+                    grid-area: num;
+                    font-family: Dosis, Quicksand, Arial, Helvetica, sans-serif;
+                    font-size: 280px;
+                    position: relative;
+                    top: -80px;
+                    margin-right: 20px;
+                    min-width: 120px;
+                    color: rgba(32, 32, 32, 0.20);
+                }
+                .titulo{
+                    grid-area:titulo;
+                    position: relative;
+                    width: 340px;
+                    align-items: start;
+                    h2{
+                        font-family: Quicksand, Arial, Helvetica, sans-serif;
+                        font-weight: 200;
+                        font-size: 32px;
+                        color: $color-date;
+                    }
+    
+                    h3{
+                        margin-top: -20px;
+                        font-weight: 400;
+                        font-size: 42px;
+                        width: fit-content;
+                        color: $color-date;
+                    }
+    
+                }
+            }
+    
+            .text{
+                height: 170px;
+                grid-area: informacion;
+                display: grid;
+                justify-content: center;
+                align-items: start;
+                grid-template-columns: 1fr 0.2fr;
+                padding: 12px;
+                p{
+                    color: $color-date;
+                }
+                a{
+                    width: fit-content;
+                    height: 60px;
+                    padding: 8px;
+                    padding-left: 20px;
+                    cursor: pointer;
+                    img{
+                        width: 80%;
+                    }
+                    &:hover{
+                        color: $color-animation-1;
+                    }
+                }
+    
+    
+            }
+            &:hover{
+                transform: scale(1.1); 
+                box-shadow: 0px 6px 4px 0px rgba(0, 0, 0, 0.08), 6px 0px 4px 0px rgba(0, 0, 0, 0.08), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                border-bottom: 1px solid #3A4226;
+                z-index: 100;
+    
+            }
+            
+    
+        }
+    
+    .project-01{
+        .title {
+            span{
+                letter-spacing: 20px;
+            }
+            .titulo{
+                margin-top: -12px;
+            }
+        }
+        background-color: #F5F7F0;
+    
+    }
+    
+    .project-02{
+        background-color: #F0F3E9;
+        .titulo{
+            margin-top: 20px;
+        }
+
+    }
+    
+    .project-03{
+        background-color: #E0E6D1;
+        .titulo{
+            margin-top: 20px;
+        }
+    }
+    
+    .project-04{
+        background-color: #F0F3E9;
+        .titulo{
+            margin-top: -12px;
+        }
+    }
+    
+    .project-05{
+        background-color: #F5F7F0;
+        .titulo{
+            margin-top: 20px;
+        }
+    }
+    
+}
+
+
+
+
 #project01{
     @include structure (80%,10%);
     .projectNumber{
@@ -38,51 +207,367 @@ hr{
 }
 
 
-/*PROJECTO-01 INDIVIDUAL*/
+/*MOBILE*/
 
-#project01_expl{
-    @extend #project01;
-}
+@media (max-width: 768px){
+    .container-projects{
+        position: relative;
+        top: 72px;
+        margin-top: 60px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 200px;
+        width: 90vw;
 
-.projectInfo01{
-    @include structure (80%,10%);
-    p{ 
-        padding: 2%;
-        font-weight: 400;
+    
+        h1{
+            font-size: 0.8rem;
+            color: $title;
+        }
+            .project{
+                width: 90vw;
+                height: 450px;
+                position: relative;
+                margin-left: auto;
+                margin-right: auto;
+                overflow: hidden;
+                display: grid;
+                grid-template-areas: 
+                "titulos" 
+                "informacion";
+                border-radius: 4px;
+                transition: transform 0.3s ease-in-out;
+                border-bottom: 1px solid  $color-animation-1;
+                box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.12) inset;
+                a{
+                    text-decoration: none;
+                }
+                .title{
+                    width: 600px;
+                    grid-area: titulos;
+                    display: grid;
+                    grid-template-areas: 
+                    "num titulo";
+                    grid-template-columns: auto 1fr;
+                    gap: 20px;
+                    span{
+                        grid-area: num;
+                        font-family: Dosis, Quicksand, Arial, Helvetica, sans-serif;
+                        font-size: 200px;
+                        position: relative;
+                        top: -20px;
+                        min-width: 120px;
+                        color: rgba(32, 32, 32, 0.20);
+                    }
+                    .titulo{
+                        height: fit-content;
+                        grid-area:titulo;
+                        position: relative;
+                        top: 24px;
+                        width: 170px;
+                        align-items: start;
+                        margin-left: -200px;
+                        h2{
+                            font-family: Quicksand, Arial, Helvetica, sans-serif;
+                            font-weight: 200;
+                            font-size: 32px;
+                            color: $color-date;
+                            margin-left: -30px;
+                        }
+        
+                        h3{
+                            margin-top: -20px;
+                            font-weight: 400;
+                            font-size: 42px;
+                            width: fit-content;
+                            color: $color-date;
+                        }
+        
+                    }
+                }
+        
+                .text{
+                    height: 200px;
+                    width: 85vw;
+                    grid-area: informacion;
+                    display: grid;
+                    grid-template-areas: 
+                    "texto"
+                    "ir";
+                    justify-content: center;
+                    align-items: start;
+                    text-align: justify;
+                    margin-top: -70px;
+                    padding: 0px;
+                    p{
+                        grid-area: texto;
+                        color: $color-date;
+                        width: 328px;
+                        position: relative;
+                        top: -160px;
+                        left: -5px;
+                        padding-left: 8px;
+                        padding-right: 8px;
+
+                    }
+                    a{
+                        grid-area: ir;
+                        width: fit-content;
+                        cursor: pointer;
+                        position: relative;
+                        top: 60px;
+                        img{
+                            width: 80%;
+                        }
+                        &:hover{
+                            color: $color-animation-1;
+                        }
+                    }
+        
+        
+                }
+                &:hover{
+                    transform: scale(1.1); 
+                    box-shadow: 0px 6px 4px 0px rgba(0, 0, 0, 0.08), 6px 0px 4px 0px rgba(0, 0, 0, 0.08), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                    border-bottom: 1px solid #3A4226;
+                    z-index: 100;
+        
+                }
+                
+        
+            }
+        
+        .project-01{
+            .title {
+                span{
+                    letter-spacing: 20px;
+                }
+                .titulo{
+                    margin-top: -12px;
+                }
+            }
+            background-color: #F5F7F0;
+        
+        }
+        
+        .project-02{
+            background-color: #F0F3E9;
+            .titulo{
+                margin-top: -20px;
+            }
+    
+        }
+        
+        .project-03{
+            background-color: #E0E6D1;
+            .titulo{
+                margin-top: 20px;
+            }
+        }
+        
+        .project-04{
+            background-color: #F0F3E9;
+            .titulo{
+                margin-top: -12px;
+            }
+        }
+        
+        .project-05{
+            background-color: #F5F7F0;
+            .titulo{
+                margin-top: 20px;
+            }
+        }
+        
     }
+
 }
 
-#album{ 
-    width: 80%;
-    h5{
-        font-family: Quicksand, Arial, Helvetica, sans-serif;
-        font-weight: 400;
-        text-align: center;
+/*Tablet*/
+@media (min-width:769px) and (max-width:1199px){
+    .container-projects{
+        position: relative;
+        top: 72px;
+        margin-top: 60px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 200px;
+    
+        h1{
+            font-size: $size_text_span_desktop;
+            color: $title;
+        }
+            .project{
+                height: 170px;
+                width: 100%;
+                margin-left: 0px;
+                position: relative;
+                overflow: hidden;
+                display: grid;
+                grid-template-areas: "titulos informacion";
+                border-radius: 4px;
+                transition: transform 0.3s ease-in-out;
+                a{
+                    text-decoration: none;
+                }
+                .title{
+                    width: 600px;
+                    grid-area: titulos;
+                    display: grid;
+                    grid-template-areas: 
+                    "num titulo";
+                    grid-template-columns: auto 1fr;
+                    gap: 20px;
+                    span{
+                        grid-area: num;
+                        font-family: Dosis, Quicksand, Arial, Helvetica, sans-serif;
+                        font-size: 280px;
+                        position: relative;
+                        top: -80px;
+                        margin-right: 20px;
+                        min-width: 120px;
+                        color: rgba(32, 32, 32, 0.20);
+                    }
+                    .titulo{
+                        grid-area:titulo;
+                        position: relative;
+                        width: 340px;
+                        align-items: start;
+                        h2{
+                            font-family: Quicksand, Arial, Helvetica, sans-serif;
+                            font-weight: 200;
+                            font-size: 32px;
+                            color: $color-date;
+                        }
+        
+                        h3{
+                            margin-top: -20px;
+                            font-weight: 400;
+                            font-size: 42px;
+                            width: fit-content;
+                            color: $color-date;
+                        }
+        
+                    }
+                }
+        
+                .text{
+                    height: 170px;
+                    grid-area: informacion;
+                    display: grid;
+                    justify-content: center;
+                    align-items: start;
+                    grid-template-columns: 1fr 0.2fr;
+                    padding: 12px;
+                    display: none;
+                    p{
+                        color: $color-date;
+                    }
+                    a{
+                        width: fit-content;
+                        height: 60px;
+                        padding: 8px;
+                        padding-left: 20px;
+                        cursor: pointer;
+                        img{
+                            width: 80%;
+                        }
+                        &:hover{
+                            color: $color-animation-1;
+                        }
+                    }
+        
+        
+                }
+                &:hover{
+                    transform: scale(1.1); 
+                    box-shadow: 0px 6px 4px 0px rgba(0, 0, 0, 0.08), 6px 0px 4px 0px rgba(0, 0, 0, 0.08), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                    border-bottom: 1px solid #3A4226;
+                    z-index: 100;
+        
+                }
+                
+        
+            }
+        
+        .project-01{
+            .title {
+                span{
+                    letter-spacing: 20px;
+                }
+                .titulo{
+                    margin-top: -12px;
+                }
+            }
+            background-color: #F5F7F0;
+        
+        }
+        
+        .project-02{
+            background-color: #F0F3E9;
+            .titulo{
+                margin-top: 20px;
+            }
+    
+        }
+        
+        .project-03{
+            background-color: #E0E6D1;
+            .titulo{
+                margin-top: 20px;
+            }
+        }
+        
+        .project-04{
+            background-color: #F0F3E9;
+            .titulo{
+                margin-top: -12px;
+            }
+        }
+        
+        .project-05{
+            background-color: #F5F7F0;
+            .titulo{
+                margin-top: 20px;
+            }
+        }
+
+        .project-06{
+            background-color: #f8f8f7;
+            .titulo{
+                margin-top: 20px;
+            }
+        }
+        
     }
-}
-
-
-/*PROJECTO-02 INDIVIDUAL*/
-#project01Expl2{
-    @extend #project02;
-    @include structure(80%,10%)
-}
-
-#projectInfo02{
-    @include structure (80%,10%);
-    p{ padding: 5%;}
-}
-
-.gridImg02{
-    @include  flex(row, nowrap, center, center);
-}
-.featurette-heading{
-    color: #545f3a;
-    font-family: dosis, Arial, Helvetica, sans-serif;
-    padding: 5%;
-}
-
-.lead{
-    color:$textgral;
-    font-weight: 400;
+    
+    
+    
+    
+    #project01{
+        @include structure (80%,10%);
+        .projectNumber{
+            font-family: Dosis, Quicksand, Arial, Helvetica, sans-serif;
+            font-weight: 300;
+            text-shadow: 5px 5px 4px $color-shadow;
+        }
+        .projectInfo{
+            margin: 0 10%;
+            padding: 5% 0;        
+            .title-2{
+                /* formato para nombre individual */
+                font-family: Dosis, Quicksand,Arial, Helvetica, sans-serif;
+                color: $subtitle;
+                margin-top: -5vh;
+            }
+            .projectText{
+                text-align: justify;
+                font-weight: 400;
+            }
+        }
+    }  
+    
+    #project02{
+        @extend #project01;  
+    }
 }

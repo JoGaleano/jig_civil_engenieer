@@ -1,19 +1,104 @@
 @import "../base/color";
 
 footer{
-    width: 80%;
-    margin-left: 10%;
-    a{
-        text-decoration: none;
-        color: $textgral;
-        &:hover{
-            color: $color-date;
+    position: relative;
+    bottom: 0;
+    background-color: $color-bg-blur;
+    box-shadow: 2px 0px 6px 0px rgba(0, 0, 0, 0.12);
+    height: 72px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .container-footer{
+        margin-top: 24px;
+        width: 80%;
+        justify-content: space-between; 
+        display: grid;
+        align-items: center;
+        grid-template-areas: 
+        "copy redes";
+       
+        .left-content{
+            grid-area: copy;
+            a{
+                text-decoration: none;
+                color: $textgral;
+                &:hover{
+                    color: $color-date;
+                }
+            }
         }
+
+        .right-content{
+            grid-area: redes;
+
+            .hidden-text{
+                font-size: 0px;
+                width: 0px;
+                height: 0px;
+            }
+        }
+       
+
+
+            
     }
-        .hidden-text{
-            font-size: 0px;
-            width: 0px;
-            height: 0px;
-        }
+    
 } 
+
+
+/*MOBILE*/
+@media (max-width: 768px){
+    footer{
+        position: relative;
+        bottom: 0;
+        background-color: $color-bg-blur;
+        box-shadow: 2px 0px 6px 0px rgba(0, 0, 0, 0.12);
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .container-footer{
+            margin-top: 24px;
+            width: 80%;
+            justify-content: center; 
+            display: grid;
+            align-items: center;
+            grid-template-areas: 
+             "redes"
+             "copy";
+           
+            .left-content{
+                grid-area: copy;
+                width: 200px;
+                text-align: center;
+                a{
+                    text-decoration: none;
+                    color: $textgral;
+                    &:hover{
+                        color: $color-date;
+                    }
+                }
+            }
+    
+            .right-content{
+                grid-area: redes;
+                .hidden-text{
+                    font-size: 0px;
+                    width: 0px;
+                    height: 0px;
+                    margin-left: 12px;
+                }
+            }
+           
+    
+    
+                
+        }
+        
+    } 
+}
+
+
 

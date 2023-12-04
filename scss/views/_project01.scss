@@ -1,0 +1,354 @@
+@import "../base/typography";
+@import "../base/color";
+@import "../componet/link";
+
+
+.regresar{
+    margin-top: 140px;
+}
+
+#project01_expl{
+    margin-top: 20px;
+    margin-bottom: 60px;
+    border-bottom: 1px solid $bgc-link;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-areas: 
+    "titulo portada numero";
+    grid-column: 0.3fr 0.4fr 0.3fr;
+    gap: 0px;
+    align-items: center;
+
+    .title{
+        grid-area: titulo;
+        display: grid;
+        grid-template-areas: 
+        "titulo"
+        "descripcion";
+
+
+        .titulo{
+            grid-area: titulo;
+            height: fit-content;
+            width: fit-content;
+            h2{
+                color: $textgral;
+            }
+
+            h3{
+                color: $color-animation-1;
+                font-weight: 400px;
+                font-size: 72px;
+                margin-top: -10px;
+            }
+        }
+
+        .text{
+            grid-area: descripcion;
+            height: fit-content;
+            padding: 16px;
+        }
+        
+    }
+
+    .portada{
+        grid-area: portada;
+        img{
+            max-height: 400px;
+        }
+
+    }
+
+    .numero{
+        grid-area: numero;
+        span{
+            font-family: Dosis, Quicksand, Arial, Helvetica, sans-serif;
+            font-weight: 300;
+            font-size: 300px;
+            color: $color-animation-2;
+        }
+    }
+}
+
+/*PROJECTO-01 INDIVIDUAL*/
+
+main{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    .info{
+        margin-bottom: 20px;
+        border-bottom: 1px solid $bgc-link;
+        padding-bottom: 20px;
+        h2{
+            color: $subtitle;
+        }
+        .keyWord{
+            font-weight: bold;
+        }
+    }
+
+    .info03{
+        .tools{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 0.5fr 0.5fr;
+            justify-content: center;
+            align-items: center;
+            span{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: $size_text_desktop;
+                margin-bottom: 16px;
+            }
+        }
+    }
+
+    
+    #passwordPrompt {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        bottom: 0;
+        left: 0;
+        backdrop-filter: blur(6px);
+        background-image: url(../../asset/bg-proje01.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        overflow: auto;
+        box-shadow: 0px 6px 4px 0px rgba(0, 0, 0, 0.24), 6px 0px 4px 0px rgba(0, 0, 0, 0.25);
+        z-index: 1000;
+        display: grid;
+        grid-column: 0.5fr 1fr;
+        border-radius: 4px;
+        height: 300px;
+        .mensaje{
+            background-color:$color-bg;
+            width: 65%;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 4px;
+            height: fit-content;
+            padding: 16px;
+            span{
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+     
+        #passwordForm{
+            width: 550px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color:$color-bg;
+            height: 60px;
+            margin-top: -60px;
+            padding: 16px;
+            border-radius: 4px;
+            box-shadow: 0px 6px 4px 0px rgba(0, 0, 0, 0.24), 6px 0px 4px 0px rgba(0, 0, 0, 0.25);
+            .password{
+                border: none;
+                border-bottom: 1px solid $color-animation-2;
+                border-radius: 4px;
+                margin-right: 8px;
+                &:focus{
+                    border: 2px solid $text-span;
+                    outline: none;
+                }
+                &::not(:placeholder-shown) {
+                    border: 2px solid $bgc-link;
+                }
+            }
+    
+            #togglePassword {
+                cursor: pointer;
+                right: -20px;
+                top: 10px;
+                margin-right: 20px;
+            }
+    
+            .btn{
+                background-color: $color-shadow;
+                color: $color-bg;
+                border-radius: 4px;
+                padding: 4px 8px;
+            }
+        }
+    }
+
+
+    .projecto02blur{
+        background-image: url(../../asset/bg-proje02.png) !important;
+    }
+
+    
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0,0.4);
+        padding-top: 60px;
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            &:hover{
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }
+        }
+    
+    }
+
+    .info02{
+        .tasks{
+            width: fit-content;
+            margin-left: 32px;
+        }
+    }
+
+
+    .info07{
+        .card-group{
+            width: 80vw;
+            margin-bottom: 40px;
+        }
+        .protected-content{
+            width: 60%;
+            z-index: 1;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    #project01_expl{
+        width: 100%;
+        grid-template-areas: 
+        "titulo" "portada" "numero";
+
+        .portada{
+            display: none;
+        }   
+
+        .numero{
+            display: none;
+        }
+
+    }
+
+    main{
+        .info03{
+            .tools{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 0.5fr 0.5fr 0.5fr;
+                justify-content: center;
+                align-items: center;
+                span{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: $size_text_desktop;
+                    margin-bottom: 16px;
+                    text-align: center;
+                }
+            }
+        }
+
+        #passwordPrompt {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            bottom: 0;
+            left: 0;
+            backdrop-filter: blur(6px);
+            background-image: url(../../asset/bg-proje01.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            overflow: auto;
+            box-shadow: 0px 6px 4px 0px rgba(0, 0, 0, 0.24), 6px 0px 4px 0px rgba(0, 0, 0, 0.25);
+            z-index: 1000;
+            display: grid;
+            grid-column: 0.5fr 1fr;
+            border-radius: 4px;
+            height: 650px;
+            .mensaje{
+                background-color:$color-bg;
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+                border-radius: 4px;
+                height: fit-content;
+                padding: 16px;
+                span{
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+         
+            #passwordForm{
+                width: 220px;
+                margin-left: auto;
+                margin-right: auto;
+                background-color:$color-bg;
+                height: 160px;
+                margin-top: 0px;
+                padding: 16px;
+                border-radius: 4px;
+                box-shadow: 0px 6px 4px 0px rgba(0, 0, 0, 0.24), 6px 0px 4px 0px rgba(0, 0, 0, 0.25);
+                .password{
+                    border: none;
+                    border-bottom: 1px solid $color-animation-2;
+                    border-radius: 4px;
+                    margin-right: 8px;
+                    &:focus{
+                        border: 2px solid $text-span;
+                        outline: none;
+                    }
+                    &::not(:placeholder-shown) {
+                        border: 2px solid $bgc-link;
+                    }
+                }
+        
+                #togglePassword {
+                    cursor: pointer;
+                    right: -20px;
+                    top: 10px;
+                    margin-right: 20px;
+                }
+        
+                .btn{
+                    background-color: $color-shadow;
+                    color: $color-bg;
+                    border-radius: 4px;
+                    padding: 4px 8px;
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}
+

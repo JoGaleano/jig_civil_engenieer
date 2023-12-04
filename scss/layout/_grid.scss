@@ -5,9 +5,7 @@
 
 /*MOBILE*/
 @media (max-width: 768px){
-    .logo{
-        width: 100px;
-    }
+
 /*FOOTER*/
     footer{
         @include grid_base(center, center);
@@ -97,141 +95,14 @@
     }
     .lead{font-size: $size_mobile_text;}
 
-/*ABOUT ME*/
-    section{
-        margin: 0 10%;
-        h1, h2{
-            font-size:$size_title_mobile;
-            text-align: center;
-            padding-top: 3vh;  
-        }
-        .textAbout{ 
-            font-size:$size_mobile_text;
-            text-align: center;
-            margin-bottom: 2vh;
-        }
-        article{
-            h3{
-                font-size: $size_subtitle_mobile;
-                padding-bottom: 2vh;
-            }
-            .date{margin-bottom: 1vh;}
-        }
-    }
-    #gridAbout{
-        @include grid_project(90% , 5%);
-        grid-template-areas: 
-        "photo"
-        "profile"
-        "languague"
-        "location"
-        "experience"
-        "skill"
-        "education";
-        grid-template-columns: 100%;
-        grid-template-rows: 0.5fr 0.5fr 0.4fr 0.3fr repeat(4,auto);
-    }
-    .photo{
-        grid-area: photo; 
-        margin: 2% 0px;
-        img{
-            width: 70%;
-        }
-    }
-    .profile{
-        grid-area: profile; 
-        margin-top: 0px;
-    }
-    .languague{
-        grid-area: languague;
-        text-align: center;
-    }
-    .location{
-        grid-area: location;
-        text-align: center;
-    }
-    .experience{grid-area: experience;}
-    .skill{
-        grid-area: skill;
-        div{
-            @include grid_base(center, center);
-            grid-template-columns: 0.2fr 0.7fr;
-            grid-template-rows: repeat(7, auto);
-            p{
-                font-size: $size_mobile_text;
-                span{
-                    font-size: $size_mobile_text;
-                }
-            }
-            img{
-                width: 100%;
-            }
-        }
-    }
-    .education{
-        grid-area: education;
-        .textEdu{text-align: justify}
-    }
 
-/*CONTACT*/
-    #gridContact{
-        @include grid_base(center, center);    
-        .message{
-            h1, p {font-size: $size_mobile_text;}
-    
-            :nth-child(2){
-                font-size: $size_mobile_text *0.8;
-            }
-            .linkedin{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding: 5%;
-            }
-            .textWork{
-                width: 80%;
-                margin-left: 10%;
-                font-size: $size_mobile_text *0.8;
-                font-style: italic;
-            }
-        } 
-    
-    }
 }
 
 
 /*TABLET*/
 @media (min-width:769px) and (max-width:1199px){
-    .logo{
-        width: 150px;
-    }
+
 /*FOOTER*/
-    footer{
-        @include grid_base(center, center);
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 0.5fr;
-        padding: 2%;
-        font-size: $size_tablet_text;
-        .footerText{
-            justify-self: flex-start;
-        }   
-        div{
-            width: 50%;
-            justify-self: flex-end;
-        }        
-    }
-/*HOME*/
-    .homeTitle{
-        font-size: $size_title_tablet;
-        span{
-            font-size: $size_title_tablet;
-        }
-    }
-    .textHome{
-        p{
-            font-size:$size_tablet_text;
-        }
-    }
 
 /* PROJECT */
     #project01{
@@ -361,28 +232,6 @@
     }
     .education{grid-area: education;}
     
-/*CONTACT*/    
-    #gridContact{
-        @include grid_base(center, center);
-        
-        .message{
-            h1, p {font-size: $size_tablet_text;}
-
-            :nth-child(2){
-                font-size: $size_tablet_text *0.8;
-            }
-            .linkedin{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding: 5%;
-            }
-            .textWork{
-                width: 80%;
-                margin-left: 10%;
-            }
-        }  
-    }  
 }
 
 /********   
@@ -390,32 +239,13 @@ DESKTOP
 *******/
 
 @media (min-width:1200px){
-    .logo{
-        width: 150px;
-    }
 /*FOOTER*/
+
     footer{
-        @include grid_base(center, center);
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 0.5fr;
-        .footerText{
-            justify-self: flex-start;
-        }
         font-size: $size_text_desktop;
-        div{
-            padding: 1%;
-            width: 25%;
-            justify-self: flex-end;
-        }        
     }
 
 /*HOME*/
-    .homeTitle{
-        font-size: $size_title_desktop;
-        span{
-            font-size: $size_title_desktop;
-        }
-    }
     .textHome{
         p{
             font-size: $size_text_desktop ;
@@ -424,158 +254,9 @@ DESKTOP
 
 /* PROJECT */
 
-    #project01{
-        @include grid_base(center, center);
-        grid-template-areas:
-        "number01 img01 info01";
-        grid-template-columns: 0.2fr 0.4fr 0.4fr;
-        grid-template-rows: 1fr;
-        
-    }
-    /* areas de la grilla project01 */
-    .number01{grid-area: number01;}
-    .img01{grid-area: img01;}
-    .info01{grid-area: info01;}
-
-    .card h5{font-size: $size_subtitle_desktop;}
-
-    #project02{
-        @include grid_base(center, center);
-        grid-template-areas:
-        "info02 img02 number02 ";
-        grid-template-columns: 0.4fr 0.4fr 0.2fr;
-        grid-template-rows: 1fr;
-    }
-      /* areas de la grilla project02 */
-    .number02{
-        grid-area: number02;
-        justify-content: start;
-        align-items: center;
-    }
-    .img02{grid-area: img02;}
-    .info02{grid-area: info02;}
-
-    .projectNumber{
-        font-size: $size_project_number_desktop;
-        @include flex(row, nowrap,center,center);
-    }
-    .projectImg{
-        @include flex( row, nowrap, center, center);
-        padding-right: 5%;
-        img{
-            width: 100%;
-        }        
-
-    }    
-    .projectInfo{
-        .title-1{
-            font-size: $size_title_project_desktop;
-        }
-        .title-2{
-            font-size: $size_subtitle_project_desktop;
-        }
-        .projectText{
-            font-size: $size_text_desktop;
-        }
-    }
-
-    .projectInfo01{
-        font-size: $size_text_desktop;
-    }
-    /* transformacion aumento de escala de imagenes de planos */
-    .scaled{transition: transform .2s;}
-
-    .scaled:hover{transform: scale(1.5);}
 
 /* ABOUT ME */
-    section{
-        h1, h2{
-            font-size: $size_title_desktop;
-            text-align: start;
-        }
-        .textAbout{ 
-            font-size: $size_text_desktop;
-            padding-left: 5%;
-        }
-        article{
-            h3{
-                font-size: $size_subtitle_desktop;
-                padding: 5px 2%;
-            }
-            .date{margin-left: 5%;}
-        }
-    }
-
-    #gridAbout{
-        @include grid_project(80% , 10%);
-        grid-template-areas: 
-        "photo profile profile"
-        "photo languague location"
-        "skill experience experience"
-        "education education education";
-        grid-template-columns: 0.5fr auto 0.4fr;
-        grid-template-rows: 0.5fr 0.5fr auto 2fr;
-    }
-    .profile{
-        grid-area: profile;
-        @include flex (column, nowrap, flex-start, center);
-        h1, h2, p{
-            align-self: flex-start;
-            padding-left: 5%;
-        }
-    }
-    .photo{
-        grid-area: photo;
-        justify-self: center;
-        align-self: center;
-        img{
-            width: 100%;
-        }
-    }
-    .languague{
-        grid-area: languague;
-        @include flex (column, nowrap, flex-start, center);
-    }
-    .location{
-        grid-area: location;
-        @include flex (column, nowrap, flex-start, center);
-    }
-    .experience{
-        grid-area: experience;
-        padding-left: 5%;
-    }
-    .skill{
-        grid-area: skill; 
-        div{
-            @include grid_base( center, center);
-            grid-template-columns: 0.2fr 0.7fr;
-            grid-template-rows: repeat(7, auto);
-            margin: 5% 0;
-            p{
-                font-size: $size_text_desktop ;
-                span{
-                    font-size: $size_text_desktop ;
-                }
-            }
-            img{
-                width: 100%;
-            }
-        }
-    }
-
-    .education{
-        grid-area: education;
-        h3{
-            text-align: justify;
-            font-size: $size_subtitle_desktop;
-            padding-bottom: 5px;
-        }
-        .dateEdu{padding-left: 3%;}
-        .textEdu{
-            padding-left: 5%;
-            font-size: $size_text_desktop;
-        }
-    }
+   
 
 /*CONTACT*/
     #gridContact{
@@ -594,7 +275,6 @@ DESKTOP
             }
             .textWork{
                 font-size: $size_text_span_desktop;
-                font-style: italic;
             }
         } 
 
