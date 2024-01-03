@@ -828,12 +828,6 @@ body {
 .container-projects .project .text a:hover {
   color: #7f8e57;
 }
-.container-projects .project:hover {
-  transform: scale(1.1);
-  box-shadow: 0px 6px 4px 0px rgba(0, 0, 0, 0.08), 6px 0px 4px 0px rgba(0, 0, 0, 0.08), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  border-bottom: 1px solid #3A4226;
-  z-index: 100;
-}
 .container-projects .project-01 {
   background-color: #F5F7F0;
 }
@@ -868,6 +862,27 @@ body {
   margin-top: 20px;
 }
 
+@media (min-width: 1200px) {
+  .project .text a {
+    width: fit-content;
+    height: 60px;
+    padding: 8px;
+    padding-left: 20px;
+    cursor: pointer;
+  }
+  .project .text a img {
+    width: 80%;
+  }
+  .project .text a:hover {
+    color: #7f8e57;
+  }
+  .project:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 6px 4px 0px rgba(0, 0, 0, 0.08), 6px 0px 4px 0px rgba(0, 0, 0, 0.08), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-bottom: 1px solid #3A4226;
+    z-index: 100;
+  }
+}
 #project01, #project02 {
   width: 80%;
   margin-left: 10%;
@@ -998,12 +1013,6 @@ body {
   }
   .container-projects .project .text a:hover {
     color: #7f8e57;
-  }
-  .container-projects .project:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 6px 4px 0px rgba(0, 0, 0, 0.08), 6px 0px 4px 0px rgba(0, 0, 0, 0.08), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    border-bottom: 1px solid #3A4226;
-    z-index: 100;
   }
   .container-projects .project-01 {
     background-color: #F5F7F0;
@@ -1322,6 +1331,18 @@ section article .date {
   gap: 120px;
 }
 
+.textAbout {
+  text-align: justify;
+}
+.textAbout .item span {
+  color: #383f3a;
+  font-weight: 600;
+}
+.textAbout span {
+  color: #383f3a;
+  font-weight: 600;
+}
+
 .itemsSkill {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -1338,6 +1359,13 @@ section article .date {
 
 .education article {
   margin-bottom: 80px;
+}
+.education article .textEdu li {
+  margin-bottom: 20px;
+}
+.education article .textEdu li span {
+  color: #383f3a;
+  font-weight: 600;
 }
 
 .buttomUp {
@@ -1510,6 +1538,7 @@ body {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 80px;
 }
 #gridContact .message :nth-child(2) {
   color: #383f3a;
