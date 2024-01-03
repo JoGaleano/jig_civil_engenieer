@@ -53,6 +53,20 @@ section{
     gap: 120px;
 }
 
+.textAbout{
+    text-align: justify;
+    .item{
+        span{
+            color: $title;
+            font-weight: 600;
+        }
+    }
+    span{
+        color: $title;
+        font-weight: 600;
+    }
+}
+
 .itemsSkill {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; 
@@ -70,6 +84,15 @@ section{
 .education{
     article{
         margin-bottom: 80px;
+        .textEdu{
+            li{
+                margin-bottom: 20px;
+                span{
+                    color: $title;
+                    font-weight: 600;
+                }
+            }
+        }
     }
 }
 
