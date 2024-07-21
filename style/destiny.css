@@ -1134,6 +1134,12 @@ body {
   text-align: start;
 }
 
+.timeline-experince {
+  width: 100%;
+  opacity: 1;
+  margin: 2rem 0;
+}
+
 section {
   padding: 32px;
   border-radius: 4px;
@@ -1268,6 +1274,9 @@ section article a:hover {
   #aboutme .lineText .titleAbout h2 a img {
     width: 30%;
   }
+  .timeline-experince {
+    opacity: 0;
+  }
   section h1 {
     margin-top: 20px;
   }
@@ -1371,6 +1380,9 @@ section article a:hover {
   }
   #aboutme .lineText .titleAbout h2 a img {
     width: 60%;
+  }
+  .timeline-experince {
+    opacity: 0;
   }
   section h1 {
     margin-top: 20px;

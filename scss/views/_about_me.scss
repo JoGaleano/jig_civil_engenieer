@@ -50,6 +50,12 @@
     text-align: start;
 }
 
+.timeline-experince{
+    width: 100%;
+    opacity: 1;
+    margin: 2rem 0;
+}
+
 section{
     padding: 32px;
     border-radius: 4px;
@@ -203,6 +209,11 @@ section{
             }
         }
     }
+
+    .timeline-experince{
+        opacity: 0;
+    }
+
     section{
         h1{
             margin-top: 20px;
@@ -324,6 +335,10 @@ section{
                 }
             }
         }
+    }
+
+    .timeline-experince{
+        opacity: 0;
     }
 
     section{
