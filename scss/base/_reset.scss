@@ -15,4 +15,12 @@ body{
 }
 
 /* justificacion de todos los parrafos */
-p{text-align: justify;}
+
+@media (min-width:1040px){
+    p{text-align: justify;}
+
+    .textAbout{
+        text-align: justify;
+    }
+    
+}

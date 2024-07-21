@@ -22,10 +22,6 @@
 }
 
 
-
-
-
-
 /*PORTADAS PAGINA PROJECT*/
 
 
@@ -43,7 +39,7 @@
         color: $title;
     }
         .project{
-            height: 170px;
+            height: 250px;
             position: relative;
             overflow: hidden;
             display: grid;
@@ -63,7 +59,7 @@
                 gap: 20px;
                 span{
                     grid-area: num;
-                    font-family: Dosis, Quicksand, Arial, Helvetica, sans-serif;
+                    font-family: Roboto, Arial, Helvetica, sans-serif;
                     font-size: 280px;
                     position: relative;
                     top: -80px;
@@ -74,17 +70,19 @@
                 .titulo{
                     grid-area:titulo;
                     position: relative;
+                    display: flex;
+                    flex-direction: column;
                     width: 340px;
                     align-items: start;
+                    justify-content: start;
                     h2{
-                        font-family: Quicksand, Arial, Helvetica, sans-serif;
+                        font-family: Roboto, Arial, Helvetica, sans-serif;
                         font-weight: 200;
                         font-size: 32px;
                         color: $color-date;
                     }
     
                     h3{
-                        margin-top: -20px;
                         font-weight: 400;
                         font-size: 42px;
                         width: fit-content;
@@ -95,16 +93,17 @@
             }
     
             .text{
-                height: 170px;
+                height: 200px;
                 grid-area: informacion;
                 display: grid;
                 justify-content: center;
                 align-items: start;
                 grid-template-columns: 1fr 0.2fr;
-                padding: 12px;
+                padding: 12px;                
                 p{
                     color: $color-date;
                 }
+
                 a{
                     width: fit-content;
                     height: 60px;
@@ -132,6 +131,7 @@
             }
             .titulo{
                 margin-top: -12px;
+                padding-left: 12px;
             }
         }
         background-color: #F5F7F0;
@@ -191,7 +191,7 @@
         }
         &:hover{
             transform: scale(1.1); 
-            box-shadow: 0px 6px 4px 0px rgba(0, 0, 0, 0.08), 6px 0px 4px 0px rgba(0, 0, 0, 0.08), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.24), 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
             border-bottom: 1px solid #3A4226;
             z-index: 100;
 
@@ -204,7 +204,7 @@
 #project01{
     @include structure (80%,10%);
     .projectNumber{
-        font-family: Dosis, Quicksand, Arial, Helvetica, sans-serif;
+        font-family: Roboto, Arial, Helvetica, sans-serif;
         font-weight: 300;
         text-shadow: 5px 5px 4px $color-shadow;
     }
@@ -213,7 +213,7 @@
         padding: 5% 0;        
         .title-2{
             /* formato para nombre individual */
-            font-family: Dosis, Quicksand,Arial, Helvetica, sans-serif;
+            font-family:  Roboto,Arial, Helvetica, sans-serif;
             color: $subtitle;
             margin-top: -5vh;
         }
@@ -241,14 +241,13 @@
         margin-bottom: 200px;
         width: 90vw;
 
-    
         h1{
             font-size: 0.8rem;
             color: $title;
         }
             .project{
                 width: 90vw;
-                height: 450px;
+                height: 500px;
                 position: relative;
                 margin-left: auto;
                 margin-right: auto;
@@ -260,7 +259,7 @@
                 border-radius: 4px;
                 transition: transform 0.3s ease-in-out;
                 border-bottom: 1px solid  $color-animation-1;
-                box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.12) inset;
+                box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.24), 0px 0px 4px 0px rgba(0, 0, 0, 0.25) inset;
                 a{
                     text-decoration: none;
                 }
@@ -274,7 +273,7 @@
                     gap: 20px;
                     span{
                         grid-area: num;
-                        font-family: Dosis, Quicksand, Arial, Helvetica, sans-serif;
+                        font-family: Roboto, Arial, Helvetica, sans-serif;
                         font-size: 200px;
                         position: relative;
                         top: -20px;
@@ -290,7 +289,7 @@
                         align-items: start;
                         margin-left: -200px;
                         h2{
-                            font-family: Quicksand, Arial, Helvetica, sans-serif;
+                            font-family: Roboto, Arial, Helvetica, sans-serif;
                             font-weight: 200;
                             font-size: 32px;
                             color: $color-date;
@@ -310,7 +309,7 @@
         
                 .text{
                     height: 200px;
-                    width: 85vw;
+                    width: 70vw;
                     grid-area: informacion;
                     display: grid;
                     grid-template-areas: 
@@ -434,7 +433,7 @@
                     gap: 20px;
                     span{
                         grid-area: num;
-                        font-family: Dosis, Quicksand, Arial, Helvetica, sans-serif;
+                        font-family: Roboto, Arial, Helvetica, sans-serif;
                         font-size: 280px;
                         position: relative;
                         top: -80px;
@@ -448,7 +447,7 @@
                         width: 340px;
                         align-items: start;
                         h2{
-                            font-family: Quicksand, Arial, Helvetica, sans-serif;
+                            font-family: Roboto, Arial, Helvetica, sans-serif;
                             font-weight: 200;
                             font-size: 32px;
                             color: $color-date;
@@ -495,7 +494,7 @@
                 }
                 &:hover{
                     transform: scale(1.1); 
-                    box-shadow: 0px 6px 4px 0px rgba(0, 0, 0, 0.08), 6px 0px 4px 0px rgba(0, 0, 0, 0.08), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.24), 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
                     border-bottom: 1px solid #3A4226;
                     z-index: 100;
         
@@ -561,7 +560,7 @@
     #project01{
         @include structure (80%,10%);
         .projectNumber{
-            font-family: Dosis, Quicksand, Arial, Helvetica, sans-serif;
+            font-family:  Roboto, Arial, Helvetica, sans-serif;
             font-weight: 300;
             text-shadow: 5px 5px 4px $color-shadow;
         }
@@ -570,7 +569,7 @@
             padding: 5% 0;        
             .title-2{
                 /* formato para nombre individual */
-                font-family: Dosis, Quicksand,Arial, Helvetica, sans-serif;
+                font-family:Roboto,Arial, Helvetica, sans-serif;
                 color: $subtitle;
                 margin-top: -5vh;
             }

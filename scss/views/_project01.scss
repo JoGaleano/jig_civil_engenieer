@@ -64,7 +64,7 @@
     .numero{
         grid-area: numero;
         span{
-            font-family: Dosis, Quicksand, Arial, Helvetica, sans-serif;
+            font-family:  Roboto, Arial, Helvetica, sans-serif;
             font-weight: 300;
             font-size: 300px;
             color: $color-animation-2;
@@ -117,12 +117,12 @@ main{
         bottom: 0;
         left: 0;
         backdrop-filter: blur(6px);
-        background-image: url(../../asset/bg-proje01.png);
+       /* background-image: url(../../asset/bg-proje01.png);
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: center;
+        background-position: center;*/
         overflow: auto;
-        box-shadow: 0px 6px 4px 0px rgba(0, 0, 0, 0.24), 6px 0px 4px 0px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.24), 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
         z-index: 1000;
         display: grid;
         grid-column: 0.5fr 1fr;
@@ -151,7 +151,7 @@ main{
             margin-top: -60px;
             padding: 16px;
             border-radius: 4px;
-            box-shadow: 0px 6px 4px 0px rgba(0, 0, 0, 0.24), 6px 0px 4px 0px rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.24), 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
             .password{
                 border: none;
                 border-bottom: 1px solid $color-animation-2;
@@ -183,9 +183,9 @@ main{
     }
 
 
-    .projecto02blur{
+    /*.projecto02blur{
         background-image: url(../../asset/bg-proje02.png) !important;
-    }
+    }*/
 
     
     .modal {
@@ -231,7 +231,7 @@ main{
 
     .info07{
         .card-group{
-            width: 80vw;
+            width: 75vw;
             margin-bottom: 40px;
         }
         .protected-content{
@@ -289,7 +289,7 @@ main{
             background-repeat: no-repeat;
             background-position: center;
             overflow: auto;
-            box-shadow: 0px 6px 4px 0px rgba(0, 0, 0, 0.24), 6px 0px 4px 0px rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.24), 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
             z-index: 1000;
             display: grid;
             grid-column: 0.5fr 1fr;
@@ -318,7 +318,7 @@ main{
                 margin-top: 0px;
                 padding: 16px;
                 border-radius: 4px;
-                box-shadow: 0px 6px 4px 0px rgba(0, 0, 0, 0.24), 6px 0px 4px 0px rgba(0, 0, 0, 0.25);
+                box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.24), 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
                 .password{
                     border: none;
                     border-bottom: 1px solid $color-animation-2;

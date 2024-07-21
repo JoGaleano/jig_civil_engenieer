@@ -34,8 +34,9 @@
         @include grid_base(center, center);    
         .message{
             h1, p {
-                font-size: $size_mobile_text;
+                font-size: $size_mobile_text*1.2;
                 text-align: start;
+                margin-bottom: 12px;
             }
     
             :nth-child(2){
@@ -48,7 +49,7 @@
                 margin-left: 10%;
             }
             .textWork{
-                font-size: $size_mobile_text *0.8;
+                font-size: $size_mobile_text;
             }
         } 
     

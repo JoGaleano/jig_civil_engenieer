@@ -16,12 +16,16 @@ body {
 }
 
 /* justificacion de todos los parrafos */
-p {
-  text-align: justify;
+@media (min-width: 1040px) {
+  p {
+    text-align: justify;
+  }
+  .textAbout {
+    text-align: justify;
+  }
 }
-
 body {
-  font-family: Quicksand, Arial, Helvetica, sans-serif;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
 }
 
 /*MOBILE*/
@@ -39,7 +43,7 @@ body {
 /*color de animacion 1 link*/
 /*color de animacion 2 link*/
 body {
-  font-family: Quicksand, Arial, Helvetica, sans-serif;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
 }
 
 /*MOBILE*/
@@ -79,10 +83,10 @@ footer .container-footer .left-content {
 }
 footer .container-footer .left-content a {
   text-decoration: none;
-  color: #383f3a;
+  color: #3A4226;
 }
 footer .container-footer .left-content a:hover {
-  color: #0d1102;
+  color: #5C5C5C;
 }
 footer .container-footer .right-content {
   grid-area: redes;
@@ -120,10 +124,10 @@ footer .container-footer .right-content .hidden-text {
   }
   footer .container-footer .left-content a {
     text-decoration: none;
-    color: #383f3a;
+    color: #3A4226;
   }
   footer .container-footer .left-content a:hover {
-    color: #0d1102;
+    color: #5C5C5C;
   }
   footer .container-footer .right-content {
     grid-area: redes;
@@ -332,7 +336,6 @@ footer .container-footer .right-content .hidden-text {
     padding-left: 3%;
   }
   section article h3 {
-    text-align: justify;
     font-size: 1.4rem;
   }
   section article .date {
@@ -459,10 +462,10 @@ footer .container-footer .left-content {
 }
 footer .container-footer .left-content a {
   text-decoration: none;
-  color: #383f3a;
+  color: #3A4226;
 }
 footer .container-footer .left-content a:hover {
-  color: #0d1102;
+  color: #5C5C5C;
 }
 footer .container-footer .right-content {
   grid-area: redes;
@@ -500,10 +503,10 @@ footer .container-footer .right-content .hidden-text {
   }
   footer .container-footer .left-content a {
     text-decoration: none;
-    color: #383f3a;
+    color: #3A4226;
   }
   footer .container-footer .left-content a:hover {
-    color: #0d1102;
+    color: #5C5C5C;
   }
   footer .container-footer .right-content {
     grid-area: redes;
@@ -571,7 +574,7 @@ header nav.navbar .navbar-brand .logo {
   }
 }
 body {
-  font-family: Quicksand, Arial, Helvetica, sans-serif;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
 }
 
 /*MOBILE*/
@@ -615,7 +618,7 @@ body {
 }
 .containerHome .container-text .homeTitle h1 #dynamicText {
   color: #7f8e57;
-  font-family: Dosis, Quicksan, Arial, Helvetica, sans-serif;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
   border-right: 2px solid black; /* cursor simulado */
   white-space: nowrap; /* asegura que el texto no se envuelva */
   overflow: hidden; /* oculta texto que sobrepasa el contenedor */
@@ -633,7 +636,7 @@ body {
 }
 .containerHome .container-text .textHome {
   margin-top: 100px;
-  background: #fcfcfc;
+  background: #fff;
   padding: 10px;
   justify-content: center;
   align-items: center;
@@ -659,7 +662,7 @@ body {
   }
 }
 body {
-  font-family: Quicksand, Arial, Helvetica, sans-serif;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
 }
 
 /*MOBILE*/
@@ -755,7 +758,7 @@ body {
   color: #383f3a;
 }
 .container-projects .project {
-  height: 170px;
+  height: 250px;
   position: relative;
   overflow: hidden;
   display: grid;
@@ -776,7 +779,7 @@ body {
 }
 .container-projects .project .title span {
   grid-area: num;
-  font-family: Dosis, Quicksand, Arial, Helvetica, sans-serif;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
   font-size: 280px;
   position: relative;
   top: -80px;
@@ -787,24 +790,26 @@ body {
 .container-projects .project .title .titulo {
   grid-area: titulo;
   position: relative;
+  display: flex;
+  flex-direction: column;
   width: 340px;
   align-items: start;
+  justify-content: start;
 }
 .container-projects .project .title .titulo h2 {
-  font-family: Quicksand, Arial, Helvetica, sans-serif;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
   font-weight: 200;
   font-size: 32px;
-  color: #0d1102;
+  color: #5C5C5C;
 }
 .container-projects .project .title .titulo h3 {
-  margin-top: -20px;
   font-weight: 400;
   font-size: 42px;
   width: fit-content;
-  color: #0d1102;
+  color: #5C5C5C;
 }
 .container-projects .project .text {
-  height: 170px;
+  height: 200px;
   grid-area: informacion;
   display: grid;
   justify-content: center;
@@ -813,7 +818,7 @@ body {
   padding: 12px;
 }
 .container-projects .project .text p {
-  color: #0d1102;
+  color: #5C5C5C;
 }
 .container-projects .project .text a {
   width: fit-content;
@@ -836,6 +841,7 @@ body {
 }
 .container-projects .project-01 .title .titulo {
   margin-top: -12px;
+  padding-left: 12px;
 }
 .container-projects .project-02 {
   background-color: #F0F3E9;
@@ -878,7 +884,7 @@ body {
   }
   .project:hover {
     transform: scale(1.1);
-    box-shadow: 0px 6px 4px 0px rgba(0, 0, 0, 0.08), 6px 0px 4px 0px rgba(0, 0, 0, 0.08), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.24), 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
     border-bottom: 1px solid #3A4226;
     z-index: 100;
   }
@@ -888,7 +894,7 @@ body {
   margin-left: 10%;
 }
 #project01 .projectNumber, #project02 .projectNumber {
-  font-family: Dosis, Quicksand, Arial, Helvetica, sans-serif;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
   font-weight: 300;
   text-shadow: 5px 5px 4px rgba(84, 95, 58, 0.7882352941);
 }
@@ -898,7 +904,7 @@ body {
 }
 #project01 .projectInfo .title-2, #project02 .projectInfo .title-2 {
   /* formato para nombre individual */
-  font-family: Dosis, Quicksand, Arial, Helvetica, sans-serif;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
   color: #5b6b2e;
   margin-top: -5vh;
 }
@@ -924,7 +930,7 @@ body {
   }
   .container-projects .project {
     width: 90vw;
-    height: 450px;
+    height: 500px;
     position: relative;
     margin-left: auto;
     margin-right: auto;
@@ -934,7 +940,7 @@ body {
     border-radius: 4px;
     transition: transform 0.3s ease-in-out;
     border-bottom: 1px solid #7f8e57;
-    box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.12) inset;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.24), 0px 0px 4px 0px rgba(0, 0, 0, 0.25) inset;
   }
   .container-projects .project a {
     text-decoration: none;
@@ -949,7 +955,7 @@ body {
   }
   .container-projects .project .title span {
     grid-area: num;
-    font-family: Dosis, Quicksand, Arial, Helvetica, sans-serif;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
     font-size: 200px;
     position: relative;
     top: -20px;
@@ -966,10 +972,10 @@ body {
     margin-left: -200px;
   }
   .container-projects .project .title .titulo h2 {
-    font-family: Quicksand, Arial, Helvetica, sans-serif;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
     font-weight: 200;
     font-size: 32px;
-    color: #0d1102;
+    color: #5C5C5C;
     margin-left: -30px;
   }
   .container-projects .project .title .titulo h3 {
@@ -977,11 +983,11 @@ body {
     font-weight: 400;
     font-size: 42px;
     width: fit-content;
-    color: #0d1102;
+    color: #5C5C5C;
   }
   .container-projects .project .text {
     height: 200px;
-    width: 85vw;
+    width: 70vw;
     grid-area: informacion;
     display: grid;
     grid-template-areas: "texto" "ir";
@@ -993,7 +999,7 @@ body {
   }
   .container-projects .project .text p {
     grid-area: texto;
-    color: #0d1102;
+    color: #5C5C5C;
     width: 328px;
     position: relative;
     top: -160px;
@@ -1086,7 +1092,7 @@ body {
   }
   .container-projects .project .title span {
     grid-area: num;
-    font-family: Dosis, Quicksand, Arial, Helvetica, sans-serif;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
     font-size: 280px;
     position: relative;
     top: -80px;
@@ -1101,17 +1107,17 @@ body {
     align-items: start;
   }
   .container-projects .project .title .titulo h2 {
-    font-family: Quicksand, Arial, Helvetica, sans-serif;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
     font-weight: 200;
     font-size: 32px;
-    color: #0d1102;
+    color: #5C5C5C;
   }
   .container-projects .project .title .titulo h3 {
     margin-top: -20px;
     font-weight: 400;
     font-size: 42px;
     width: fit-content;
-    color: #0d1102;
+    color: #5C5C5C;
   }
   .container-projects .project .text {
     height: 170px;
@@ -1124,7 +1130,7 @@ body {
     display: none;
   }
   .container-projects .project .text p {
-    color: #0d1102;
+    color: #5C5C5C;
   }
   .container-projects .project .text a {
     width: fit-content;
@@ -1141,7 +1147,7 @@ body {
   }
   .container-projects .project:hover {
     transform: scale(1.1);
-    box-shadow: 0px 6px 4px 0px rgba(0, 0, 0, 0.08), 6px 0px 4px 0px rgba(0, 0, 0, 0.08), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.24), 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
     border-bottom: 1px solid #3A4226;
     z-index: 100;
   }
@@ -1189,7 +1195,7 @@ body {
     margin-left: 10%;
   }
   #project01 .projectNumber, #project02 .projectNumber {
-    font-family: Dosis, Quicksand, Arial, Helvetica, sans-serif;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
     font-weight: 300;
     text-shadow: 5px 5px 4px rgba(84, 95, 58, 0.7882352941);
   }
@@ -1199,7 +1205,7 @@ body {
   }
   #project01 .projectInfo .title-2, #project02 .projectInfo .title-2 {
     /* formato para nombre individual */
-    font-family: Dosis, Quicksand, Arial, Helvetica, sans-serif;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
     color: #5b6b2e;
     margin-top: -5vh;
   }
@@ -1209,7 +1215,7 @@ body {
   }
 }
 body {
-  font-family: Quicksand, Arial, Helvetica, sans-serif;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
 }
 
 /*MOBILE*/
@@ -1251,7 +1257,7 @@ body {
 }
 
 .buttomBack, .buttomUp svg {
-  color: #383f3a;
+  color: #3A4226;
 }
 .buttomBack:hover, .buttomUp svg:hover {
   color: rgba(84, 95, 58, 0.7882352941);
@@ -1272,42 +1278,91 @@ body {
   color: #818C61;
 }
 .fa-linkedin:hover {
-  color: #0d1102;
+  color: #5C5C5C;
 }
 
 .fa-instagram {
   color: #4F611E;
 }
 .fa-instagram:hover {
-  color: #0d1102;
+  color: #5C5C5C;
 }
 
 .fa-envelope {
   color: #9BAD6A;
 }
 .fa-envelope:hover {
-  color: #0d1102;
+  color: #5C5C5C;
 }
 
-.photo {
-  margin-top: 72px;
-  background-image: url(../../asset/about_desktop_portada.png);
-  height: 343px;
-  background-size: cover;
+#aboutme {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-areas: "photo lineText";
+  margin: 100px 10% 0px;
+  padding: 0px;
+  height: 40vh;
+}
+#aboutme .photo {
+  grid-area: photo;
+  background-image: url(../../asset/photo_color_profile.png);
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   overflow: auto;
   transition: background-color 0.3s ease;
-  width: 100%;
 }
-.photo:hover {
-  background-image: url(../../asset/about_desktop_portada_color.png);
+#aboutme .photo:hover {
+  background-image: url(../../asset/photo_black_profile.png);
+}
+#aboutme .lineText {
+  grid-area: lineText;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  align-self: center;
+}
+#aboutme .lineText .citizen {
+  text-align: end;
+  font-size: 0.75rem;
+}
+#aboutme .lineText .titleAbout {
+  padding: 5% 0%;
+  align-self: center;
+}
+#aboutme .lineText .titleAbout h2 {
+  color: #5b6b2e;
+}
+#aboutme .lineText .titleAbout h2 a img {
+  width: 30%;
 }
 
+.titleExperience {
+  margin: 40px 0px 12px;
+  text-align: start;
+}
+
+section {
+  padding: 32px;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.24), 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+  margin-bottom: 40px;
+}
 section h1, section h2 {
   font-weight: 600;
   color: #383f3a;
   padding: 3vh 0;
+}
+section a {
+  color: #7f8e57;
+}
+section a:hover {
+  color: #383f3a;
+}
+section .subtitle {
+  font-weight: 600;
 }
 section article h3 {
   color: #5b6b2e;
@@ -1315,25 +1370,34 @@ section article h3 {
   text-align: start;
 }
 section article h3 span {
-  color: #0d1102;
-  font-weight: 200;
+  color: #5C5C5C;
+  font-weight: 400;
 }
 section article .middle {
   color: #a1a1a1;
   width: 60%;
 }
 section article .date {
-  color: #0d1102;
+  color: #5C5C5C;
+}
+section article a {
+  color: #7f8e57;
+}
+section article a:hover {
+  color: #383f3a;
 }
 
 .profile {
   display: flex;
-  gap: 120px;
+  justify-content: space-between;
+}
+.profile .languague {
+  width: 100%;
+}
+.profile .location {
+  width: 100%;
 }
 
-.textAbout {
-  text-align: justify;
-}
 .textAbout .item span {
   color: #383f3a;
   font-weight: 600;
@@ -1373,35 +1437,45 @@ section article .date {
 }
 
 @media (min-width: 769px) and (max-width: 1199px) {
-  .photo {
-    margin-top: 72px;
-    background-image: url(../../asset/about_desktop_portada.png);
-    height: 200px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: left;
-    overflow: auto;
-    transition: background-color 0.3s ease;
+  #aboutme {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "photo lineText";
+    margin: 100px 10% 0px;
+    padding: 0px;
+    height: 30vh;
   }
-  .photo:hover {
-    background-image: url(../../asset/about_desktop_portada_color.png);
-  }
-}
-@media (max-width: 768px) {
-  .photo {
-    width: 100%;
-    margin-top: 72px;
-    background-image: url(../../asset/about-me_mobile.png);
-    height: 343px;
-    background-size: cover;
+  #aboutme .photo {
+    grid-area: photo;
+    background-image: url(../../asset/photo_black_profile.png);
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     overflow: auto;
     transition: background-color 0.3s ease;
-    border-radius: 0px 0px 18px 18px;
   }
-  .photo:hover {
-    background-image: url(../../asset/about-me_mobile.png);
+  #aboutme .lineText {
+    grid-area: lineText;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    align-self: center;
+  }
+  #aboutme .lineText .citizen {
+    text-align: end;
+    font-size: 0.75rem;
+  }
+  #aboutme .lineText .titleAbout {
+    padding: 5% 0%;
+    align-self: center;
+  }
+  #aboutme .lineText .titleAbout h2 {
+    color: #5b6b2e;
+  }
+  #aboutme .lineText .titleAbout h2 a img {
+    width: 30%;
   }
   section h1 {
     margin-top: 20px;
@@ -1418,10 +1492,117 @@ section article .date {
     text-align: start;
   }
   section article h3 span {
-    color: #0d1102;
+    color: #5C5C5C;
   }
   section article .date {
-    color: #0d1102;
+    color: #5C5C5C;
+    margin-top: 12px;
+  }
+  .profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    margin-left: 10%;
+  }
+  .profile .languague {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .profile .location {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .profile .location h2 {
+    text-align: center;
+  }
+  .profile .location p {
+    text-align: center;
+  }
+  .itemsSkill {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    align-items: start;
+  }
+  .itemsSkill div {
+    display: flex;
+    flex-direction: column;
+  }
+  .itemsSkill div span {
+    margin-bottom: 24px;
+  }
+  .buttomUp {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 768px) {
+  #aboutme {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr;
+    grid-template-areas: "photo" "lineText";
+    margin: 80px 10% 0px;
+    padding: 0px;
+    height: 30vh;
+  }
+  #aboutme .photo {
+    grid-area: photo;
+    background-image: url(../../asset/photo_color_profile.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: auto;
+    transition: background-color 0.3s ease;
+    display: none;
+  }
+  #aboutme .photo:hover {
+    background-image: url(../../asset/photo_black_profile.png);
+  }
+  #aboutme .lineText {
+    grid-area: lineText;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    align-self: center;
+  }
+  #aboutme .lineText .citizen {
+    text-align: start;
+    font-size: 0.75rem;
+  }
+  #aboutme .lineText .titleAbout {
+    padding: 5% 0%;
+    align-self: center;
+  }
+  #aboutme .lineText .titleAbout h2 {
+    color: #5b6b2e;
+  }
+  #aboutme .lineText .titleAbout h2 a img {
+    width: 60%;
+  }
+  section h1 {
+    margin-top: 20px;
+  }
+  section .intro {
+    margin-top: -20px;
+  }
+  section .experience {
+    margin-bottom: -20px;
+  }
+  section article h3 {
+    color: #5b6b2e;
+    font-weight: 400;
+    text-align: start;
+  }
+  section article h3 span {
+    color: #5C5C5C;
+  }
+  section article .date {
+    color: #5C5C5C;
     margin-top: 12px;
   }
   .profile {
@@ -1447,7 +1628,7 @@ section article .date {
   }
 }
 body {
-  font-family: Quicksand, Arial, Helvetica, sans-serif;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
 }
 
 /*MOBILE*/
@@ -1489,7 +1670,7 @@ body {
 }
 
 .buttomBack, .buttomUp svg {
-  color: #383f3a;
+  color: #3A4226;
 }
 .buttomBack:hover, .buttomUp svg:hover {
   color: rgba(84, 95, 58, 0.7882352941);
@@ -1510,21 +1691,21 @@ body {
   color: #818C61;
 }
 .fa-linkedin:hover {
-  color: #0d1102;
+  color: #5C5C5C;
 }
 
 .fa-instagram {
   color: #4F611E;
 }
 .fa-instagram:hover {
-  color: #0d1102;
+  color: #5C5C5C;
 }
 
 .fa-envelope {
   color: #9BAD6A;
 }
 .fa-envelope:hover {
-  color: #0d1102;
+  color: #5C5C5C;
 }
 
 #gridContact {
@@ -1557,8 +1738,9 @@ body {
     align-items: center;
   }
   #gridContact .message h1, #gridContact .message p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-align: start;
+    margin-bottom: 12px;
   }
   #gridContact .message :nth-child(2) {
     font-size: 0.8rem;
@@ -1570,7 +1752,7 @@ body {
     margin-left: 10%;
   }
   #gridContact .message .textWork {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }
 @media (min-width: 769px) and (max-width: 1199px) {
@@ -1600,7 +1782,7 @@ body {
   }
 }
 body {
-  font-family: Quicksand, Arial, Helvetica, sans-serif;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
 }
 
 /*MOBILE*/
@@ -1691,7 +1873,7 @@ body {
   width: fit-content;
 }
 #project01_expl .title .titulo h2 {
-  color: #383f3a;
+  color: #3A4226;
 }
 #project01_expl .title .titulo h3 {
   color: #7f8e57;
@@ -1714,7 +1896,7 @@ body {
   grid-area: numero;
 }
 #project01_expl .numero span {
-  font-family: Dosis, Quicksand, Arial, Helvetica, sans-serif;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
   font-weight: 300;
   font-size: 300px;
   color: #383f3a;
@@ -1725,6 +1907,9 @@ main {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
+  /*.projecto02blur{
+      background-image: url(../../asset/bg-proje02.png) !important;
+  }*/
 }
 main .info {
   margin-bottom: 20px;
@@ -1760,12 +1945,12 @@ main #passwordPrompt {
   bottom: 0;
   left: 0;
   backdrop-filter: blur(6px);
-  background-image: url(../../asset/bg-proje01.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  /* background-image: url(../../asset/bg-proje01.png);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;*/
   overflow: auto;
-  box-shadow: 0px 6px 4px 0px rgba(0, 0, 0, 0.24), 6px 0px 4px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.24), 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
   z-index: 1000;
   display: grid;
   grid-column: 0.5fr 1fr;
@@ -1773,7 +1958,7 @@ main #passwordPrompt {
   height: 300px;
 }
 main #passwordPrompt .mensaje {
-  background-color: #fcfcfc;
+  background-color: #fff;
   width: 65%;
   margin-left: auto;
   margin-right: auto;
@@ -1789,12 +1974,12 @@ main #passwordPrompt #passwordForm {
   width: 550px;
   margin-left: auto;
   margin-right: auto;
-  background-color: #fcfcfc;
+  background-color: #fff;
   height: 60px;
   margin-top: -60px;
   padding: 16px;
   border-radius: 4px;
-  box-shadow: 0px 6px 4px 0px rgba(0, 0, 0, 0.24), 6px 0px 4px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.24), 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
 }
 main #passwordPrompt #passwordForm .password {
   border: none;
@@ -1817,12 +2002,9 @@ main #passwordPrompt #passwordForm #togglePassword {
 }
 main #passwordPrompt #passwordForm .btn {
   background-color: rgba(84, 95, 58, 0.7882352941);
-  color: #fcfcfc;
+  color: #fff;
   border-radius: 4px;
   padding: 4px 8px;
-}
-main .projecto02blur {
-  background-image: url(../../asset/bg-proje02.png) !important;
 }
 main .modal {
   display: none;
@@ -1860,7 +2042,7 @@ main .info02 .tasks {
   margin-left: 32px;
 }
 main .info07 .card-group {
-  width: 80vw;
+  width: 75vw;
   margin-bottom: 40px;
 }
 main .info07 .protected-content {
@@ -1907,7 +2089,7 @@ main .info07 .protected-content {
     background-repeat: no-repeat;
     background-position: center;
     overflow: auto;
-    box-shadow: 0px 6px 4px 0px rgba(0, 0, 0, 0.24), 6px 0px 4px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.24), 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
     z-index: 1000;
     display: grid;
     grid-column: 0.5fr 1fr;
@@ -1915,7 +2097,7 @@ main .info07 .protected-content {
     height: 650px;
   }
   main #passwordPrompt .mensaje {
-    background-color: #fcfcfc;
+    background-color: #fff;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
@@ -1931,12 +2113,12 @@ main .info07 .protected-content {
     width: 220px;
     margin-left: auto;
     margin-right: auto;
-    background-color: #fcfcfc;
+    background-color: #fff;
     height: 160px;
     margin-top: 0px;
     padding: 16px;
     border-radius: 4px;
-    box-shadow: 0px 6px 4px 0px rgba(0, 0, 0, 0.24), 6px 0px 4px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.24), 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
   }
   main #passwordPrompt #passwordForm .password {
     border: none;
@@ -1959,7 +2141,7 @@ main .info07 .protected-content {
   }
   main #passwordPrompt #passwordForm .btn {
     background-color: rgba(84, 95, 58, 0.7882352941);
-    color: #fcfcfc;
+    color: #fff;
     border-radius: 4px;
     padding: 4px 8px;
     margin-top: 20px;

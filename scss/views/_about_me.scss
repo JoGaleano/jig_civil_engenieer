@@ -2,28 +2,78 @@
 @import "../base/color";
 @import "../componet/buttom";
 
-
-.photo {
-    margin-top: 72px;
-    background-image: url(../../asset/about_desktop_portada.png);
-    height: 343px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    overflow: auto;
-    transition: background-color 0.3s ease;
-    width: 100%;
-    &:hover{
-
-        background-image: url(../../asset/about_desktop_portada_color.png);
+#aboutme{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-areas: "photo lineText";
+    margin: 100px 10% 0px;
+    padding: 0px;
+    height: 40vh;
+    
+    .photo {
+        grid-area: photo;
+        background-image: url(../../asset/photo_color_profile.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        overflow: auto;
+        transition: background-color 0.3s ease;
+        &:hover{
+            background-image: url(../../asset/photo_black_profile.png);
+        }
+    }
+    .lineText{
+        grid-area: lineText;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        align-self: center;
+        .citizen{
+            text-align: end;
+            font-size: $size_text_span__small_desktop;
+        }
+        .titleAbout{
+            padding: 5% 0%;
+            align-self: center;
+            h2{
+                color: $subtitle;
+                a{
+                    img{
+                        width: 30%;
+                    }
+                }
+            }
+        }
     }
 }
 
+.titleExperience{
+    margin: 40px 0px 12px;
+    text-align: start;
+}
+
 section{
+    padding: 32px;
+    border-radius: 4px;
+    background-color: $color-bg;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.24), 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+    margin-bottom: 40px;
     h1, h2{
         font-weight: 600;
         color: $title;
         padding: 3vh 0; 
+    }
+
+    a{
+        color: $bgc-link;
+        &:hover{
+            color: $color-animation-2;
+        }
+    }
+
+    .subtitle{
+        font-weight: 600;
     }
 
     article{
@@ -33,7 +83,7 @@ section{
             text-align: start;
             span{
                 color: $color-date;
-                font-weight: 200;
+                font-weight: 400;
             }
         }
 
@@ -44,17 +94,29 @@ section{
         .date{
             color: $color-date;
         }
+        
+        a{
+            color: $bgc-link;
+            &:hover{
+                color: $color-animation-2;
+            }
+        }
     }
 
 }
 
 .profile{
     display: flex;
-    gap: 120px;
+    justify-content: space-between;
+    .languague{
+        width: 100%;
+    }
+    .location{
+        width: 100%;
+    }
 }
 
 .textAbout{
-    text-align: justify;
     .item{
         span{
             color: $title;
@@ -101,38 +163,172 @@ section{
 }
 
 @media (min-width:769px) and (max-width:1199px){
-    .photo {
-        margin-top: 72px;
-        background-image: url(../../asset/about_desktop_portada.png);
-        height: 200px;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: left;
-        overflow: auto;
-        transition: background-color 0.3s ease;
-        &:hover{
-    
-            background-image: url(../../asset/about_desktop_portada_color.png);
+    #aboutme{
+        display: grid;
+        grid-template-columns: 30% 70%;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "photo lineText";
+        margin: 100px 10% 0px;
+        padding: 0px;
+        height: 30vh;
+        
+        .photo {
+            grid-area: photo;
+            background-image: url(../../asset/photo_black_profile.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            overflow: auto;
+            transition: background-color 0.3s ease;
         }
+        .lineText{
+            grid-area: lineText;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            align-self: center;
+            .citizen{
+                text-align: end;
+                font-size: $size_text_span__small_desktop;
+            }
+            .titleAbout{
+                padding: 5% 0%;
+                align-self: center;
+                h2{
+                    color: $subtitle;
+                    a{
+                        img{
+                            width: 30%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    section{
+        h1{
+            margin-top: 20px;
+        }
+    
+        .intro{
+            margin-top: -20px;
+        }
+
+        .experience{
+            margin-bottom: -20px;
+        }
+
+        article{
+            h3{
+                color: $subtitle;
+                font-weight: 400;
+                text-align: start;
+                span{
+                    color: $color-date;
+                }
+            }
+            .date{
+                color: $color-date;
+                margin-top: 12px;
+            }
+        }
+    }
+
+    
+    .profile{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 80%;
+        margin-left: 10%;
+        .languague{
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .location{
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            h2{
+                text-align: center;
+            }
+            p{
+                text-align: center;
+            }
+
+        }
+    }
+
+    .itemsSkill {
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        grid-gap: 10px; 
+        align-items: start;
+        div{
+            display: flex;
+            flex-direction: column;
+            span{
+                margin-bottom: 24px;
+            }
+        } 
+    }
+
+    .buttomUp{
+        margin-bottom: 20px;
     }
 }
 
 
 @media (max-width: 768px) {
 
-    .photo {
-        width: 100%;
-        margin-top: 72px;
-        background-image: url(../../asset/about-me_mobile.png);
-        height: 343px;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        overflow: auto;
-        transition: background-color 0.3s ease;
-        border-radius: 0px 0px 18px 18px;
-        &:hover{
-            background-image: url(../../asset/about-me_mobile.png);
+    #aboutme{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr;
+        grid-template-areas: "photo" "lineText";
+        margin: 80px 10% 0px;
+        padding: 0px;
+        height: 30vh;
+        
+        .photo {
+            grid-area: photo;
+            background-image: url(../../asset/photo_color_profile.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            overflow: auto;
+            transition: background-color 0.3s ease;
+            &:hover{
+                background-image: url(../../asset/photo_black_profile.png);
+            }
+            display: none;
+        }
+        .lineText{
+            grid-area: lineText;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            align-self: center;
+            .citizen{
+                text-align: start;
+                font-size: $size_mobile_text_small;
+            }
+            .titleAbout{
+                padding: 5% 0%;
+                align-self: center;
+                h2{
+                    color: $subtitle;
+                    a{
+                        img{
+                            width: 60%;
+                        }
+                    }
+                }
+            }
         }
     }
 
