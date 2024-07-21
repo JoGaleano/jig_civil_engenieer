@@ -298,9 +298,6 @@ section{
             background-position: center;
             overflow: auto;
             transition: background-color 0.3s ease;
-            &:hover{
-                background-image: url(../../asset/photo_black_profile.png);
-            }
             display: none;
         }
         .lineText{

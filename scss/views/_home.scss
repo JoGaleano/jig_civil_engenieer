@@ -5,14 +5,8 @@
 .containerHome{
     position: relative;
     top: 72px;
-    background-image: url("../../asset/bg_principal.png"); 
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    overflow: auto;
-    min-height: 94vh;
     .container-text{
-        margin-top: 200px;
+        margin-top: 40px;
         @include structure ( 90% , 5%);
         .homeTitle{
             z-index: 10;
@@ -42,14 +36,14 @@
             }
 
         .textHome{
-            margin-top: 100px;
+            margin-top: 20px;
             background: $color-bg;
             padding: 10px;
             justify-content: center;
             align-items: center;
             border-radius: 4px;
             height: auto;
-            margin-bottom: 200px;
+            margin-bottom: 20px;
             p{
                 text-align: justify;
             }
@@ -58,6 +52,8 @@
     }   
 
 }
+
+
 
 @media (min-width:1428px){
     .homeTitle{

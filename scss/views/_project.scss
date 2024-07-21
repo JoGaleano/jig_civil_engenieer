@@ -27,177 +27,98 @@
 
 .container-projects{
     position: relative;
-    top: 72px;
+    top: 40px;
     margin-top: 60px;
-    width: 80%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 200px;
-
-    h1{
+    margin-bottom: 8rem;
+    h2{
         font-size: $size_text_span_desktop;
         color: $title;
     }
-        .project{
-            height: 250px;
-            position: relative;
-            overflow: hidden;
+    .project{
+        background-color: #F5F7F0;
+        height: 16rem;
+        /*position: relative; */
+        overflow: hidden;
+        border-radius: 8px;
+        transition: transform 0.3s ease-in-out;
+        .container-project{
+            text-decoration: none;
             display: grid;
             grid-template-areas: "titulos informacion";
-            border-radius: 4px;
-            transition: transform 0.3s ease-in-out;
-            a{
-                text-decoration: none;
-            }
-            .title{
-                width: 600px;
-                grid-area: titulos;
-                display: grid;
-                grid-template-areas: 
-                "num titulo";
-                grid-template-columns: auto 1fr;
-                gap: 20px;
-                span{
-                    grid-area: num;
-                    font-family: Roboto, Arial, Helvetica, sans-serif;
-                    font-size: 280px;
-                    position: relative;
-                    top: -80px;
-                    margin-right: 20px;
-                    min-width: 120px;
-                    color: rgba(32, 32, 32, 0.20);
-                }
-                .titulo{
-                    grid-area:titulo;
-                    position: relative;
-                    display: flex;
-                    flex-direction: column;
-                    width: 340px;
-                    align-items: start;
-                    justify-content: start;
-                    h2{
+            grid-template-columns: 0.5fr 1fr;
+            grid-template-rows: 1fr;
+                .title{
+                    grid-area: titulos;
+                    display: grid;
+                    grid-template-areas: 
+                    "num titulo";
+                    grid-template-columns: auto 1fr;
+                    gap: 20px;
+                    span{
+                        grid-area: num;
                         font-family: Roboto, Arial, Helvetica, sans-serif;
-                        font-weight: 200;
-                        font-size: 32px;
-                        color: $color-date;
+                        font-size: 280px;
+                        position: relative;
+                        top: -80px;
+                        margin-right: 20px;
+                        min-width: 120px;
+                        color: rgba(32, 32, 32, 0.20);
+                        letter-spacing: 20px;
                     }
-    
-                    h3{
-                        font-weight: 400;
-                        font-size: 42px;
-                        width: fit-content;
-                        color: $color-date;
+                    .titulo{
+                        grid-area:titulo;
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        width: 20rem;
+                        align-items: start;
+                        justify-content: start;
+                        h2{
+                            font-family: Roboto, Arial, Helvetica, sans-serif;
+                            font-weight: 200;
+                            font-size: 32px;
+                            color: $color-date;
+                        }
+        
+                        h3{
+                            font-weight: 400;
+                            font-size: 42px;
+                            width: fit-content;
+                            color: $color-date;
+                        }
+        
                     }
-    
-                }
-            }
-    
-            .text{
-                height: 200px;
-                grid-area: informacion;
-                display: grid;
-                justify-content: center;
-                align-items: start;
-                grid-template-columns: 1fr 0.2fr;
-                padding: 12px;                
-                p{
-                    color: $color-date;
                 }
 
-                a{
-                    width: fit-content;
-                    height: 60px;
-                    padding: 8px;
-                    padding-left: 20px;
-                    cursor: pointer;
-                    img{
-                        width: 80%;
+                .text{
+                    grid-area: informacion; 
+                    display: flex;
+                    padding-top: 2rem;          
+                    p{
+                        color: $color-date;
                     }
-                    &:hover{
-                        color: $color-animation-1;
-                    }
+        
+        
                 }
-    
-    
-            }
-            
-    
-        }
-    
-    .project-01{
-        .title {
-            span{
-                letter-spacing: 20px;
-            }
-            .titulo{
-                margin-top: -12px;
-                padding-left: 12px;
-            }
-        }
-        background-color: #F5F7F0;
-    
-    }
-    
-    .project-02{
-        background-color: #F0F3E9;
-        .titulo{
-            margin-top: 20px;
-        }
 
-    }
+            }         
     
-    .project-03{
-        background-color: #E0E6D1;
-        .titulo{
-            margin-top: 20px;
         }
-    }
-    
-    .project-04{
-        background-color: #F0F3E9;
-        .titulo{
-            margin-top: -12px;
-        }
-    }
-    
-    .project-05{
-        background-color: #F5F7F0;
-        .titulo{
-            margin-top: 20px;
-        }
-    }
-    
 }
 
 
 @media (min-width:1200px){
     .project{
-        .text{
-            a{
-                width: fit-content;
-                height: 60px;
-                padding: 8px;
-                padding-left: 20px;
-                cursor: pointer;
-                img{
-                    width: 80%;
-                }
-                &:hover{
-                    color: $color-animation-1;
-                }
-            }
-
-
-        }
         &:hover{
             transform: scale(1.1); 
             box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.24), 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
-            border-bottom: 1px solid #3A4226;
+            border: 0.5px solid $divider-secodnary;
             z-index: 100;
-
         }
         
-
     }
 }
 
@@ -208,14 +129,10 @@
         font-weight: 300;
         text-shadow: 5px 5px 4px $color-shadow;
     }
-    .projectInfo{
-        margin: 0 10%;
-        padding: 5% 0;        
+    .projectInfo{      
         .title-2{
-            /* formato para nombre individual */
             font-family:  Roboto,Arial, Helvetica, sans-serif;
             color: $subtitle;
-            margin-top: -5vh;
         }
         .projectText{
             text-align: justify;
@@ -234,164 +151,94 @@
 @media (max-width: 768px){
     .container-projects{
         position: relative;
-        top: 72px;
+        top: 40px;
         margin-top: 60px;
+        width: 90%;
         margin-left: auto;
         margin-right: auto;
-        margin-bottom: 200px;
-        width: 90vw;
-
-        h1{
-            font-size: 0.8rem;
+        margin-bottom: 8rem;
+        h2{
+            font-size: $size_text_span_desktop;
             color: $title;
         }
-            .project{
-                width: 90vw;
-                height: 500px;
-                position: relative;
-                margin-left: auto;
-                margin-right: auto;
-                overflow: hidden;
+        .project{
+            background-color: #F5F7F0;
+            height: 32rem;
+            /*position: relative; */
+            overflow: hidden;
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+            width: 100%;
+            margin-left: 0;
+            margin: 0 !important;
+            padding: 8px !important;
+            margin-bottom: 40px !important;
+            .container-project{
+                text-decoration: none;
                 display: grid;
-                grid-template-areas: 
-                "titulos" 
-                "informacion";
-                border-radius: 4px;
-                transition: transform 0.3s ease-in-out;
-                border-bottom: 1px solid  $color-animation-1;
-                box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.24), 0px 0px 4px 0px rgba(0, 0, 0, 0.25) inset;
-                a{
-                    text-decoration: none;
-                }
-                .title{
-                    width: 600px;
-                    grid-area: titulos;
-                    display: grid;
-                    grid-template-areas: 
-                    "num titulo";
-                    grid-template-columns: auto 1fr;
-                    gap: 20px;
-                    span{
-                        grid-area: num;
-                        font-family: Roboto, Arial, Helvetica, sans-serif;
-                        font-size: 200px;
-                        position: relative;
-                        top: -20px;
-                        min-width: 120px;
-                        color: rgba(32, 32, 32, 0.20);
-                    }
-                    .titulo{
-                        height: fit-content;
-                        grid-area:titulo;
-                        position: relative;
-                        top: 24px;
-                        width: 170px;
-                        align-items: start;
-                        margin-left: -200px;
-                        h2{
+                grid-template-areas: "titulos" "informacion";
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr;
+                    .title{
+                        grid-area: titulos;
+                        display: grid;
+                        grid-template-areas: 
+                        "num titulo";
+                        grid-template-columns: 20% 80%;
+                        gap: 0px;
+                        span{
+                            grid-area: num;
                             font-family: Roboto, Arial, Helvetica, sans-serif;
-                            font-weight: 200;
-                            font-size: 32px;
-                            color: $color-date;
-                            margin-left: -30px;
+                            font-size: 280px;
+                            position: relative;
+                            top: -80px;
+                            margin-right: 20px;
+                            min-width: 120px;
+                            color: rgba(32, 32, 32, 0.20);
+                            letter-spacing: 20px;
                         }
-        
-                        h3{
-                            margin-top: -20px;
-                            font-weight: 400;
-                            font-size: 42px;
-                            width: fit-content;
-                            color: $color-date;
-                        }
-        
-                    }
-                }
-        
-                .text{
-                    height: 200px;
-                    width: 70vw;
-                    grid-area: informacion;
-                    display: grid;
-                    grid-template-areas: 
-                    "texto"
-                    "ir";
-                    justify-content: center;
-                    align-items: start;
-                    text-align: justify;
-                    margin-top: -70px;
-                    padding: 0px;
-                    p{
-                        grid-area: texto;
-                        color: $color-date;
-                        width: 328px;
-                        position: relative;
-                        top: -160px;
-                        left: -5px;
-                        padding-left: 8px;
-                        padding-right: 8px;
-
-                    }
-                    a{
-                        grid-area: ir;
-                        width: fit-content;
-                        cursor: pointer;
-                        position: relative;
-                        top: 60px;
-                        img{
-                            width: 80%;
-                        }
-                        &:hover{
-                            color: $color-animation-1;
+                        .titulo{
+                            grid-area:titulo;
+                            position: relative;
+                            display: flex;
+                            flex-direction: column;
+                            width: 16rem;
+                            align-items: start;
+                            justify-content: start;
+                            h2{
+                                font-family: Roboto, Arial, Helvetica, sans-serif;
+                                font-weight: 200;
+                                font-size: 32px;
+                                color: $color-date;
+                            }
+            
+                            h3{
+                                font-weight: 400;
+                                font-size: 38px;
+                                width: fit-content;
+                                color: $color-date;
+                            }
+            
                         }
                     }
-        
-        
-                }
-                
-            }
-        
-        .project-01{
-            .title {
-                span{
-                    letter-spacing: 20px;
-                }
-                .titulo{
-                    margin-top: -12px;
-                }
-            }
-            background-color: #F5F7F0;
-        
-        }
-        
-        .project-02{
-            background-color: #F0F3E9;
-            .titulo{
-                margin-top: -20px;
-            }
     
-        }
+                    .text{
+                        grid-area: informacion; 
+                        display: flex;
+                        padding: 0 rem;
+                        margin-top: -12rem; 
+                        margin-left: 0px;  
+                        width: 15rem;     
+                        p{
+                            color: $color-date;
+                        }
+            
+            
+                    }
+    
+                }         
         
-        .project-03{
-            background-color: #E0E6D1;
-            .titulo{
-                margin-top: 20px;
             }
-        }
-        
-        .project-04{
-            background-color: #F0F3E9;
-            .titulo{
-                margin-top: -12px;
-            }
-        }
-        
-        .project-05{
-            background-color: #F5F7F0;
-            .titulo{
-                margin-top: 20px;
-            }
-        }
-        
     }
 
 }
@@ -400,187 +247,88 @@
 @media (min-width:769px) and (max-width:1199px){
     .container-projects{
         position: relative;
-        top: 72px;
+        top: 40px;
         margin-top: 60px;
+        width: 90%;
         margin-left: auto;
         margin-right: auto;
-        margin-bottom: 200px;
-    
-        h1{
+        margin-bottom: 8rem;
+        h2{
             font-size: $size_text_span_desktop;
             color: $title;
         }
-            .project{
-                height: 170px;
-                width: 100%;
-                margin-left: 0px;
-                position: relative;
-                overflow: hidden;
+        .project{
+            background-color: #F5F7F0;
+            height: 16rem;
+            /*position: relative; */
+            overflow: hidden;
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+            width: 100%;
+            margin-left: 0;
+            .container-project{
+                text-decoration: none;
                 display: grid;
                 grid-template-areas: "titulos informacion";
-                border-radius: 4px;
-                transition: transform 0.3s ease-in-out;
-                a{
-                    text-decoration: none;
-                }
-                .title{
-                    width: 600px;
-                    grid-area: titulos;
-                    display: grid;
-                    grid-template-areas: 
-                    "num titulo";
-                    grid-template-columns: auto 1fr;
-                    gap: 20px;
-                    span{
-                        grid-area: num;
-                        font-family: Roboto, Arial, Helvetica, sans-serif;
-                        font-size: 280px;
-                        position: relative;
-                        top: -80px;
-                        margin-right: 20px;
-                        min-width: 120px;
-                        color: rgba(32, 32, 32, 0.20);
-                    }
-                    .titulo{
-                        grid-area:titulo;
-                        position: relative;
-                        width: 340px;
-                        align-items: start;
-                        h2{
+                grid-template-columns: 40% 60%;
+                grid-template-rows: 1fr;
+                    .title{
+                        grid-area: titulos;
+                        display: grid;
+                        grid-template-areas: 
+                        "num titulo";
+                        grid-template-columns: 20% 80%;
+                        gap: 12px;
+                        span{
+                            grid-area: num;
                             font-family: Roboto, Arial, Helvetica, sans-serif;
-                            font-weight: 200;
-                            font-size: 32px;
-                            color: $color-date;
+                            font-size: 280px;
+                            position: relative;
+                            top: -80px;
+                            margin-right: 20px;
+                            min-width: 120px;
+                            color: rgba(32, 32, 32, 0.20);
+                            letter-spacing: 20px;
                         }
-        
-                        h3{
-                            margin-top: -20px;
-                            font-weight: 400;
-                            font-size: 42px;
-                            width: fit-content;
-                            color: $color-date;
-                        }
-        
-                    }
-                }
-        
-                .text{
-                    height: 170px;
-                    grid-area: informacion;
-                    display: grid;
-                    justify-content: center;
-                    align-items: start;
-                    grid-template-columns: 1fr 0.2fr;
-                    padding: 12px;
-                    display: none;
-                    p{
-                        color: $color-date;
-                    }
-                    a{
-                        width: fit-content;
-                        height: 60px;
-                        padding: 8px;
-                        padding-left: 20px;
-                        cursor: pointer;
-                        img{
-                            width: 80%;
-                        }
-                        &:hover{
-                            color: $color-animation-1;
+                        .titulo{
+                            grid-area:titulo;
+                            position: relative;
+                            display: flex;
+                            flex-direction: column;
+                            width: 16rem;
+                            align-items: start;
+                            justify-content: start;
+                            h2{
+                                font-family: Roboto, Arial, Helvetica, sans-serif;
+                                font-weight: 200;
+                                font-size: 32px;
+                                color: $color-date;
+                            }
+            
+                            h3{
+                                font-weight: 400;
+                                font-size: 38px;
+                                width: fit-content;
+                                color: $color-date;
+                            }
+            
                         }
                     }
-        
-        
-                }
-                &:hover{
-                    transform: scale(1.1); 
-                    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.24), 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
-                    border-bottom: 1px solid #3A4226;
-                    z-index: 100;
-        
-                }
-                
-        
-            }
-        
-        .project-01{
-            .title {
-                span{
-                    letter-spacing: 20px;
-                }
-                .titulo{
-                    margin-top: -12px;
-                }
-            }
-            background-color: #F5F7F0;
-        
-        }
-        
-        .project-02{
-            background-color: #F0F3E9;
-            .titulo{
-                margin-top: 20px;
-            }
     
-        }
+                    .text{
+                        grid-area: informacion; 
+                        display: flex;
+                        padding-top: 0rem;        
+                        p{
+                            color: $color-date;
+                        }
+            
+            
+                    }
+    
+                }         
         
-        .project-03{
-            background-color: #E0E6D1;
-            .titulo{
-                margin-top: 20px;
             }
-        }
-        
-        .project-04{
-            background-color: #F0F3E9;
-            .titulo{
-                margin-top: -12px;
-            }
-        }
-        
-        .project-05{
-            background-color: #F5F7F0;
-            .titulo{
-                margin-top: 20px;
-            }
-        }
+    }
 
-        .project-06{
-            background-color: #f8f8f7;
-            .titulo{
-                margin-top: 20px;
-            }
-        }
-        
-    }
-    
-    
-    
-    
-    #project01{
-        @include structure (80%,10%);
-        .projectNumber{
-            font-family:  Roboto, Arial, Helvetica, sans-serif;
-            font-weight: 300;
-            text-shadow: 5px 5px 4px $color-shadow;
-        }
-        .projectInfo{
-            margin: 0 10%;
-            padding: 5% 0;        
-            .title-2{
-                /* formato para nombre individual */
-                font-family:Roboto,Arial, Helvetica, sans-serif;
-                color: $subtitle;
-                margin-top: -5vh;
-            }
-            .projectText{
-                text-align: justify;
-                font-weight: 400;
-            }
-        }
-    }  
-    
-    #project02{
-        @extend #project01;  
-    }
 }

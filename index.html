@@ -59,9 +59,9 @@
                             <a class="nav-link active h4" aria-current="page" href="index.html">Home</a>
                         </li>
     
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="nav-link h4" href="view/projects.html">Projects</a>
-                        </li>
+                        </li> -->
     
                         <li class="nav-item">
                             <a class="nav-link h4" href="view/about-me.html">About me</a>
@@ -77,19 +77,122 @@
     </header>
 
     <!-- CONTENIDO PRINCIPAL -->
-    <main class="containerHome">
-        <div class="container-text">
-            <div class="homeTitle" id="rotatingText">                 
-                <hr>
-                <h1> JOSE IGNACIO GOMEZ | <span id="dynamicText"></span></h1>  
-                <hr>
-            </div>
-            <div class="textHome">
-                <p>As a civil engineer specializing in MEP and BIM project management, my goal is to drive digital transformation in construction. With a global vision and expertise in cutting-edge technologies, I strive to optimize processes and push the boundaries of engineering innovation.  With advanced skills in software such as Autodesk Revit, Fabrication CADmep and Navisworks, and a solid foundation in leadership and teamwork, I am ready to tackle the most complex construction challenges. I am fluent in English which allows me to work comfortably in multicultural and multidisciplinary environments.</p>
-
-
+    <main>
+        <div class="containerHome">
+            <div class="container-text">
+                <div class="homeTitle" id="rotatingText">                 
+                    <hr>
+                    <h1> JOSE IGNACIO GOMEZ | <span id="dynamicText"></span></h1>  
+                    <hr>
+                </div>
+                <div class="textHome">
+                <p>As a civil engineer specializing in MEP and BIM project management, my goal is to drive digital transformation in construction. With a global vision and expertise in cutting-edge technologies, I strive to optimize processes and push the boundaries of engineering innovation.</p>
+                </div>
             </div>
         </div>
+
+        <div class="container-projects">
+            <h2>Some projects I was worked in 2022 - 2024</h2>
+                <!-- Proyecto 01 -->
+                <section class="project project-01">
+                    <a href="view/PULPER_FACTORY.html" class="container-project">
+                        <div class="title">
+                            <span>01</span>
+                            <div class="titulo">
+                                <h2>Project</h2>
+                                <h3>PULPER FACTORY</h3>
+                            </div>
+                        </div>
+                        <div class="text">
+                            <p>Industrial pipework modelling for a paper plant, featuring 15+ systems, 140,000 linear feet of diverse diameter pipes (2-1/2" to 48"). Focus on prefabrication (LOD 400), spooling, and use of fabrication parts with 1/16" tolerance.</p>
+                        </div>
+                    </a>
+                </section>
+        
+        
+                <!-- Proyecto 02 -->
+                <section class="project project-02">
+                    <a href="view/STEAM_PLANT.html" class="container-project">
+                    <div class="title">
+                        <span>02</span>
+                        <div class="titulo">
+                            <h2>Project</h2>
+                            <h3>STEAM PLANT</h3>
+                        </div>
+                    </div>
+                    <div class="text ">
+                        <p>Modelling and coordination of pipework systems for a steam plant, guided by P&ID and material specifications/piping class. The project included spooling and installation drawings and modelling of equipment according to cutsheets and submittals.</p>
+                    </div>
+                    </a>
+                </section>
+        
+        
+                <!-- Proyecto 03 -->
+                <section class="project project-03">
+                    <a href="view/DATABASE.html" class="container-project">
+                    <div class="title">
+                        <span>03</span>
+                        <div class="titulo">
+                            <h2>Project</h2>
+                            <h3>DATABASE</h3>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <p>Creation of ITMs from cut sheets, material setup, and connector configurations. Setup of different piping systems. Custom part creation independent of CDI, which is supported in Revit.</p>
+                    </div>
+                    </a>
+                </section>
+        
+                <!-- Proyecto 04 -->
+                <section class="project project-04">
+                    <a href="view/SEMI_CONDUCTOR.html" class="container-project">
+                    <div class="title">
+                        <span>04</span>
+                        <div class="titulo">
+                            <h2>Project</h2>
+                            <h3>SEMI CONDUCTOR</h3>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <p>I led a team of 14 (coordinators and detailers) for a major contractor at a technology giant's semi-conductor plant, overseeing projects for two buildings of 358,891 sqft and 406,981 sqft respectively.</p>
+                    </div>
+                    </a>
+                </section>
+        
+                <!-- Proyecto 05 -->
+                <section class="project project-05">
+                    <a href="view/PLUMBING.html" class="container-project">
+                    <div class="title">
+                        <span>05</span>
+                        <div class="titulo">
+                            <h2>Project</h2>
+                            <h3>PLUMBING</h3>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <p>I designed, modeled and coordinated the sanitary plumbing system for a residential building in South Dakota, guaranteeing complete conformity with the IPC guidelines.</p>
+                    </div>
+                </a>
+                </section>
+        
+                <!-- Proyecto 06 -->
+                <section class="project project-06">
+                    <a href="view/HVAC.html" class="container-project">
+                    <div class="title">
+                        <span>06</span>
+                        <div class="titulo">
+                            <h2>Project</h2>
+                            <h3>HVAC</h3>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <p>Modelling and coordination of ductwork and piping of the mechanical system for a 29-storey residential building.</p>
+                    </div>
+                </a>
+                </section>
+
+        </div>  
+
     </main>
 
     <!-- FOOTER INICIO -->
@@ -110,5 +213,6 @@
     <!-- BOOTSTRAP JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="js/index.js"></script>
+    
 </body>
 </html>
