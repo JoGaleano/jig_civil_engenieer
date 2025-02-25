@@ -1,26 +1,28 @@
 /*VARIABLES - PALETA DE COLORES */
 
 $textgral: #3A4226;  /* color del texto predeterminado*/
-$text-span: #7f8e57; /*color secundario del texto*/
-$title: #383f3a; /*color titulos*/
-$subtitle: #5b6b2e; /*color subtitulos*/
+$text-span: #114CE1; /*color secundario del texto*/
+$title: #114CE1; /*color titulos*/
+$subtitle: #3965d6; /*color subtitulos*/
 $color-date: #5C5C5C; /*color fecha about me*/
-$color-shadow: #545f3ac9; /*color para sombras*/
-$bgc-link: #7f8e57; /*fondo de links*/
+$color-shadow: #3a425fc9; /*color para sombras*/
+$bgc-link: #0048ff; /*fondo de links*/
 $text-hover: #fcfcfc; /*color de texto al aplicar hover*/
-$color-animation-1: #7f8e57; /*color de animacion 1 link*/
-$color-animation-2: #383f3a; /*color de animacion 2 link*/
+$color-animation-1: #114CE1; /*color de animacion 1 link*/
+$color-animation-2: #130f54; /*color de animacion 2 link*/
 $color-hover-link: #fcfcfc;
 $color-bg-blur: rgba(255, 255, 255, 0.10);
 $color-bg: #fff;
-$divider-principal:#3A4226;
-$divider-secodnary:#A1A1A1;
+$divider-principal:#262a42;
+$divider-secodnary:#D1D1D1;
 $color-bg-card: #F6F8F2;
+
+$black: #181818;
 
 $mapa:(
     /*clave para color*/
-    linkedin:#818C61,
-    instagram: #4F611E,
-    envelope: #9BAD6A
+    linkedin:#114CE1,
+    instagram: #0934a2,
+    envelope: #114CE1
 );
 

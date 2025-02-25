@@ -1,26 +1,28 @@
-@import "../base/color";
+@use "../base/color";
+@use "../layout/mixin";
+
 .boton{
     letter-spacing: 2px;
-    background-color: $bgc-link;
+    background-color: color.$bgc-link;
     text-transform: uppercase;
     padding: 1% 2%;
     border-radius: 10px;
-    box-shadow: 2px 5px 5px $color-shadow;
-    color: $color-hover-link;
+    box-shadow: 2px 5px 5px color.$color-shadow;
+    color: color.$color-hover-link;
     &:hover{
         animation: pulsate 1s ease-in-out;
     }    
 }
 
 .buttomBack{ 
-    color: $textgral;
+    color: color.$textgral;
     &:hover{
-        color: $color-shadow;
+        color: color.$color-shadow;
     }
 }
 
 .buttomUp{
-        @include flex(row, nowrap, flex-end, center);
+        @include mixin.flex(row, nowrap, flex-end, center);
         svg{ 
             @extend .buttomBack;
         }
@@ -29,16 +31,16 @@
 @keyframes pulsate{
     0%{
         box-shadow:
-        0 0 10px $color-animation-1,
-        0 0 25px $color-animation-2;
+        0 0 10px color.$color-animation-1,
+        0 0 25px color.$color-animation-2;
     }
 }
 
-@each $iconos, $color in $mapa{
+@each $iconos, $color in color.$mapa{
     .fa-#{$iconos}{
         color:$color;
         &:hover{
-            color: $color-date;
+            color: color.$color-date;
         }
     }
 }

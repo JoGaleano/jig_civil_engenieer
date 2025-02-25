@@ -1,4 +1,4 @@
-@import "../base/color";
+@use "../base/color";
 
 .link{
     display: inline-block;
@@ -12,7 +12,7 @@
                 -8px -8px 22px #ffffff;
     &:hover{
         animation: pulsate 1s ease-in-out;
-        color: $color-hover-link;
+        color: color.$color-hover-link;
     }
 
 }
@@ -21,14 +21,14 @@
 .projectLink{
     display: inline-block;
     text-decoration: none;
-    color: $color-hover-link;
+    color: color.$color-hover-link;
     padding: 2% 5%;   
-    background-color: $bgc-link;
+    background-color: color.$bgc-link;
     border-radius: 5px 20px;
-    box-shadow: 2px 5px 5px $color-shadow;
+    box-shadow: 2px 5px 5px color.$color-shadow;
     &:hover{
         animation: pulsate 1s ease-in-out;
-        color: $color-hover-link;
+        color: color.$color-hover-link;
     }
     
 }
@@ -36,7 +36,7 @@
 @keyframes pulsate{
     0%{
         box-shadow:
-        0 0 25px $color-animation-1,
-        0 0 50px $color-animation-2;
+        0 0 25px color.$color-animation-1,
+        0 0 50px color.$color-animation-2;
     }
 }
