@@ -1,13 +1,15 @@
-@import "../base/color";
+@use "../base/color";
 
 header{
         z-index: 10000;
-        height: 72px;
+        height: 82px;
         box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.12);
         backdrop-filter: blur(2px);
         position: fixed;
-        background-color: $color-bg-blur;
+        background-color: color.$color-bg-blur;
         nav.navbar{
+            align-items: center;
+            padding-top: 12px;
             height: 100%;
             .navbar-brand{
                 .logo{
@@ -15,6 +17,16 @@ header{
                     object-fit: contain;
                 }
             }
+            .nav-item{
+                .nav-link{
+                    color: color.$black;
+                    font-weight: 300;
+                    &.active {
+                        color: color.$text-span; // El color que quieres para cuando esté activo
+                        font-weight: 400; // Cualquier otro estilo que quieras añadir
+                      }
+                }
+            }   
         }
 
 }
@@ -24,6 +36,7 @@ header{
         height: 100%;
         .navbar-brand{
             object-fit: contain;
+            padding-top: 0px;
             .logo{
                 height: 30px;
                 width: 80px;
@@ -33,7 +46,7 @@ header{
         }
 
         .navbar-collapse {
-            background-color: #545f3ad2;
+            background-color: #ffffff;
             padding: 16px;
             backdrop-filter: blur(2px);
             border-radius: 4px;
@@ -41,11 +54,11 @@ header{
 
             .nav-item{
                 .nav-link{
-                    color: white;
-                    font-weight: 200;
+                    color: color.$black;
+                    font-weight: 400;
                     &.active {
-                        color: #e3f8a9; // El color que quieres para cuando esté activo
-                        font-weight: 600; // Cualquier otro estilo que quieras añadir
+                        color: color.$text-span; // El color que quieres para cuando esté activo
+                        font-weight: 500; // Cualquier otro estilo que quieras añadir
                       }
                 }
             }

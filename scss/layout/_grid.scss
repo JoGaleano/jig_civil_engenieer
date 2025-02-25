@@ -1,6 +1,6 @@
-@import "../base/typography";
-@import "footer";
-@import "mixin";
+@use "../base/typography";
+@use "footer";
+@use "mixin";
 
 
 /*MOBILE*/
@@ -8,11 +8,11 @@
 
 /*FOOTER*/
     footer{
-        @include grid_base(center, center);
+        @include mixin.grid_base(center, center);
         grid-template-columns: 100%;
         grid-template-rows: 0.2fr 0.4fr;
         padding: 2%;
-        font-size: $size_mobile_text;
+        font-size: typography.$size_mobile_text;
         .footerText{
             justify-self: center;
             padding-bottom: 2%;
@@ -26,20 +26,20 @@
 
 /*HOME*/
     .homeTitle{
-        font-size: $size_title_mobile;
+        font-size: typography.$size_title_mobile;
         span{
-            font-size: $size_title_mobile;
+            font-size: typography.$size_title_mobile;
         }
     }
     .textHome{
         p{
-            font-size:$size_mobile_text;
+            font-size: typography.$size_mobile_text;
         }
     }
 
 /*PROJECT*/
     #project01{
-        @include grid_base(center, center);
+        @include mixin.grid_base(center, center);
         grid-template-areas:
         "number01 img01"
         "info01 info01";
@@ -51,10 +51,10 @@
     .img01{grid-area: img01;}
     .info01{grid-area: info01;}
 
-    .card h5{font-size: $size_subtitle_mobile;}
+    .card h5{font-size: typography.$size_subtitle_mobile;}
 
     #project02{
-        @include grid_base(center, center);
+        @include mixin.grid_base(center, center);
         grid-template-areas:
         "number02 img02"
         "info02 info02";
@@ -70,11 +70,11 @@
     .info02{grid-area: info02;}
 
     .projectNumber{
-        font-size: $size_project_number_mobile;
-        @include flex(row, nowrap,center,center);
+        font-size: typography.$size_project_number_mobile;
+        @include mixin.flex(row, nowrap,center,center);
     }
     .projectImg{
-        @include flex(row, nowrap,center,center);
+        @include mixin.flex(row, nowrap,center,center);
         padding-right: 4%;
         img{
             width: 100%;
@@ -83,17 +83,17 @@
 
     .projectInfo{
         .title-1{
-            font-size: $size_project_subtitle_mobile;
+            font-size: typography.$size_project_subtitle_mobile;
         }
         .title-2{
-            font-size: $size_project_title_mobile;
+            font-size: typography.$size_project_title_mobile;
         }
         .projectText{
-            font-size: $size_mobile_text;
+            font-size: typography.$size_mobile_text;
             font-weight: 300;
         }
     }
-    .lead{font-size: $size_mobile_text;}
+    .lead{font-size: typography.$size_mobile_text;}
 
 
 }
@@ -106,7 +106,7 @@
 
 /* PROJECT */
     #project01{
-        @include grid_base(center, center);
+        @include mixin.grid_base(center, center);
         grid-template-areas:
         "number01 img01"
         "info01 info01";
@@ -118,10 +118,10 @@
     .img01{grid-area: img01;}
     .info01{grid-area: info01;}
 
-    .card h5{font-size: $size_subtitle_tablet;}
+    .card h5{font-size: typography.$size_subtitle_tablet;}
 
     #project02{
-        @include grid_base(center, center);
+        @include mixin.grid_base(center, center);
         grid-template-areas:
         "number02 img02"
         "info02 info02";
@@ -134,12 +134,12 @@
     .info02{grid-area: info02;}
 
     .projectNumber{
-        font-size: $size_project_number_tablet;
-        @include flex( row, nowrap, center, center);
+        font-size: typography.$size_project_number_tablet;
+        @include mixin.flex( row, nowrap, center, center);
     }
 
     .projectImg{
-        @include flex( row, nowrap, center, center);
+        @include mixin.flex( row, nowrap, center, center);
         padding-right: 5%;
         img{
             width: 100%;
@@ -148,17 +148,17 @@
 
     .projectInfo{
         .title-1{
-            font-size: $size_project_subtitle_mobile ;
+            font-size: typography.$size_project_subtitle_mobile ;
         }
         .title-2{
-            font-size: $size_project_title_mobile;
+            font-size: typography.$size_project_title_mobile;
         }
         .project-text{
-            font-size: $size_tablet_text;
+            font-size: typography.$size_tablet_text;
             font-weight: 300;
         }
     }
-    .lead{font-size: $size_tablet_text;}
+    .lead{font-size: typography.$size_tablet_text;}
 
     /* transformacion aumento de escala de imagenes de planos */
     .scaled{transition: transform .2s;}
@@ -169,24 +169,24 @@
     section{
         margin: 0 10% ;
         h1, h2{
-            font-size: $size_title_tablet;
+            font-size: typography.$size_title_tablet;
             text-align: start;
             padding: 3vh 0;  
         }
         .textAbout{ 
-            font-size: $size_tablet_text;
+            font-size: typography.$size_tablet_text;
             padding-left: 3%;
         }
         article{
             h3{
-                font-size: $size_subtitle_tablet;
+                font-size: typography.$size_subtitle_tablet;
             }
             .date{margin-left: 3%;}
         }
     }
 
     #gridAbout{
-        @include grid_project(80% , 10%);
+        @include mixin.grid_project(80% , 10%);
         grid-template-areas: 
         "photo photo"
         "profile profile"
@@ -210,7 +210,7 @@
     }
     .languague{
         grid-area: languague;
-        @include flex (column, nowrap, flex-start, center);
+        @include mixin.flex (column, nowrap, flex-start, center);
         margin-left:  -10%;
     }
     .location{grid-area: location;}
@@ -241,13 +241,13 @@ DESKTOP
 /*FOOTER*/
 
     footer{
-        font-size: $size_text_desktop;
+        font-size: typography.$size_text_desktop;
     }
 
 /*HOME*/
     .textHome{
         p{
-            font-size: $size_text_desktop ;
+            font-size: typography.$size_text_desktop ;
         }
     }
 
@@ -259,12 +259,12 @@ DESKTOP
 
 /*CONTACT*/
     #gridContact{
-        @include grid_base(center, center);
+        @include mixin.grid_base(center, center);
         .message{
-            h1,p {font-size: $size_text_desktop;}
+            h1,p {font-size: typography.$size_text_desktop;}
 
             :nth-child(2){
-                font-size: calc($size_text_desktop *0.8);
+                font-size: calc(typography.$size_text_desktop *0.8);
             }
             .linkedin{
                 display: flex;
@@ -273,7 +273,7 @@ DESKTOP
                 padding: 2% 0% 5% 0%;
             }
             .textWork{
-                font-size: $size_text_span_desktop;
+                font-size: typography.$size_text_span_desktop;
             }
         } 
 

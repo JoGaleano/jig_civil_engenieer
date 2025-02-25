@@ -1,8 +1,9 @@
-@import "../base/typography";
-@import "../base/color";
-@import "../componet/link";
+@use "../base/typography";
+@use "../base/color";
+@use "../componet/link";
+@use "../layout/mixin";
 
-
+/* Mensaje de en proceso*/
 .wait{
     min-height: 80vh;
     display: flex;
@@ -11,11 +12,11 @@
     flex-direction: column;
     h2{
         font: 2rem;
-        color: #7c7c7b;
+        color: color.$divider-principal;
         font-weight: 200;
     }
     img{
-        width: 400px;
+        width: 300px;
         margin-bottom: 20px;
         opacity: 0.6;
     }
@@ -23,6 +24,15 @@
 
 
 /*PORTADAS PAGINA PROJECT*/
+
+section{
+    padding: 32px;
+    background-color: color.$color-bg;
+    margin-bottom: 40px;
+    border: 0.5px solid color.$divider-secodnary;
+}
+
+
 
 
 .container-projects{
@@ -34,15 +44,18 @@
     margin-right: auto;
     margin-bottom: 8rem;
     h2{
-        font-size: $size_text_span_desktop;
-        color: $title;
+        font-size: typography.$size_subtitle_desktop;
+        font-weight: 300;
+        color: color.$textgral;
+        margin-top: 5rem;
+        margin-bottom: 2rem;
     }
     .project{
-        background-color: #F5F7F0;
+        background-color: color.$color-bg;
         height: 16rem;
         /*position: relative; */
         overflow: hidden;
-        border-radius: 8px;
+        border-radius: 4px;
         transition: transform 0.3s ease-in-out;
         .container-project{
             text-decoration: none;
@@ -65,7 +78,7 @@
                         top: -80px;
                         margin-right: 20px;
                         min-width: 120px;
-                        color: rgba(32, 32, 32, 0.20);
+                        color: rgba(19, 29, 107, 0.2);
                         letter-spacing: 20px;
                     }
                     .titulo{
@@ -80,14 +93,16 @@
                             font-family: Roboto, Arial, Helvetica, sans-serif;
                             font-weight: 200;
                             font-size: 32px;
-                            color: $color-date;
+                            color: color.$black;
+                            margin-top: 40px;
                         }
         
                         h3{
                             font-weight: 400;
                             font-size: 42px;
                             width: fit-content;
-                            color: $color-date;
+                            color: color.$text-span;
+                            margin-top: -20px;
                         }
         
                     }
@@ -98,7 +113,7 @@
                     display: flex;
                     padding-top: 2rem;          
                     p{
-                        color: $color-date;
+                        color: color.$color-date;
                     }
         
         
@@ -113,9 +128,8 @@
 @media (min-width:1200px){
     .project{
         &:hover{
-            transform: scale(1.1); 
-            box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.24), 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
-            border: 0.5px solid $divider-secodnary;
+            box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.118), 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+            border: 0.5px solid color.$divider-secodnary;
             z-index: 100;
         }
         
@@ -123,16 +137,16 @@
 }
 
 #project01{
-    @include structure (80%,10%);
+    @include mixin.structure (80%,10%);
     .projectNumber{
         font-family: Roboto, Arial, Helvetica, sans-serif;
         font-weight: 300;
-        text-shadow: 5px 5px 4px $color-shadow;
+        text-shadow: 5px 5px 4px color.$color-shadow;
     }
     .projectInfo{      
         .title-2{
             font-family:  Roboto,Arial, Helvetica, sans-serif;
-            color: $subtitle;
+            color: color.$subtitle;
         }
         .projectText{
             text-align: justify;
@@ -158,11 +172,9 @@
         margin-right: auto;
         margin-bottom: 8rem;
         h2{
-            font-size: $size_text_span_desktop;
-            color: $title;
+            font-size: typography.$size_text_span_desktop;
         }
         .project{
-            background-color: #F5F7F0;
             height: 32rem;
             /*position: relative; */
             overflow: hidden;
@@ -192,9 +204,8 @@
                             font-size: 280px;
                             position: relative;
                             top: -80px;
-                            margin-right: 20px;
+                            margin-left: -40px;
                             min-width: 120px;
-                            color: rgba(32, 32, 32, 0.20);
                             letter-spacing: 20px;
                         }
                         .titulo{
@@ -209,7 +220,6 @@
                                 font-family: Roboto, Arial, Helvetica, sans-serif;
                                 font-weight: 200;
                                 font-size: 32px;
-                                color: $color-date;
                                 margin-left: -3rem;
                             }
             
@@ -217,7 +227,6 @@
                                 font-weight: 400;
                                 font-size: 38px;
                                 width: fit-content;
-                                color: $color-date;
                                 margin-left: -3rem;
                             }
             
@@ -229,12 +238,8 @@
                         display: flex;
                         padding: 0 rem;
                         margin-top: -12rem; 
-                        width: 15rem; 
+                        width: 12rem; 
                         margin-left: 2rem;    
-                        p{
-                            color: $color-date;
-                        }
-            
             
                     }
     
@@ -256,11 +261,9 @@
         margin-right: auto;
         margin-bottom: 8rem;
         h2{
-            font-size: $size_text_span_desktop;
-            color: $title;
+            font-size: typography.$size_text_span_desktop;
         }
         .project{
-            background-color: #F5F7F0;
             height: 16rem;
             /*position: relative; */
             overflow: hidden;
@@ -289,7 +292,6 @@
                             top: -80px;
                             margin-right: 20px;
                             min-width: 120px;
-                            color: rgba(32, 32, 32, 0.20);
                             letter-spacing: 20px;
                         }
                         .titulo{
@@ -304,14 +306,12 @@
                                 font-family: Roboto, Arial, Helvetica, sans-serif;
                                 font-weight: 200;
                                 font-size: 32px;
-                                color: $color-date;
                             }
             
                             h3{
                                 font-weight: 400;
                                 font-size: 38px;
                                 width: fit-content;
-                                color: $color-date;
                             }
             
                         }
@@ -321,11 +321,7 @@
                         grid-area: informacion; 
                         display: flex;
                         padding-top: 0rem;        
-                        p{
-                            color: $color-date;
-                        }
-            
-            
+
                     }
     
                 }         

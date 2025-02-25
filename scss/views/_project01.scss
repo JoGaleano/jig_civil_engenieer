@@ -1,6 +1,6 @@
-@import "../base/typography";
-@import "../base/color";
-@import "../componet/link";
+@use "../base/typography";
+@use "../base/color";
+@use "../componet/link";
 
 
 .regresar{
@@ -10,7 +10,7 @@
 #project01_expl{
     margin-top: 20px;
     margin-bottom: 60px;
-    border-bottom: 1px solid $bgc-link;
+    border-bottom: 1px solid color.$bgc-link;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
@@ -34,11 +34,11 @@
             height: fit-content;
             width: fit-content;
             h2{
-                color: $textgral;
+                color: color.$textgral;
             }
 
             h3{
-                color: $color-animation-1;
+                color: color.$color-animation-1;
                 font-weight: 400px;
                 font-size: 72px;
                 margin-top: -10px;
@@ -67,7 +67,7 @@
             font-family:  Roboto, Arial, Helvetica, sans-serif;
             font-weight: 300;
             font-size: 300px;
-            color: $color-animation-2;
+            color: color.$color-animation-2;
         }
     }
 }
@@ -80,10 +80,10 @@ main{
     margin-right: auto;
     .info{
         margin-bottom: 20px;
-        border-bottom: 1px solid $bgc-link;
+        border-bottom: 1px solid color.$bgc-link;
         padding-bottom: 20px;
         h2{
-            color: $subtitle;
+            color: color.$subtitle;
         }
         .keyWord{
             font-weight: bold;
@@ -101,7 +101,7 @@ main{
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                font-size: $size_text_desktop;
+                font-size: typography.$size_text_desktop;
                 margin-bottom: 16px;
             }
         }
@@ -128,7 +128,7 @@ main{
         border-radius: 4px;
         height: 300px;
         .mensaje{
-            background-color:$color-bg;
+            background-color: color.$color-bg;
             width: 65%;
             margin-left: auto;
             margin-right: auto;
@@ -145,7 +145,7 @@ main{
             width: 550px;
             margin-left: auto;
             margin-right: auto;
-            background-color:$color-bg;
+            background-color: color.$color-bg;
             height: 60px;
             margin-top: -60px;
             padding: 16px;
@@ -153,15 +153,15 @@ main{
             box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.24), 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
             .password{
                 border: none;
-                border-bottom: 1px solid $color-animation-2;
+                border-bottom: 1px solid color.$color-animation-2;
                 border-radius: 4px;
                 margin-right: 8px;
                 &:focus{
-                    border: 2px solid $text-span;
+                    border: 2px solid color.$text-span;
                     outline: none;
                 }
                 &::not(:placeholder-shown) {
-                    border: 2px solid $bgc-link;
+                    border: 2px solid color.$bgc-link;
                 }
             }
     
@@ -173,8 +173,8 @@ main{
             }
     
             .btn{
-                background-color: $color-shadow;
-                color: $color-bg;
+                background-color: color.$bgc-link;
+                color: color.$color-bg;
                 border-radius: 4px;
                 padding: 4px 8px;
             }
@@ -268,7 +268,7 @@ main{
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    font-size: $size_text_desktop;
+                    font-size: typography.$size_text_desktop;
                     margin-bottom: 16px;
                     text-align: center;
                 }
@@ -283,15 +283,12 @@ main{
             bottom: 0;
             left: 0;
             overflow: auto;
-            box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.24), 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
             z-index: 1000;
             display: grid;
             grid-column: 0.5fr 1fr;
             border-radius: 4px;
             height: 650px;
-            background-color:$color-bg;
             .mensaje{
-                background-color:$color-bg;
                 width: 80%;
                 margin-left: auto;
                 margin-right: auto;
@@ -308,23 +305,19 @@ main{
                 width: 220px;
                 margin-left: auto;
                 margin-right: auto;
-                background-color:$color-bg;
                 height: 160px;
                 margin-top: 0px;
                 padding: 16px;
                 border-radius: 4px;
-                box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.24), 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
                 .password{
                     border: none;
-                    border-bottom: 1px solid $color-animation-2;
                     border-radius: 4px;
                     margin-right: 8px;
                     &:focus{
-                        border: 2px solid $text-span;
                         outline: none;
                     }
                     &::not(:placeholder-shown) {
-                        border: 2px solid $bgc-link;
+                        border: 2px solid color.$bgc-link;
                     }
                 }
         
@@ -336,8 +329,7 @@ main{
                 }
         
                 .btn{
-                    background-color: $color-shadow;
-                    color: $color-bg;
+                    color: color.$color-bg;
                     border-radius: 4px;
                     padding: 4px 8px;
                     margin-top: 20px;

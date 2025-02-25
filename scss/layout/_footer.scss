@@ -1,9 +1,10 @@
-@import "../base/color";
+@use "../base/color";
+@use "../base/typography";
 
 footer{
     position: relative;
     bottom: 0;
-    background-color: $color-bg-blur;
+    background-color: color.$color-bg-blur;
     box-shadow: 2px 0px 6px 0px rgba(0, 0, 0, 0.12);
     height: 72px;
     display: flex;
@@ -21,11 +22,12 @@ footer{
        
         .left-content{
             grid-area: copy;
+            font-size: typography.$size_text_span_desktop ;
             a{
                 text-decoration: none;
-                color: $textgral;
+                color: color.$textgral;
                 &:hover{
-                    color: $color-date;
+                    color: color.$color-date;
                 }
             }
         }
@@ -39,9 +41,6 @@ footer{
                 height: 0px;
             }
         }
-       
-
-
             
     }
     
@@ -53,7 +52,7 @@ footer{
     footer{
         position: relative;
         bottom: 0;
-        background-color: $color-bg-blur;
+        background-color: color.$color-bg-blur;
         box-shadow: 2px 0px 6px 0px rgba(0, 0, 0, 0.12);
         height: 120px;
         display: flex;
@@ -75,9 +74,9 @@ footer{
                 text-align: center;
                 a{
                     text-decoration: none;
-                    color: $textgral;
+                    color: color.$textgral;
                     &:hover{
-                        color: $color-date;
+                        color: color.$color-date;
                     }
                 }
             }

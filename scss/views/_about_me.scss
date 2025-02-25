@@ -1,6 +1,6 @@
-@import "../base/typography";
-@import "../base/color";
-@import "../componet/buttom";
+@use "../base/typography";
+@use "../base/color";
+@use "../componet/buttom";
 
 #aboutme{
     display: grid;
@@ -18,6 +18,7 @@
         background-position: center;
         overflow: auto;
         transition: background-color 0.3s ease;
+        border-radius: 4px;
     }
     .lineText{
         grid-area: lineText;
@@ -28,13 +29,21 @@
         align-self: center;
         .citizen{
             text-align: end;
-            font-size: $size_text_span__small_desktop;
+            font-size: typography.$size_text_span_desktop;
+            color: color.$color-date;
+            font-weight: 300;
         }
         .titleAbout{
             padding: 5% 0%;
             align-self: center;
+            p{
+                text-transform: uppercase;
+            }
             h2{
-                color: $subtitle;
+                color: color.$subtitle;
+                span{
+                    text-transform: uppercase;
+                }
                 a{
                     img{
                         width: 30%;
@@ -56,22 +65,21 @@
     margin: 2rem 0;
 }
 
-section{
+.aboutMeCard{
     padding: 32px;
-    border-radius: 4px;
-    background-color: $color-bg;
-    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.24), 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+    background-color: color.$color-bg;
+    border-bottom: 1px solid color.$divider-secodnary;
     margin-bottom: 40px;
     h1, h2{
         font-weight: 600;
-        color: $title;
+        color: color.$title;
         padding: 3vh 0; 
     }
 
     a{
-        color: $bgc-link;
+        color: color.$bgc-link;
         &:hover{
-            color: $color-animation-2;
+            color: color.$color-animation-2;
         }
     }
 
@@ -81,11 +89,11 @@ section{
 
     article{
         h3{
-            color: $subtitle;
+            color: color.$subtitle;
             font-weight: 400;
             text-align: start;
             span{
-                color: $color-date;
+                color: color.$color-date;
                 font-weight: 400;
             }
         }
@@ -95,13 +103,13 @@ section{
             width: 60%;
         }
         .date{
-            color: $color-date;
+            color: color.$color-date;
         }
         
         a{
-            color: $bgc-link;
+            color: color.$bgc-link;
             &:hover{
-                color: $color-animation-2;
+                color: color.$color-animation-2;
             }
         }
     }
@@ -113,8 +121,16 @@ section{
     justify-content: space-between;
     .languague{
         width: 100%;
+        h2{
+            font-weight: 400;
+            color: color.$textgral;
+        }
     }
     .location{
+        h2{
+            font-weight: 400;
+            color: color.$textgral;
+        }
         width: 100%;
     }
 }
@@ -122,12 +138,12 @@ section{
 .textAbout{
     .item{
         span{
-            color: $title;
+            color: color.$title;
             font-weight: 600;
         }
     }
     span{
-        color: $title;
+        color: color.$title;
         font-weight: 600;
     }
 }
@@ -153,7 +169,7 @@ section{
             li{
                 margin-bottom: 20px;
                 span{
-                    color: $title;
+                    color: color.$title;
                     font-weight: 600;
                 }
             }
@@ -193,13 +209,12 @@ section{
             align-self: center;
             .citizen{
                 text-align: end;
-                font-size: $size_text_span__small_desktop;
+                font-size: typography.$size_text_span__small_desktop;
             }
             .titleAbout{
                 padding: 5% 0%;
                 align-self: center;
                 h2{
-                    color: $subtitle;
                     a{
                         img{
                             width: 30%;
@@ -229,15 +244,10 @@ section{
 
         article{
             h3{
-                color: $subtitle;
                 font-weight: 400;
                 text-align: start;
-                span{
-                    color: $color-date;
-                }
             }
             .date{
-                color: $color-date;
                 margin-top: 12px;
             }
         }
@@ -295,21 +305,21 @@ section{
     #aboutme{
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 1fr;
-        grid-template-areas: "photo" "lineText";
-        margin: 80px 10% 0px;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "lineText" "photo";
+        margin: 150px 10% 0px;
         padding: 0px;
-        height: 30vh;
+        height: 50vh;
         
         .photo {
             grid-area: photo;
             background-image: url(../../asset/photo_color_profile.png);
-            background-size: contain;
+            background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
             overflow: auto;
             transition: background-color 0.3s ease;
-            display: none;
+            height: 200px;
         }
         .lineText{
             grid-area: lineText;
@@ -320,13 +330,12 @@ section{
             align-self: center;
             .citizen{
                 text-align: start;
-                font-size: $size_mobile_text_small;
+                font-size: typography.$size_mobile_text_small;
             }
             .titleAbout{
                 padding: 5% 0%;
                 align-self: center;
                 h2{
-                    color: $subtitle;
                     a{
                         img{
                             width: 60%;
@@ -356,15 +365,11 @@ section{
 
         article{
             h3{
-                color: $subtitle;
+                color: color.$subtitle;
                 font-weight: 400;
                 text-align: start;
-                span{
-                    color: $color-date;
-                }
             }
             .date{
-                color: $color-date;
                 margin-top: 12px;
             }
         }
