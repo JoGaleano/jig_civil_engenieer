@@ -1628,5 +1628,44 @@ main .info07 .protected-content {
     margin-top: 20px;
   }
 }
+.titlePosts {
+  margin-left: 10%;
+}
+
+.linkedin-gallery {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 90%;
+  margin-left: 5%;
+}
+.linkedin-gallery .linkedin-post iframe {
+  height: 1278px;
+  width: 504px;
+}
+.linkedin-gallery .post2 iframe {
+  height: 958px;
+}
+
+@media (max-width: 768px) {
+  .titlePosts {
+    margin-left: 0%;
+  }
+  .linkedin-gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-left: 0%;
+  }
+  .linkedin-gallery .linkedin-post iframe {
+    height: 85rem;
+    width: 90vw;
+  }
+  .linkedin-gallery .post2 iframe {
+    width: 90vw;
+    height: 72rem;
+  }
+}
 
 /*# sourceMappingURL=destiny.css.map */
